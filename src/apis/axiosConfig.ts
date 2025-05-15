@@ -1,8 +1,6 @@
 import axios, { type AxiosInstance, type AxiosError, type AxiosResponse, type InternalAxiosRequestConfig } from 'axios'
 
 const apiUrl = import.meta.env.VITE_API_URL
-// || 'https://68230e2fb342dce8005078b8.mockapi.io'
-console.log('API URL:', apiUrl);
 
 // Create Axios instance
 const api: AxiosInstance = axios.create({
