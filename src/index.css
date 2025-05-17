@@ -1,4 +1,14 @@
+/* index.css */
+/* @import "tailwindcss/preflight"; */
 @import "tailwindcss";
+@tailwind utilities;
+
+/* Custom style layer nếu cần */
+/* @layer utilities {
+  .text-shadow {
+    text-shadow: 1px 1px 2px black;
+  }
+} */
 
 *,
 *::before,
@@ -12,3 +22,60 @@
   font-weight: 400;
   font-style: normal;
 }
+
+.bgColor {
+  background-color: #FFF6E3;
+  color: #2c2c2c;  
+}
+
+.text-priamry {
+  color: #2c2c2c2c;
+}
+/* .text-title:hover {
+  color: #E34225;
+  cursor: pointer;
+  font-weight: bold;
+  border-bottom: 3px solid #E34225;
+} */
+
+.text-navbar {
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  color: #2c2c2c;
+  transition: color 0.3s ease;
+}
+
+.text-navbar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  width: 0%;
+  height: 2px;
+  background-color: #E34225;
+  transition: width 0.3s ease;
+}
+
+.text-navbar:hover {
+  color: #E34225;
+  cursor: pointer;
+}
+
+.text-navbar:hover::after {
+  width: 100%;
+}
+
+.linear-button {
+  background: linear-gradient(90deg, #E34225 0%, #FF9853 100%);  
+  padding: 20px;
+  cursor: pointer;
+}
+
+.linear-button:hover {
+  opacity: 80%;
+}
+  .linear-button:active {
+    opacity: 90%;
+    box-shadow: 0 5px 10px -2px rgba(170, 60, 36, 0.8);
+  }
