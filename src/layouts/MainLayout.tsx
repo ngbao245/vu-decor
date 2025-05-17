@@ -5,16 +5,21 @@ import Footer from "../components/Footer/Footer";
 
 const MainLayout = () => {
   return (
-    <>
-      <div className="sticky top-0 z-50">
-        <Header />
+    <div className="flex justify-center py-4 lg:py-8 items-center bgColor shadow-md">
+      <div className="container max-w-7xl mx-auto px-4">
+        <div className="sticky top-0 z-50 bgColor">
+          <Header />
+        </div>
+        <main className="min-h-screen px-4 py-6">
+          {/* <div className="flex justify-center py-4 lg:py-8 items-center bgColor shadow-md"> */}
+          {/* <div className="container max-w-7xl mx-auto px-4 "> */}
+          <Outlet />
+          {/* </div> */}
+          {/* </div> */}
+        </main>
+        <Footer />
       </div>
-      
-      <main className="min-h-screen  px-4 py-6 bgColor">
-        <Outlet />
-      </main>
-      <Footer />
-    </>
+    </div>
   );
 };
 

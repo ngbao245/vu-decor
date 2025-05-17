@@ -2,7 +2,7 @@
 
 const Hero = () => {
   return (
-    <div className='w-screen h-[500px] bg-amber-600'>
+    <div className='w-full h-[500px] bg-amber-600'>
 
     </div>
   )
