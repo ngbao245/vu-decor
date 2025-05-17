@@ -1,13 +1,15 @@
 
 import Button from '../Button/Button'
 import logoImage from '../../assets/logoImage.png'
+import { Link } from 'react-router-dom';
 
 
 const navLinks = [
   { label: "Trang Chủ", href: "#" },
   { label: "Dự Án", href: "" },
   { label: "Thiết kế", href: "#integrations" },
-  { label: "Về Chung Tôi", href: "#faqs" },
+  { label: "Bài Viết", href: "#integrations" },
+  { label: "Về Chúng Tôi", href: "#faqs" },
   { label: "Liên Hệ", href: "#faqs" },
 ];
 
@@ -15,24 +17,26 @@ const Header = () => {
   return (
 
     <div className="w-full grid grid-cols-2 lg:grid-cols-4 border border-white/15  py-2 px-4 md:pr-2 items-center">
-      <div className='w-16 h-16 flex justify-between items-center  '>
-        <img
-          src={logoImage}
-          className="w-auto h-14 py-3 md:h-auto object-contain bg-white rounded-md"
-          width={50} height={50}
-          alt="Layers logo"
-        />
+      <div className='w-16 h-16 grid-span-1  bg-yellow-700 '>
+        <div className='h-full flex items-center justify-center'>
+          <img
+            src={logoImage}
+            className="w-auto h-14 ml-5  py-3 md:h-auto object-contain bg-white rounded-md"
+            width={50} height={50}
+            alt="Layers logo"
+          />
+        </div>
       </div>
-      <div className="lg:flex lg:col-span-2 h-full  justify-center items-center hidden ">
+      <div className="lg:flex lg:col-span-2 h-full  justify-center items-center hidden bg-red-400">
         <nav className="flex gap-10 px-3 h-full font-medium items-center ">
           {navLinks.map((link) => {
-            return (<a
+            return (<Link
               key={link.label}
-              href={link.href}
+              to={link.href}
               className="text-navbar"
             >
               {link.label}
-            </a>)
+            </Link>)
           })}
         </nav>
       </div>
