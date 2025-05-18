@@ -1,6 +1,5 @@
-
-import Button from '../Button/Button'
-import logoImage from '../../assets/logoImage.png'
+import Button from '../Button/Button';
+import logoImage from '../../assets/logoImage.png';
 import { Link } from 'react-router-dom';
 
 const navLinks = [
@@ -14,52 +13,60 @@ const navLinks = [
 
 const Header = () => {
   return (
+    <header className="w-full border-b border-white/15 py-2 bg-white/5 backdrop-blur">
+      <div className="grid grid-cols-[auto_1fr] items-center px-4 sm:px-6 lg:px-10">
 
-    <header className="w-full grid grid-cols-2 lg:grid-cols-4 border border-white/15  py-2 px-4 md:pr-2 items-center">
-      <div className='w-16 h-16 grid-span-1  bg-yellow-700 '>
-        <div className='h-full flex items-center justify-center'>
+        {/* Logo */}
+        <div className="flex items-center">
           <img
             src={logoImage}
-            className="w-auto h-14 ml-5  py-3 md:h-auto object-contain bg-white rounded-md"
-            width={50} height={50}
+            className="h-14 w-auto object-contain bg-white rounded-md"
             alt="Layers logo"
           />
         </div>
-      </div>
-      <div className="lg:flex lg:col-span-2 h-full  justify-center items-center hidden bg-red-400">
-        <nav className="flex gap-10 px-3 h-full font-medium items-center ">
-          {navLinks.map((link) => {
-            return (<Link
-              key={link.label}
-              to={link.href}
-              className="text-navbar"
-            >
-              {link.label}
-            </Link>)
-          })}
-        </nav>
-      </div>
-      <div className="flex justify-end gap-4">
-        <svg xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="feather feather-menu mr-2 md:hidden"
-        >
-          <line x1="3" y1="12" x2="21" y2="12" />
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <line x1="3" y1="18" x2="21" y2="18" />
-        </svg>
 
-        <Button variant="primary" className="hidden md:inline-flex items-center">Get Start</Button>
+        {/* Desktop Nav */}
+        <div className="hidden lg:flex justify-end items-center gap-8">
+          <nav className="flex gap-6 font-medium items-center">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                to={link.href}
+                className="text-navbar hover:text-primary transition"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <Button variant="primary" className="hidden md:inline-flex items-center">
+            Get Start
+          </Button>
+        </div>
+
+        {/* Mobile Menu Icon */}
+        <div className="flex justify-end lg:hidden">
+          <button type="button" className="p-2 rounded-md hover:bg-white/10">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="feather feather-menu"
+            >
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
