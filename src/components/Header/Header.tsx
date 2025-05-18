@@ -3,20 +3,19 @@ import Button from '../Button/Button'
 import logoImage from '../../assets/logoImage.png'
 import { Link } from 'react-router-dom';
 
-
 const navLinks = [
-  { label: "Trang Chủ", href: "#" },
-  { label: "Dự Án", href: "" },
-  { label: "Thiết kế", href: "#integrations" },
-  { label: "Bài Viết", href: "#integrations" },
-  { label: "Về Chúng Tôi", href: "#faqs" },
-  { label: "Liên Hệ", href: "#faqs" },
+  { label: "Trang Chủ", href: "/" },
+  { label: "Dự Án", href: "/projects" },
+  { label: "Thiết kế", href: "/styles" },
+  { label: "Bài Viết", href: "/news" },
+  { label: "Về Chúng Tôi", href: "/ourStory" },
+  { label: "Liên Hệ", href: "/contact" },
 ];
 
 const Header = () => {
   return (
 
-    <div className="w-full grid grid-cols-2 lg:grid-cols-4 border border-white/15  py-2 px-4 md:pr-2 items-center">
+    <header className="w-full grid grid-cols-2 lg:grid-cols-4 border border-white/15  py-2 px-4 md:pr-2 items-center">
       <div className='w-16 h-16 grid-span-1  bg-yellow-700 '>
         <div className='h-full flex items-center justify-center'>
           <img
@@ -59,7 +58,7 @@ const Header = () => {
 
         <Button variant="primary" className="hidden md:inline-flex items-center">Get Start</Button>
       </div>
-    </div>
+    </header>
   )
 }
 
