@@ -6,17 +6,17 @@ import { RxTextAlignJustify } from "react-icons/rx";
 
 
 const navLinks = [
-  { label: "Trang Chủ", href: "#" },
-  { label: "Dự Án", href: "" },
-  { label: "Thiết kế", href: "#integrations" },
-  { label: "Bài Viết", href: "#integrations" },
-  { label: "Về Chúng Tôi", href: "#faqs" },
-  { label: "Liên Hệ", href: "#faqs" },
+  { label: "Trang Chủ", href: "/" },
+  { label: "Dự Án", href: "/projects" },
+  { label: "Thiết kế", href: "/styles" },
+  { label: "Bài Viết", href: "/news" },
+  { label: "Về Chúng Tôi", href: "/ourStory" },
+  { label: "Liên Hệ", href: "/contact" },
 ];
 
 const Header = () => {
   return (
-    <div className="w-full grid grid-cols-2 lg:grid-cols-4 px-4  items-center">
+    <header className="w-full grid grid-cols-2 lg:grid-cols-4 px-4  items-center">
       <div className='w-full h-16 col-span-1'>
         <div className='h-full flex items-center'
           // style={{ marginLeft: '20px' }}
@@ -52,7 +52,7 @@ const Header = () => {
           // style={{ marginRight: '20px' }}
         />
       </div>
-    </div>
+    </header>
   )
 }
 
