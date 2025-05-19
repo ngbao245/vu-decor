@@ -1,6 +1,9 @@
-import Button from '../Button/Button';
-import logoImage from '../../assets/logoImage.png';
-import { Link } from 'react-router-dom';
+import Button from "../Button/Button";
+import logoImage from "../../assets/logoImage.png";
+import VuDecorLogo from "../../assets/vudecor.svg";
+import asm from "../../assets/asm.png";
+import { Link } from "react-router-dom";
+import { RxTextAlignJustify } from "react-icons/rx";
 
 const navLinks = [
   { label: "Trang Chủ", href: "/" },
@@ -13,57 +16,52 @@ const navLinks = [
 
 const Header = () => {
   return (
-    <header className="w-full border-b border-white/15 py-2 bg-white/5 backdrop-blur">
-      <div className="grid grid-cols-[auto_1fr] items-center px-4 sm:px-6 lg:px-10">
+    <header className="w-full grid grid-cols-2 lg:grid-cols-4 px-4  items-center">
+      <div className="w-full h-16 col-span-1">
+        <div className="h-full flex items-center">
+          {/* <img
+            src={logoImage}
+            className="aspect-square h-[40px]  lg:h-[55px] ml-4 py-3  object-contain bg-white rounded-sm border"
+            alt="Layers logo"
+          /> */}
 
-        {/* Logo */}
-        <div className="flex items-center">
           <img
             src={logoImage}
-            className="h-14 w-auto object-contain bg-white rounded-md"
+            className="aspect-square h-[50px] md:h-[75px] md:ml-3 py-3 object-contain"
+            alt="Layers logo"
+          />
+          <img
+            src={asm}
+            className="h-[40px] md:h-[50px] sm:h-[30px] py-3 object-contain ml-[-20px]"
             alt="Layers logo"
           />
         </div>
-
-        {/* Desktop Nav */}
-        <div className="hidden lg:flex justify-end items-center gap-8">
-          <nav className="flex gap-6 font-medium items-center">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                to={link.href}
-                className="text-navbar hover:text-primary transition"
-              >
+      </div>
+      <div className="lg:flex lg:col-span-2 h-full  justify-center items-center hidden ">
+        <nav className="flex gap-10 px-3 h-full font-medium items-center ">
+          {navLinks.map((link) => {
+            return (
+              <Link key={link.label} to={link.href} className="text-navbar">
                 {link.label}
               </Link>
-            ))}
-          </nav>
-          <Button variant="primary" className="hidden md:inline-flex items-center">
+            );
+          })}
+        </nav>
+      </div>
+      <div className="flex justify-end gap-4">
+        <div className="flex ">
+          <Button
+            variant="primary"
+            className="hidden md:inline-flex items-center"
+          >
             Get Start
           </Button>
         </div>
-
-        {/* Mobile Menu Icon */}
-        <div className="flex justify-end lg:hidden">
-          <button type="button" className="p-2 rounded-md hover:bg-white/10">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="28"
-              height="28"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="feather feather-menu"
-            >
-              <line x1="3" y1="12" x2="21" y2="12" />
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <line x1="3" y1="18" x2="21" y2="18" />
-            </svg>
-          </button>
-        </div>
+        <RxTextAlignJustify
+          size={25}
+          className="feather feather-menu md:hidden"
+          // style={{ marginRight: '20px' }}
+        />
       </div>
     </header>
   );
