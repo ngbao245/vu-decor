@@ -2,6 +2,7 @@
 import Button from '../Button/Button'
 import logoImage from '../../assets/logoImage.png'
 import { Link } from 'react-router-dom';
+import { RxTextAlignJustify } from "react-icons/rx";
 
 
 const navLinks = [
@@ -15,19 +16,19 @@ const navLinks = [
 
 const Header = () => {
   return (
-
-    <div className="w-full grid grid-cols-2 lg:grid-cols-4 border border-white/15  py-2 px-4 md:pr-2 items-center">
-      <div className='w-16 h-16 grid-span-1  bg-yellow-700 '>
-        <div className='h-full flex items-center justify-center'>
+    <div className="w-full grid grid-cols-2 lg:grid-cols-4 px-4  items-center">
+      <div className='w-full h-16 col-span-1'>
+        <div className='h-full flex items-center'
+          // style={{ marginLeft: '20px' }}
+        >
           <img
             src={logoImage}
-            className="w-auto h-14 ml-5  py-3 md:h-auto object-contain bg-white rounded-md"
-            width={50} height={50}
+            className="aspect-square h-[40px]  lg:h-[55px] ml-4 py-3  object-contain bg-white rounded-sm border"
             alt="Layers logo"
           />
         </div>
       </div>
-      <div className="lg:flex lg:col-span-2 h-full  justify-center items-center hidden bg-red-400">
+      <div className="lg:flex lg:col-span-2 h-full  justify-center items-center hidden ">
         <nav className="flex gap-10 px-3 h-full font-medium items-center ">
           {navLinks.map((link) => {
             return (<Link
@@ -41,23 +42,15 @@ const Header = () => {
         </nav>
       </div>
       <div className="flex justify-end gap-4">
-        <svg xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="feather feather-menu mr-2 md:hidden"
+        <div className='flex '
         >
-          <line x1="3" y1="12" x2="21" y2="12" />
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <line x1="3" y1="18" x2="21" y2="18" />
-        </svg>
-
-        <Button variant="primary" className="hidden md:inline-flex items-center">Get Start</Button>
+          <Button variant="primary" className="hidden md:inline-flex items-center">Get Start</Button>
+        </div>
+        <RxTextAlignJustify
+          size={25}
+          className='feather feather-menu md:hidden'
+          // style={{ marginRight: '20px' }}
+        />
       </div>
     </div>
   )

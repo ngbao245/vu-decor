@@ -1,7 +1,7 @@
 /* index.css */
 /* @import "tailwindcss/preflight"; */
 @import "tailwindcss";
-@tailwind utilities;
+
 
 /* Custom style layer nếu cần */
 /* @layer utilities {
@@ -11,11 +11,11 @@
 } */
 
 *,
-*::before,
+/* *::before,
 *::after {
   padding: 0;
   margin: 0;
-}
+} */
 
 :root {
   font-family: "Roboto", sans-serif;
@@ -24,7 +24,7 @@
 }
 
 .bgColor {
-  background-color: #FFF6E3;
+  background-color: #F5F5F3;
   color: #2c2c2c;  
 }
 
@@ -42,7 +42,7 @@
   position: relative;
   display: inline-block;
   font-weight: 600;
-  color: #2c2c2c;
+  color: #2F2F2F;
   transition: color 0.3s ease;
 }
 
