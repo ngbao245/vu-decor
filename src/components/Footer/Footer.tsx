@@ -18,7 +18,7 @@ const navLinks = [
   { label: "Bài Viết", href: "/news" },
   { label: "Về Chúng Tôi", href: "/ourStory" },
   { label: "Liên Hệ", href: "/contact" },
-  { label: "Quản trị", href: "/admin" },
+  { label: "Quản trị", href: "/admin-login" },
 ];
 
 const socialLinks = [
