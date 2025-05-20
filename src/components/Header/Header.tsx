@@ -16,7 +16,7 @@ const navLinks = [
 
 const Header = () => {
   return (
-    <header className="w-full grid grid-cols-2 lg:grid-cols-4 px-4  items-center">
+    <header className="w-full grid grid-cols-2 lg:grid-cols-4 px-4 items-center">
       <div className="w-full h-16 col-span-1">
         <div className="h-full flex items-center">
           {/* <img
