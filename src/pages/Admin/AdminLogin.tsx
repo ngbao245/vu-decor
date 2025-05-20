@@ -100,7 +100,7 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="min-h-screen w-full flex bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="min-h-screen w-full flex bg-gradient-to-br from-gray-50 to-gray-100 select-none">
       {/* Left Side - Decorative Image */}
       <div className="hidden lg:block lg:w-1/2 relative overflow-hidden">
         {/* Animated background pattern */}

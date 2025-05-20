@@ -214,7 +214,7 @@ const Footer = () => {
                 <MdEmail size={20} />
                 {/* <span className="text-gray-400">vudecor24@gmail.com</span> */}
                 <span className="text-gray-400">
-                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vudecor24@gmail.com" target="_blank">
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vudecor24@gmail.com&su=Hỗ%20Trợ%20Tư%20Vấn" target="_blank">
                     vudecor24@gmail.com
                   </a>
                 </span>
