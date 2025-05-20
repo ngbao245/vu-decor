@@ -1,4 +1,10 @@
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+  FaYoutube,
+} from "react-icons/fa";
 import { MdEmail, MdPhone, MdLocationOn, MdSend } from "react-icons/md";
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
@@ -13,6 +19,22 @@ const navLinks = [
   { label: "Về Chúng Tôi", href: "/ourStory" },
   { label: "Liên Hệ", href: "/contact" },
   { label: "Quản trị", href: "/admin" },
+];
+
+const socialLinks = [
+  {
+    icon: FaFacebook,
+    href: "https://www.facebook.com/vudecor24",
+    label: "Facebook",
+  },
+  // { icon: FaTwitter, href: "https://twitter.com/", label: "Twitter" },
+  { icon: FaInstagram, href: "https://instagram.com/", label: "Instagram" },
+  { icon: FaYoutube, href: "https://youtube.com/", label: "Youtube" },
+  {
+    icon: FaLinkedin,
+    href: "https://linkedin.com/company/vudecor",
+    label: "LinkedIn",
+  },
 ];
 
 const Footer = () => {
@@ -135,18 +157,17 @@ const Footer = () => {
               thi công nội thất chuyên nghiệp.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="hover:text-blue-400 transition-colors">
-                <FaFacebook size={24} />
-              </a>
-              <a href="#" className="hover:text-blue-400 transition-colors">
-                <FaTwitter size={24} />
-              </a>
-              <a href="#" className="hover:text-blue-400 transition-colors">
-                <FaInstagram size={24} />
-              </a>
-              <a href="#" className="hover:text-blue-400 transition-colors">
-                <FaLinkedin size={24} />
-              </a>
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  className="hover:text-blue-400 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <social.icon size={24} />
+                </a>
+              ))}
             </div>
           </div>
 
@@ -180,7 +201,9 @@ const Footer = () => {
               <li className="flex items-center space-x-3">
                 <MdLocationOn size={20} />
                 <span className="text-gray-400">
-                  Vinhome Grand Park, Thành phố, Thủ Đức, Hồ Chí Minh
+                  Vinhomes Grand Park, đường
+                  <br /> Nguyễn Xiển, Phường Long
+                  <br /> Thạnh Mỹ, Thủ Đức, TP.HCM
                 </span>
               </li>
               <li className="flex items-center space-x-3">
@@ -189,7 +212,12 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <MdEmail size={20} />
-                <span className="text-gray-400">vudecor24@gmail.com</span>
+                {/* <span className="text-gray-400">vudecor24@gmail.com</span> */}
+                <span className="text-gray-400">
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vudecor24@gmail.com" target="_blank">
+                    vudecor24@gmail.com
+                  </a>
+                </span>
               </li>
             </ul>
           </div>
@@ -226,7 +254,7 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <div className="border-t border-gray-800 mt-6 pt-8 text-center text-gray-400">
+      <div className="h-0.5 border-t border-gray-800 mt-6 pt-6 text-center text-gray-400">
         <p>
           &copy; {new Date().getFullYear()} VuDecor. Giữ bản quyển website này.
         </p>

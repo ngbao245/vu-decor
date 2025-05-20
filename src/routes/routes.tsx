@@ -7,6 +7,7 @@ import { News } from "../pages/News/News";
 import { OurStory } from "../pages/OurStory/OurStory";
 import { NotFound } from "../pages/NotFound/NotFound";
 import MainLayout from "../layouts/MainLayout";
+import { Admin } from "../pages/Admin/Admin";
 
 const AppRoutes = () => {
     return (
@@ -18,6 +19,7 @@ const AppRoutes = () => {
                 <Route path="/news" element={<News />} />
                 <Route path="/ourStory" element={<OurStory />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/admin" element={<Admin />} />
             </Route>
 
             <Route path="*" element={<NotFound />} />
