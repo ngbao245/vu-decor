@@ -9,20 +9,4 @@ export default defineConfig({
     port: 3030,
     open: true,
   },
-  publicDir: "public",
-  optimizeDeps: {
-    include: ["react-quill"],
-  },
-  build: {
-    commonjsOptions: {
-      include: [/react-quill/, /node_modules/],
-    },
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          tinymce: ["tinymce"],
-        },
-      },
-    },
-  },
 });
