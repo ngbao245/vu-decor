@@ -152,7 +152,7 @@ const Footer = () => {
                 ></div>
               </div>
             </div>
-            <p className="text-gray-400">
+            <p className="text-gray-400 text-justify">
               Chúng tôi là Vu Decor, chuyên cung cấp các giải pháp thiết kế và
               thi công nội thất chuyên nghiệp.
             </p>
