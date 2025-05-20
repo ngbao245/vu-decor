@@ -5,7 +5,7 @@ import Footer from "../components/Footer/Footer";
 
 const MainLayout = () => {
   return (
-    <div className="flex justify-center items-center bg-[#D8D3CD] ">
+    <div className="flex justify-center items-center ">
       <div className="container w-screen max-w-8xl min-w-[300px] shadow-lg bgColor">
         <div className="sticky top-0 z-50 bgColor">
           <Header />
