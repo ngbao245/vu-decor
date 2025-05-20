@@ -10,7 +10,7 @@ const MainLayout = () => {
         <div className="sticky top-0 z-50 bgColor">
           <Header />
         </div>
-        <main className="min-h-screen  py-6">
+        <main className="min-h-screen">
           {/* <div className="flex justify-center py-4 lg:py-8 items-center bgColor shadow-md"> */}
           {/* <div className="container max-w-7xl mx-auto px-4 "> */}
           <Outlet />

@@ -7,10 +7,13 @@ import { News } from "../pages/News/News";
 import { OurStory } from "../pages/OurStory/OurStory";
 import { NotFound } from "../pages/NotFound/NotFound";
 import MainLayout from "../layouts/MainLayout";
+import AdminLayout from "../layouts/AdminLayout";
+import AdminLogin from "../pages/Admin/AdminLogin";
+import { Admin } from "../pages/Admin/Admin";
 
 const AppRoutes = () => {
     return (
-        <Routes >
+        <Routes>
             <Route element={<MainLayout />}>
                 <Route path="/" element={<Home />} />
                 <Route path="/projects" element={<Projects />} />
@@ -18,6 +21,11 @@ const AppRoutes = () => {
                 <Route path="/news" element={<News />} />
                 <Route path="/ourStory" element={<OurStory />} />
                 <Route path="/contact" element={<Contact />} />
+            </Route>
+
+            <Route element={<AdminLayout />}>
+                <Route path="/admin-login" element={<AdminLogin />} />
+                <Route path="/admin" element={<Admin />} />
             </Route>
 
             <Route path="*" element={<NotFound />} />

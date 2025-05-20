@@ -7,7 +7,7 @@ export default function ContactHero() {
         .hero {
           position: relative;
           width: 100%;
-          height: 500px;
+          height: 400px;
         }
         .hero-image {
           position: absolute;
@@ -19,20 +19,21 @@ export default function ContactHero() {
         .hero-overlay {
           position: absolute;
           inset: 0;
-          background-color: rgba(0, 0, 0, 0.3);
+          background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
           display: flex;
           align-items: center;
           justify-content: center;
         }
         .hero-title {
           color: white;
-          font-size: 3rem;
-          font-weight: 500;
+          font-size: 3.5rem;
+          font-weight: 600;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
         
         @media (max-width: 768px) {
           .hero {
-            height: 400px;
+            height: 300px;
           }
           .hero-title {
             font-size: 2.5rem;

@@ -2,7 +2,6 @@
 /* @import "tailwindcss/preflight"; */
 @import "tailwindcss";
 
-
 /* Custom style layer nếu cần */
 /* @layer utilities {
   .text-shadow {
@@ -10,12 +9,17 @@
   }
 } */
 
-*,
+/* *, */
 /* *::before,
 *::after {
   padding: 0;
   margin: 0;
 } */
+
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
 
 :root {
   font-family: "Roboto", sans-serif;
@@ -24,8 +28,8 @@
 }
 
 .bgColor {
-  background-color: #F5F5F3;
-  color: #2c2c2c;  
+  background-color: #f5f5f3;
+  color: #2c2c2c;
 }
 
 .text-priamry {
@@ -43,7 +47,7 @@
   position: relative;
   display: inline-block;
   font-weight: 600;
-  color: #2F2F2F;
+  color: #2f2f2f;
   transition: color 0.3s ease;
 }
 
@@ -54,12 +58,12 @@
   bottom: -15px;
   width: 0%;
   height: 2px;
-  background-color: #E34225;
+  background-color: #e34225;
   transition: width 0.3s ease;
 }
 
 .text-navbar:hover {
-  color: #E34225;
+  color: #e34225;
   cursor: pointer;
 }
 
@@ -68,7 +72,7 @@
 }
 
 .linear-button {
-  background: linear-gradient(90deg, #E34225 0%, #FF9853 100%);  
+  background: linear-gradient(90deg, #e34225 0%, #ff9853 100%);
   padding: 20px;
   cursor: pointer;
 }
@@ -76,7 +80,7 @@
 .linear-button:hover {
   opacity: 80%;
 }
-  .linear-button:active {
-    opacity: 90%;
-    box-shadow: 0 5px 10px -2px rgba(170, 60, 36, 0.8);
-  }
+.linear-button:active {
+  opacity: 90%;
+  box-shadow: 0 5px 10px -2px rgba(170, 60, 36, 0.8);
+}
