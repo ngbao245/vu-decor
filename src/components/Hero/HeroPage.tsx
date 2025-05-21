@@ -1,4 +1,4 @@
-import { motion, useAnimation, useInView } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const HeroPage = () => {
 

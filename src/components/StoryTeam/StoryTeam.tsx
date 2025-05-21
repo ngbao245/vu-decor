@@ -1,5 +1,5 @@
 import { motion, useAnimation, useInView } from 'framer-motion'
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 const StoryTeam = () => {
     const ref = useRef(null)

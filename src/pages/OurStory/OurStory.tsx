@@ -1,4 +1,4 @@
-import Hero from "../../components/Hero/Hero"
+
 import HeroPage from "../../components/Hero/HeroPage"
 import Story from "../../components/Story/Story"
 import StoryAward from "../../components/StoryAward/StoryAward"
