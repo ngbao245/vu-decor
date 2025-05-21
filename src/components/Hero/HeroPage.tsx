@@ -1,6 +1,12 @@
 import { motion } from 'framer-motion'
 
-const HeroPage = () => {
+const HeroPage = ({
+    page,
+    title,
+}: {
+    page: string;
+    title: string;
+}) => {
 
     return (
         <section className=" h-[50vh]">
@@ -20,11 +26,10 @@ const HeroPage = () => {
                         transition={{ duration: 0.8 }}
                         className="text-center text-white max-w-3xl mx-auto"
                     >
-                        <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">About Us</h1>
+                        <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">{page}</h1>
                         <div className="w-20 h-1 bg-[#D6B26D] mx-auto mb-6"></div>
                         <p className="text-xl text-white/90">
-                            Artisan Interiors is a premier interior design studio specializing in neoclassical design for discerning
-                            clients.
+                            {title}
                         </p>
                     </motion.div>
                 </div>

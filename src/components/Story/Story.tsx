@@ -60,7 +60,7 @@ const Story = () => {
                                 className="h-full w-full object-cover"
                             />
                         </div>
-                        <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-[#7A876D] rounded-lg flex items-center justify-center p-6">
+                        <div className="absolute lg:-bottom-6 lg:-left-6 bottom-0 left-0 w-32 h-32 bg-[#7A876D] lg:rounded-lg rounded-tr-lg rounded-bl-lg flex items-center justify-center p-6">
                             <p className="text-white text-center font-serif">
                                 <span className="block text-4xl font-bold">18</span>
                                 <span className="block text-sm mt-1">Years of Excellence</span>

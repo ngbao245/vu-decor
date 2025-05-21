@@ -59,7 +59,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full bg-gray-900 text-white py-12">
+    <footer className="w-full bg-gray-900 text-white py-12 text-justify">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 px-8">
           {/* Company Info */}
@@ -152,7 +152,7 @@ const Footer = () => {
                 ></div>
               </div>
             </div>
-            <p className="text-gray-400 text-justify">
+            <p className="text-gray-400">
               Chúng tôi là Vu Decor, chuyên cung cấp các giải pháp thiết kế và
               thi công nội thất chuyên nghiệp.
             </p>
@@ -174,7 +174,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div className="space-y-6">
             <h4 className="text-xl font-semibold relative inline-block">
-              Quick Links
+              Trang chủ
               <span className="absolute -bottom-2 left-0 w-12 h-1 bg-blue-500 rounded-full"></span>
             </h4>
             <ul className="space-y-4 grid grid-cols-2">
@@ -194,7 +194,7 @@ const Footer = () => {
           {/* Contact Info */}
           <div className="space-y-6">
             <h4 className="text-xl font-semibold relative inline-block">
-              Contact Us
+              Liên hệ
               <span className="absolute -bottom-2 left-0 w-12 h-1 bg-blue-500 rounded-full"></span>
             </h4>
             <ul className="space-y-4">
@@ -214,7 +214,10 @@ const Footer = () => {
                 <MdEmail size={20} />
                 {/* <span className="text-gray-400">vudecor24@gmail.com</span> */}
                 <span className="text-gray-400">
-                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vudecor24@gmail.com&su=Hỗ%20Trợ%20Tư%20Vấn" target="_blank">
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=vudecor24@gmail.com&su=Hỗ%20Trợ%20Tư%20Vấn"
+                    target="_blank"
+                  >
                     vudecor24@gmail.com
                   </a>
                 </span>
@@ -225,11 +228,11 @@ const Footer = () => {
           {/* Contact */}
           <div className="space-y-6">
             <h4 className="text-xl font-semibold relative inline-block">
-              Contact advice
+              Hỗ trợ tư vấn
               <span className="absolute -bottom-2 left-0 w-12 h-1 bg-blue-500 rounded-full"></span>
             </h4>
-            <p className="text-gray-400">
-              Subscribe to our newsletter for design inspiration and updates.
+            <p className="text-gray-400 flex flex-wrap">
+              Hãy để lại email, chúng tôi sẽ liên hệ tư vấn thiết kế cho bạn.
             </p>
             <form onSubmit={handleSubmit}>
               <div className="relative">
@@ -237,7 +240,7 @@ const Footer = () => {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Your email address"
+                  placeholder="Vui lập nhập email để được tư vấn"
                   className="w-full px-4 py-2.5 text-sm rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-blue-500 text-white pr-12"
                   required
                 />

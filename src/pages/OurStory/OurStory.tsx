@@ -9,7 +9,11 @@ export const OurStory = () => {
     return (
         <div className="min-h-screen">
             <div>
-                <HeroPage />
+                <HeroPage
+                    page="Về Chúng Tôi"
+                    title="Artisan Interiors is a leading interior design firm that specializes in creating elegant 
+                and functional spaces that reflect the unique character and style of each client."
+                />
             </div>
             <div>
                 <Story />

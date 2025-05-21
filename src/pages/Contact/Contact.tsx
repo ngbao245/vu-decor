@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import PostService from "../../services/post-service"
 import ContactHero from "./components/contact-hero"
-import ContactForm from "./components/contact-form"
+import ContactForm from "../../components/ContactForm/contact-form"
 
 export const Contact = () => {
   useEffect(() => {
