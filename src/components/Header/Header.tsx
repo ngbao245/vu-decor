@@ -3,7 +3,7 @@ import logoImage from "../../assets/logoImage.png";
 import asm from "../../assets/asm.png";
 import { Link } from "react-router-dom";
 import { RxTextAlignJustify } from "react-icons/rx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const navLinks = [
   { label: "Trang Chủ", href: "/" },
@@ -17,15 +17,23 @@ const navLinks = [
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isOpen) {
+        setIsOpen(false);
+      }
+    };
 
+    window.addEventListener('scroll', handleScroll);
 
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isOpen]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
-
-
 
   return (
     <header
@@ -87,19 +95,21 @@ const Header = () => {
 
       {/* Mobile menu */}
       <div
-        className={`fixed inset-0 z-50 lg:hidden transition-opacity duration-300 ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
+        className={`fixed inset-0 lg:hidden transition-opacity duration-300 ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+        style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, width: '100vw', height: '100vh'}}
       >
         {/* Backdrop */}
         <div
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300"
+          className="fixed inset-0 bg-black/50 transition-opacity duration-300"
           onClick={toggleMenu}
+          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, width: '100vw', height: '100vh'}}
         />
 
         {/* Menu content */}
         <div
-          className={`fixed right-0 top-0 h-full w-[280px] bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"
+          className={`fixed right-0 top-0 h-[100vh] w-[280px] bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"
             }`}
+          style={{ position: 'fixed' }}
         >
           <div className="flex flex-col h-full">
             {/* Close button */}
