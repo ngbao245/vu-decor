@@ -3,7 +3,7 @@ import { cva } from 'class-variance-authority';
 import type { ButtonHTMLAttributes } from 'react';
 
 
-const classes = cva('rounded-md h-10 font-medium ', {
+const classes = cva('flex items-center rounded-md h-10 font-medium ', {
   variants: {
     variant: {
       primary: ' text-white px-10 linear-button',

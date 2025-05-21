@@ -1,7 +1,32 @@
+
+import HeroPage from "../../components/Hero/HeroPage"
+import Story from "../../components/Story/Story"
+import StoryAward from "../../components/StoryAward/StoryAward"
+import StoryTeam from "../../components/StoryTeam/StoryTeam"
+import StoryValue from "../../components/StoryValue/StoryValue"
+
 export const OurStory = () => {
     return (
-        <>
-            <h1>OUR STORY</h1>
-        </>
+        <div className="min-h-screen">
+            <div>
+                <HeroPage
+                    page="Về Chúng Tôi"
+                    title="Artisan Interiors is a leading interior design firm that specializes in creating elegant 
+                and functional spaces that reflect the unique character and style of each client."
+                />
+            </div>
+            <div>
+                <Story />
+            </div>
+            <div>
+                <StoryTeam />
+            </div>
+            <div>
+                <StoryValue />
+            </div>
+            <div>
+                <StoryAward />
+            </div>
+        </div>
     )
 }
