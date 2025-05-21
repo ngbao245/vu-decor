@@ -23,15 +23,15 @@ const projects: Project[] = [
     id: 2,
     title: "Kitchen Renovation",
     image:
-      "https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=1000",
-    description: "Complete kitchen makeover with modern appliances",
+      "https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/473526944_122117507252618470_8918935857155496066_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=rQiJSDX5q3UQ7kNvwGRRSoQ&_nc_oc=Adk32e6D5NnRfQKQdHm_bzaQJABTqOrb1jQBnXrn6LP6xoJU3r7yeKo_K62JYZXJ_oqHwu28HPJ76KVofw9JVsCu&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=RdKpas1QsRm78_I9hA36BQ&oh=00_AfLG8dE36WL0Am3JY7L54Obv4HEU6Tw21M5Hpk0D_qTelg&oe=683355D2",
+    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
   },
   {
     id: 3,
     title: "Bedroom Design",
     image:
       "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=1000",
-    description: "Cozy bedroom with custom furniture",
+    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
   },
   // Add more projects as needed
 ];
@@ -67,9 +67,9 @@ export const Projects = () => {
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl font-bold text-center text-gray-900 mb-12"
+          className="text-4xl font-bold text-center text-gray-900 mb-12 pt-5 capitalize"
         >
-          Our Projects
+          Dự án của chúng tôi
         </motion.h1>
 
         <motion.div
