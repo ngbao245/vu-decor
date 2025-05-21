@@ -41,8 +41,8 @@ const MainLayout = () => {
           className={clsx(
             'fixed w-full top-0 z-50',
             'transition-[background-color,backdrop-filter] duration-300 ease-in-out',
-            isSticky 
-              ? 'bg-white/95 shadow-md backdrop-blur-md' 
+            isSticky
+              ? 'bg-white/95 shadow-md backdrop-blur-md'
               : 'bg-transparent'
           )}
           style={{
