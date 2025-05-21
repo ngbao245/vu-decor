@@ -1,7 +1,7 @@
 import Button from "../Button/Button";
 import logoImage from "../../assets/logoImage.png";
 import asm from "../../assets/asm.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { RxTextAlignJustify } from "react-icons/rx";
 import { useState, useEffect } from "react";
 
@@ -16,6 +16,7 @@ const navLinks = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,15 +25,19 @@ const Header = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [isOpen]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const getStart = () => {
+    navigate("/contact");
   };
 
   return (
@@ -44,7 +49,6 @@ const Header = () => {
       //     ? 'sticky top-0 bg-white shadow-md'
       //     : 'bg-transparent'
       // )}
-
     >
       <div className="w-full h-16 col-span-1">
         <div className="h-full flex items-center">
@@ -79,37 +83,57 @@ const Header = () => {
       <div className="flex justify-end gap-4">
         <div className="flex ">
           <Button
+            onClick={getStart}
             variant="primary"
             className="hidden md:inline-flex items-center"
           >
-            Get Start
+            Tư Vấn
           </Button>
         </div>
         <RxTextAlignJustify
           onClick={toggleMenu}
           size={25}
           className="feather feather-menu md:hidden"
-        // style={{ marginRight: '20px' }}
+          // style={{ marginRight: '20px' }}
         />
       </div>
 
       {/* Mobile menu */}
       <div
-        className={`fixed inset-0 lg:hidden transition-opacity duration-300 ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
-        style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, width: '100vw', height: '100vh'}}
+        className={`fixed inset-0 lg:hidden transition-opacity duration-300 ${
+          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          width: "100vw",
+          height: "100vh",
+        }}
       >
         {/* Backdrop */}
         <div
           className="fixed inset-0 bg-black/50 transition-opacity duration-300"
           onClick={toggleMenu}
-          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, width: '100vw', height: '100vh'}}
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            width: "100vw",
+            height: "100vh",
+          }}
         />
 
         {/* Menu content */}
         <div
-          className={`fixed right-0 top-0 h-[100vh] w-[280px] bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"
-            }`}
-          style={{ position: 'fixed' }}
+          className={`fixed right-0 top-0 h-[100vh] w-[280px] bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${
+            isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+          style={{ position: "fixed" }}
         >
           <div className="flex flex-col h-full">
             {/* Close button */}

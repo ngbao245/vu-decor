@@ -13,7 +13,7 @@ interface Project {
 const projects: Project[] = [
   {
     id: "7e164cb1-49d5-4709-b53d-7a92c7a65320",
-    title: "The Beverly Vinhomes",
+    title: "Căn BE1 - The Beverly Vinhomes",
     image:
       "https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/473806759_122117412578618470_1205087045803481247_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=kEN9x-ZpxtYQ7kNvwHQJnqn&_nc_oc=AdmcEQOCPCG8fN_4t-qZ2N4qVqBES7DM5ZM3ZmKoSoaIS2K7do_9st0N8uUtlg5C7V8&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=hBE3_npexKkOls6XsYM28w&oh=00_AfI4hRw4PHy8dvZdbEIcZuPAm4LwRQsr8lGhHrVUuKGhsg&oe=68329F33",
     description:
@@ -21,19 +21,20 @@ const projects: Project[] = [
   },
   {
     id: "4a64ed59-d264-44dc-ab95-56ab74848ea9",
-    title: "Kitchen Renovation",
+    title: "Căn GH1 - The Glory Heights",
     image:
       "https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/473526944_122117507252618470_8918935857155496066_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=rQiJSDX5q3UQ7kNvwGRRSoQ&_nc_oc=Adk32e6D5NnRfQKQdHm_bzaQJABTqOrb1jQBnXrn6LP6xoJU3r7yeKo_K62JYZXJ_oqHwu28HPJ76KVofw9JVsCu&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=RdKpas1QsRm78_I9hA36BQ&oh=00_AfLG8dE36WL0Am3JY7L54Obv4HEU6Tw21M5Hpk0D_qTelg&oe=683355D2",
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+    description:
+      "Đang đi YEP mà nghe tin chị khách Hà Nội chốt thiết kế, mừng quá trời! Giám đốc sản xuất lên kế hoạch sẵn, ra Tết thi công liền cho kịp bàn giao.",
   },
   {
-    id: "3",
-    title: "Bedroom Design",
+    id: "5c107602-c66b-41ef-a69c-90acc4e9fea7",
+    title: "Bếp Căn BS10 - The Beverly Solari",
     image:
-      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=1000",
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+      "https://scontent.fsgn5-3.fna.fbcdn.net/v/t39.30808-6/499221817_122133969560618470_7542221533059836553_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=6sNxBnHRc-gQ7kNvwHbZQ8Q&_nc_oc=AdlJDrN7UZzZyHg9NU-eN_99Lim-PwxohAYyauFNtY9SBSiF0vK3jMnK75TFSbE0AfU&_nc_zt=23&_nc_ht=scontent.fsgn5-3.fna&_nc_gid=0qYNjhm2GSuFRkfSHCQ0Hg&oh=00_AfLsRF7G0bH__j00J6k25gbUeWS6bbpbg3-qIHsCyQ81nw&oe=6833EB28",
+    description:
+      "Vu Decor tin rằng căn bếp không chỉ đẹp mà còn là nơi giữ lửa yêu thương – nơi cả nhà quây quần, tái tạo năng lượng sau một ngày dài.",
   },
-  // Add more projects as needed
 ];
 
 export const Projects = () => {
