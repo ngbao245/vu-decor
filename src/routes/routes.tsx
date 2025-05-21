@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import { Home } from "../pages/Home/Home";
-import { Contact } from "../pages/Contact/Contact";
 import { Projects } from "../pages/Projects/Projects";
 import { ProjectDetail } from "../pages/Projects/ProjectDetail";
 import { Styles } from "../Styles/Styles";
@@ -11,6 +10,7 @@ import MainLayout from "../layouts/MainLayout";
 import AdminLayout from "../layouts/AdminLayout";
 import AdminLogin from "../pages/Admin/AdminLogin";
 import { Admin } from "../pages/Admin/Admin";
+import ContactUs from "../pages/ContactUs/ContactUs";
 
 const AppRoutes = () => {
     return (
@@ -22,7 +22,7 @@ const AppRoutes = () => {
                 <Route path="/styles" element={<Styles />} />
                 <Route path="/news" element={<News />} />
                 <Route path="/ourStory" element={<OurStory />} />
-                <Route path="/contact" element={<Contact />} />
+                <Route path="/contact" element={<ContactUs />} />
             </Route>
 
             <Route element={<AdminLayout />}>
