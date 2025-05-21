@@ -38,6 +38,14 @@ const Header = () => {
 
   const getStart = () => {
     navigate("/contact");
+    //luôn scroll từ đầu trang xuống
+    // window.scrollTo(0, 0);
+    setTimeout(() => {
+      const element = document.getElementById("contact-form");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
   };
 
   return (

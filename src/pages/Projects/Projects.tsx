@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import HeroPage from "../../components/Hero/HeroPage";
 
 interface Project {
   id: string;
@@ -63,16 +64,18 @@ export const Projects = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-4xl font-bold text-center text-gray-900 mb-12 pt-5 capitalize"
-        >
-          Dự án của chúng tôi
-        </motion.h1>
+    // <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen">
+      <div>
+        <HeroPage
+          page="Dự án của chúng tôi"
+          title="VuDecor là công ty thiết kế nội thất chuyên tạo ra những không gian thanh lịch và tiện dụng, 
+                    phản ánh tính cách và phong cách độc đáo của mỗi khách hàng."
+          image="https://assets.architecturaldigest.in/photos/62026064b5d9eefa7e4e2ddf/16:9/w_1615,h_908,c_limit/How%20to%20furnish%20your%20home%20on%20a%20budget.jpg"
+        />
+      </div>
 
+      <div className="max-w-7xl mx-auto py-20">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}

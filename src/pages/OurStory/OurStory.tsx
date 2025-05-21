@@ -13,6 +13,7 @@ export const OurStory = () => {
                     page="Về Chúng Tôi"
                     title="VuDecor là công ty thiết kế nội thất chuyên tạo ra những không gian thanh lịch và tiện dụng, 
                     phản ánh tính cách và phong cách độc đáo của mỗi khách hàng."
+                    image="https://www.sustainablejungle.com/wp-content/uploads/2022/07/Header-Image-by-Spacejoy-Unsplash.jpg"
                 />
             </div>
             <div>
