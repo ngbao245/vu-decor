@@ -15,7 +15,7 @@ import {
 import { useState } from "react";
 
 interface Project {
-  id: number;
+  id: string;
   title: string;
   image: string;
   description: string;
@@ -36,7 +36,7 @@ interface Project {
 // Sample projects data - replace with your actual data
 const projects: Project[] = [
   {
-    id: 1,
+    id: "7e164cb1-49d5-4709-b53d-7a92c7a65320",
     title: "The Beverly Vinhomes",
     image:
       "https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/473806759_122117412578618470_1205087045803481247_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=kEN9x-ZpxtYQ7kNvwHQJnqn&_nc_oc=AdmcEQOCPCG8fN_4t-qZ2N4qVqBES7DM5ZM3ZmKoSoaIS2K7do_9st0N8uUtlg5C7V8&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=hBE3_npexKkOls6XsYM28w&oh=00_AfI4hRw4PHy8dvZdbEIcZuPAm4LwRQsr8lGhHrVUuKGhsg&oe=68329F33",
@@ -74,7 +74,7 @@ const projects: Project[] = [
     },
   },
   {
-    id: 2,
+    id: "4a64ed59-d264-44dc-ab95-56ab74848ea9",
     title: "The Glory Heights",
     image:
       "https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/473526944_122117507252618470_8918935857155496066_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=rQiJSDX5q3UQ7kNvwGRRSoQ&_nc_oc=Adk32e6D5NnRfQKQdHm_bzaQJABTqOrb1jQBnXrn6LP6xoJU3r7yeKo_K62JYZXJ_oqHwu28HPJ76KVofw9JVsCu&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=RdKpas1QsRm78_I9hA36BQ&oh=00_AfLG8dE36WL0Am3JY7L54Obv4HEU6Tw21M5Hpk0D_qTelg&oe=683355D2",
@@ -123,7 +123,7 @@ const projects: Project[] = [
     },
   },
   {
-    id: 3,
+    id: "3",
     title: "Modern Living Room",
     image:
       "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000",
@@ -165,7 +165,7 @@ const projects: Project[] = [
 export const ProjectDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const project = projects.find((p) => p.id === Number(id));
+  const project = projects.find((p) => p.id === id);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
