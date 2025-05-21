@@ -15,7 +15,6 @@
     "antd": "^5.25.1",
     "axios": "^1.9.0",
     "class-variance-authority": "^0.7.1",
-    "framer-motion": "^12.12.1",
     "html-react-parser": "^5.2.5",
     "lucide-react": "^0.510.0",
     "react": "^19.1.0",
