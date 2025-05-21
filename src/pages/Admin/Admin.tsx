@@ -12,7 +12,7 @@ export const Admin = () => {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const [pageSize] = useState(2);
+  const [pageSize, setPageSize] = useState(5);
   const [selectedPost, setSelectedPost] = useState<PostModel | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -224,6 +224,21 @@ export const Admin = () => {
 
                   {/* Pagination */}
                   <div className="flex justify-center items-center mt-4 space-x-4">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-sm text-gray-600">Items per page:</span>
+                      <select
+                        value={pageSize}
+                        onChange={(e) => {
+                          setPageSize(Number(e.target.value));
+                          setCurrentPage(1);
+                        }}
+                        className="border rounded px-2 py-1 text-sm"
+                      >
+                        <option value={5}>5</option>
+                        <option value={10}>10</option>
+                        <option value={20}>20</option>
+                      </select>
+                    </div>
                     <button
                       onClick={() =>
                         setCurrentPage((prev) => Math.max(prev - 1, 1))
