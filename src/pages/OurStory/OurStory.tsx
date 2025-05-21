@@ -11,8 +11,8 @@ export const OurStory = () => {
             <div>
                 <HeroPage
                     page="Về Chúng Tôi"
-                    title="Artisan Interiors is a leading interior design firm that specializes in creating elegant 
-                and functional spaces that reflect the unique character and style of each client."
+                    title="VuDecor là công ty thiết kế nội thất chuyên tạo ra những không gian thanh lịch và tiện dụng, 
+                    phản ánh tính cách và phong cách độc đáo của mỗi khách hàng."
                 />
             </div>
             <div>

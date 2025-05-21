@@ -29,18 +29,19 @@ const Story = () => {
                         <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">Our Story</h2>
                         <div className="w-20 h-1 bg-[#D6B26D] mb-6"></div>
                         <p className="text-gray-600 mb-6">
-                            Founded in 2005 by renowned interior designer Elizabeth Harrington, Artisan Interiors was born from a
-                            passion for neoclassical design and a vision to create spaces that honor architectural heritage while
-                            embracing modern functionality.
+                            Được thành lập vào năm 2024, 
+                            VuDecor ra đời từ niềm đam mê thiết kế tân cổ điển 
+                            và tầm nhìn tạo ra những không gian tôn vinh di sản kiến ​​trúc đồng thời kết hợp chức năng hiện đại.
                         </p>
                         <p className="text-gray-600 mb-6">
-                            What began as a small studio has grown into an award-winning design firm with a team of talented
-                            designers, architects, and craftsmen who share a commitment to excellence and a deep appreciation for
-                            classical design principles.
+                            Bắt đầu từ một studio nhỏ, công ty đã phát triển thành một công ty thiết kế từng đoạt giải thưởng 
+                            với đội ngũ các nhà thiết kế, kiến ​​trúc sư và thợ thủ công tài năng, 
+                            những người cùng cam kết theo đuổi sự xuất sắc và đánh giá cao sâu sắc các nguyên tắc thiết kế cổ điển.
                         </p>
                         <p className="text-gray-600">
-                            Today, we are proud to serve clients across the country and internationally, bringing our unique blend of
-                            timeless elegance and contemporary comfort to residences, commercial spaces, and cultural institutions.
+                            Ngày nay, chúng tôi tự hào được phục vụ khách hàng trên khắp cả nước và quốc tế, 
+                            mang đến sự kết hợp độc đáo giữa vẻ đẹp thanh lịch vượt thời gian và sự thoải mái hiện đại cho các khu dân cư, 
+                            không gian thương mại và các tổ chức văn hóa.
                         </p>
                     </motion.div>
 
@@ -63,7 +64,7 @@ const Story = () => {
                         <div className="absolute lg:-bottom-6 lg:-left-6 bottom-0 left-0 w-32 h-32 bg-[#7A876D] lg:rounded-lg rounded-tr-lg rounded-bl-lg flex items-center justify-center p-6">
                             <p className="text-white text-center font-serif">
                                 <span className="block text-4xl font-bold">18</span>
-                                <span className="block text-sm mt-1">Years of Excellence</span>
+                                <span className="block text-sm mt-1">năm xuất sắc</span>
                             </p>
                         </div>
                     </motion.div>
