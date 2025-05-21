@@ -1,21 +1,44 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import { useEffect, useState } from "react";
+import clsx from 'clsx';
 
 
 const MainLayout = () => {
+  const [isSticky, setIsSticky] = useState(false);
+
+  // useEffect(() => {
+  //   const onScroll = () => {
+  //     setSticky(window.scrollY > 2000);
+  //   };
+
+  //   window.addEventListener('scroll', onScroll);
+  //   return () => window.removeEventListener('scroll', onScroll);
+  // }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsSticky(window.scrollY > 10)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   return (
     <div className="flex justify-center items-center ">
-      <div className="container w-screen max-w-8xl min-w-[300px] shadow-lg bgColor">
-        <div className="sticky top-0 z-50 bgColor">
+      <div className="relative container w-screen max-w-8xl min-w-[300px] shadow-lg bgColor">
+        <div
+          className={clsx(
+            'absolute w-full top-0 z-50 transition-all duration-300',
+            isSticky ? ' sticky bg-white shadow-md  backdrop-blur-md' : 'bg-transparent'
+          )}
+        >
           <Header />
         </div>
-        <main className="min-h-screen">
-          {/* <div className="flex justify-center py-4 lg:py-8 items-center bgColor shadow-md"> */}
-          {/* <div className="container max-w-7xl mx-auto px-4 "> */}
+
+        <main className="min-h-screen ">
           <Outlet />
-          {/* </div> */}
-          {/* </div> */}
         </main>
         <Footer />
       </div>

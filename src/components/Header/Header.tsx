@@ -17,19 +17,29 @@ const navLinks = [
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+
+
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+
+
+
   return (
-    <header className="w-full grid grid-cols-2 lg:grid-cols-4 px-4 items-center">
+    <header
+      className="w-full grid grid-cols-2 lg:grid-cols-4 px-4 items-center transition-all duration-300 ease-in-out"
+      // className={clsx(
+      //   'w-full grid grid-cols-2 lg:grid-cols-4 px-4 transition-all duration-300',
+      //   isSticky
+      //     ? 'sticky top-0 bg-white shadow-md'
+      //     : 'bg-transparent'
+      // )}
+
+    >
       <div className="w-full h-16 col-span-1">
         <div className="h-full flex items-center">
-          {/* <img
-            src={logoImage}
-            className="aspect-square h-[40px]  lg:h-[55px] ml-4 py-3  object-contain bg-white rounded-sm border"
-            alt="Layers logo"
-          /> */}
-
           <img
             src={logoImage}
             className="aspect-square h-[50px] md:h-[75px] md:ml-3 py-3 object-contain"
@@ -46,9 +56,9 @@ const Header = () => {
         <nav className="flex gap-10 px-3 h-full font-medium items-center ">
           {navLinks.map((link) => {
             return (
-              <Link 
-                key={link.label} 
-                to={link.href} 
+              <Link
+                key={link.label}
+                to={link.href}
                 className="text-navbar relative group hover:text-primary transition-colors duration-300"
               >
                 {link.label}
@@ -71,15 +81,14 @@ const Header = () => {
           onClick={toggleMenu}
           size={25}
           className="feather feather-menu md:hidden"
-          // style={{ marginRight: '20px' }}
+        // style={{ marginRight: '20px' }}
         />
       </div>
 
       {/* Mobile menu */}
       <div
-        className={`fixed inset-0 z-50 lg:hidden transition-opacity duration-300 ${
-          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 z-50 lg:hidden transition-opacity duration-300 ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
       >
         {/* Backdrop */}
         <div
@@ -89,9 +98,8 @@ const Header = () => {
 
         {/* Menu content */}
         <div
-          className={`fixed right-0 top-0 h-full w-[280px] bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${
-            isOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`fixed right-0 top-0 h-full w-[280px] bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           <div className="flex flex-col h-full">
             {/* Close button */}
