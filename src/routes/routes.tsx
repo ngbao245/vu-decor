@@ -5,12 +5,12 @@ import { ProjectDetail } from "../pages/Projects/ProjectDetail";
 import { Styles } from "../Styles/Styles";
 import { News } from "../pages/News/News";
 import { OurStory } from "../pages/OurStory/OurStory";
-import { NotFound } from "../pages/NotFound/NotFound";
 import MainLayout from "../layouts/MainLayout";
 import AdminLayout from "../layouts/AdminLayout";
 import AdminLogin from "../pages/Admin/AdminLogin";
 import { Admin } from "../pages/Admin/Admin";
 import ContactUs from "../pages/ContactUs/ContactUs";
+import NotFound from "../components/NotFound/NotFound";
 
 const AppRoutes = () => {
     return (
