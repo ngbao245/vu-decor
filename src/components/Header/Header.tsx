@@ -85,7 +85,9 @@ const Header = ({ isSticky }: HeaderProps) => {
                 key={link.label}
                 to={link.href}
                 className={`relative group transition-colors duration-300 ${
-                  isSticky ? 'text-navbar text-[#2f2f2f]' : 'text-[#F5F5F3] text-navbar'
+                  isSticky
+                    ? "text-navbar text-[#2f2f2f]"
+                    : "text-[#F5F5F3] text-navbar"
                 } hover:text-primary`}
               >
                 {link.label}
@@ -108,7 +110,9 @@ const Header = ({ isSticky }: HeaderProps) => {
         <RxTextAlignJustify
           onClick={toggleMenu}
           size={25}
-          className="feather feather-menu md:hidden"
+          className={`feather feather-menu md:hidden ${
+            isSticky ? "text-[#2f2f2f]" : "text-[#F5F5F3]"
+          }`}
           // style={{ marginRight: '20px' }}
         />
       </div>
@@ -180,9 +184,7 @@ const Header = ({ isSticky }: HeaderProps) => {
                   key={link.label}
                   to={link.href}
                   onClick={toggleMenu}
-                  className={`block py-3 px-4 hover:bg-gray-100 rounded-lg transition-all duration-300 hover:translate-x-2 hover:text-primary active:scale-95 border-l-4 border-transparent hover:border-primary ${
-                    isSticky ? 'text-gray-700' : 'text-gray-200'
-                  }`}
+                  className={`block py-3 px-4 hover:bg-gray-100 rounded-lg transition-all duration-300 hover:translate-x-2 hover:text-primary active:scale-95 border-l-4 border-transparent hover:border-primary text-gray-700`}
                 >
                   {link.label}
                 </Link>

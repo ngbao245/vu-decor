@@ -30,8 +30,8 @@ const MainLayout = () => {
       <div className="relative container w-screen max-w-8xl min-w-[300px] shadow-lg bgColor">
         <div
           className={clsx(
-            'absolute w-full top-0 z-50 transition-all duration-300',
-            isSticky ? ' sticky bg-white shadow-md  backdrop-blur-md' : 'bg-transparent'
+            'absolute w-full top-0 z-50 transition-all duration-1000 ease-in-out',
+            isSticky ? ' sticky bg-white shadow-md' : 'bg-transparent'
           )}
         >
           <Header isSticky={isSticky} />
