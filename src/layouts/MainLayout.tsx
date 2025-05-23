@@ -8,15 +8,6 @@ import clsx from 'clsx';
 const MainLayout = () => {
   const [isSticky, setIsSticky] = useState(false);
 
-  // useEffect(() => {
-  //   const onScroll = () => {
-  //     setSticky(window.scrollY > 2000);
-  //   };
-
-  //   window.addEventListener('scroll', onScroll);
-  //   return () => window.removeEventListener('scroll', onScroll);
-  // }, []);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsSticky(window.scrollY > 10)
@@ -31,7 +22,7 @@ const MainLayout = () => {
         <div
           className={clsx(
             'absolute w-full top-0 z-50 transition-all duration-1000 ease-in-out',
-            isSticky ? ' sticky bg-white shadow-md' : 'bg-transparent'
+            isSticky ? 'sticky bg-white shadow-md' : 'bg-transparent'
           )}
         >
           <Header isSticky={isSticky} />

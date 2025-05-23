@@ -1,10 +1,10 @@
-import Button from "../Button/Button";
 import logoImage from "../../assets/logoImage.png";
 import asm from "../../assets/asm.png";
 import asmLight from "../../assets/asm-light.png";
 import { Link, useNavigate } from "react-router-dom";
 import { RxTextAlignJustify } from "react-icons/rx";
 import { useState, useEffect } from "react";
+import clsx from "clsx";
 
 const navLinks = [
   { label: "Trang Chủ", href: "/" },
@@ -41,9 +41,12 @@ const Header = ({ isSticky }: HeaderProps) => {
     setIsOpen(!isOpen);
   };
 
-  const handleNavigation = (path: string, shouldToggleMenu: boolean = false) => {
+  const handleNavigation = (
+    path: string,
+    shouldToggleMenu: boolean = false
+  ) => {
     navigate(path);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
     if (shouldToggleMenu) {
       toggleMenu();
     }
@@ -61,15 +64,15 @@ const Header = ({ isSticky }: HeaderProps) => {
 
   return (
     <header
-      className="w-full grid grid-cols-2 lg:grid-cols-4 px-4 items-center transition-all duration-300 ease-in-out"
-      // className={clsx(
-      //   'w-full grid grid-cols-2 lg:grid-cols-4 px-4 transition-all duration-300',
-      //   isSticky
-      //     ? 'sticky top-0 bg-white shadow-md'
-      //     : 'bg-transparent'
-      // )}
+      className={clsx(
+        "w-full grid grid-cols-2 lg:grid-cols-4 px-4 items-center fixed top-0 left-0 right-0 z-50 transition-all duration-1000",
+        isSticky ? "bg-white shadow-md" : "bg-transparent"
+      )}
     >
-      <div className="w-full h-16 col-span-1 cursor-pointer" onClick={() => handleNavigation("/#")}>
+      <div
+        className="w-full h-16 col-span-1 cursor-pointer"
+        onClick={() => handleNavigation("/#")}
+      >
         <div className="h-full flex items-center">
           <img
             src={logoImage}

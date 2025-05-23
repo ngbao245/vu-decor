@@ -1,20 +1,4 @@
-/* index.css */
-/* @import "tailwindcss/preflight"; */
 @import "tailwindcss";
-
-/* Custom style layer nếu cần */
-/* @layer utilities {
-  .text-shadow {
-    text-shadow: 1px 1px 2px black;
-  }
-} */
-
-/* *, */
-/* *::before,
-*::after {
-  padding: 0;
-  margin: 0;
-} */
 
 input::-ms-reveal,
 input::-ms-clear {
@@ -27,11 +11,24 @@ input::-ms-clear {
   font-style: normal;
 }
 
-/* Global settings for smoother animations */
 * {
   -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
   backface-visibility: hidden;
+  
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
 }
 
 .bgColor {
