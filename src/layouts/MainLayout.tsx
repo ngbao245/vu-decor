@@ -34,7 +34,7 @@ const MainLayout = () => {
             isSticky ? ' sticky bg-white shadow-md  backdrop-blur-md' : 'bg-transparent'
           )}
         >
-          <Header />
+          <Header isSticky={isSticky} />
         </div>
 
         <main className="min-h-screen ">

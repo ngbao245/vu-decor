@@ -1,6 +1,7 @@
 import Button from "../Button/Button";
 import logoImage from "../../assets/logoImage.png";
 import asm from "../../assets/asm.png";
+import asmLight from "../../assets/asm-light.png";
 import { Link, useNavigate } from "react-router-dom";
 import { RxTextAlignJustify } from "react-icons/rx";
 import { useState, useEffect } from "react";
@@ -14,7 +15,11 @@ const navLinks = [
   { label: "Liên Hệ", href: "/contact" },
 ];
 
-const Header = () => {
+interface HeaderProps {
+  isSticky: boolean;
+}
+
+const Header = ({ isSticky }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -62,12 +67,12 @@ const Header = () => {
         <div className="h-full flex items-center">
           <img
             src={logoImage}
-            className="aspect-square h-[50px] md:h-[75px] md:ml-3 py-3 object-contain"
+            className="aspect-square h-[50px] md:h-[75px] md:ml-3 py-3 object-contain transition-all duration-300"
             alt="Layers logo"
           />
           <img
-            src={asm}
-            className="h-[40px] md:h-[50px] sm:h-[30px] py-3 object-contain ml-[-20px]"
+            src={isSticky ? asm : asmLight}
+            className="h-[40px] md:h-[50px] sm:h-[30px] py-3 object-contain ml-[-20px] transition-all duration-300"
             alt="Layers logo"
           />
         </div>
@@ -79,7 +84,9 @@ const Header = () => {
               <Link
                 key={link.label}
                 to={link.href}
-                className="text-navbar relative group hover:text-primary transition-colors duration-300"
+                className={`relative group transition-colors duration-300 ${
+                  isSticky ? 'text-navbar text-[#2f2f2f]' : 'text-[#F5F5F3] text-navbar'
+                } hover:text-primary`}
               >
                 {link.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
@@ -173,7 +180,9 @@ const Header = () => {
                   key={link.label}
                   to={link.href}
                   onClick={toggleMenu}
-                  className="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition-all duration-300 hover:translate-x-2 hover:text-primary active:scale-95 border-l-4 border-transparent hover:border-primary"
+                  className={`block py-3 px-4 hover:bg-gray-100 rounded-lg transition-all duration-300 hover:translate-x-2 hover:text-primary active:scale-95 border-l-4 border-transparent hover:border-primary ${
+                    isSticky ? 'text-gray-700' : 'text-gray-200'
+                  }`}
                 >
                   {link.label}
                 </Link>
