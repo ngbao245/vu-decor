@@ -41,10 +41,16 @@ const Header = ({ isSticky }: HeaderProps) => {
     setIsOpen(!isOpen);
   };
 
+  const handleNavigation = (path: string, shouldToggleMenu: boolean = false) => {
+    navigate(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (shouldToggleMenu) {
+      toggleMenu();
+    }
+  };
+
   const getStart = () => {
     navigate("/contact");
-    //luôn scroll từ đầu trang xuống
-    // window.scrollTo(0, 0);
     setTimeout(() => {
       const element = document.getElementById("contact-form");
       if (element) {
@@ -63,7 +69,7 @@ const Header = ({ isSticky }: HeaderProps) => {
       //     : 'bg-transparent'
       // )}
     >
-      <div className="w-full h-16 col-span-1">
+      <div className="w-full h-16 col-span-1 cursor-pointer" onClick={() => handleNavigation("/#")}>
         <div className="h-full flex items-center">
           <img
             src={logoImage}
@@ -77,13 +83,14 @@ const Header = ({ isSticky }: HeaderProps) => {
           />
         </div>
       </div>
-      <div className="lg:flex lg:col-span-2 h-full  justify-center items-center hidden ">
+      <div className="lg:flex lg:col-span-2 h-full  justify-center items-center hidden">
         <nav className="flex gap-10 px-3 h-full font-medium items-center ">
           {navLinks.map((link) => {
             return (
               <Link
                 key={link.label}
                 to={link.href}
+                onClick={() => handleNavigation(link.href, false)}
                 className={`relative group transition-colors duration-300 ${
                   isSticky
                     ? "text-navbar text-[#2f2f2f]"
@@ -98,14 +105,56 @@ const Header = ({ isSticky }: HeaderProps) => {
         </nav>
       </div>
       <div className="flex justify-end gap-4">
-        <div className="flex ">
-          <Button
+        <div
+          className={`relative ${
+            isSticky ? "text-[#2f2f2f]" : "text-[#F5F5F3]"
+          }`}
+        >
+          <button
             onClick={getStart}
-            variant="primary"
-            className="hidden md:inline-flex items-center"
+            className={`hidden md:flex items-center group active:scale-90 transition-transform ${
+              isSticky ? "text-[#2f2f2f]" : "text-[#F5F5F3]"
+            }`}
           >
-            Tư Vấn
-          </Button>
+            <span className="relative overflow-hidden pr-3 border-r-2 border-current">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 transform transition-transform duration-300 ease-out group-hover:translate-y-[-100%]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 transform transition-transform duration-300 ease-out translate-y-[100%] group-hover:translate-y-0 absolute top-0 left-0"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                />
+              </svg>
+            </span>
+            <span className="pl-3 font-light text-lg tracking-[0.2em] relative overflow-hidden">
+              <span className="inline-block transform transition-transform duration-300 ease-out group-hover:translate-y-[-100%]">
+                LIÊN HỆ
+              </span>
+              <span className="absolute top-0 left-3 transform transition-transform duration-300 ease-out translate-y-[100%] group-hover:translate-y-0">
+                TƯ VẤN
+              </span>
+            </span>
+          </button>
         </div>
         <RxTextAlignJustify
           onClick={toggleMenu}
@@ -183,7 +232,7 @@ const Header = ({ isSticky }: HeaderProps) => {
                 <Link
                   key={link.label}
                   to={link.href}
-                  onClick={toggleMenu}
+                  onClick={() => handleNavigation(link.href, true)}
                   className={`block py-3 px-4 hover:bg-gray-100 rounded-lg transition-all duration-300 hover:translate-x-2 hover:text-primary active:scale-95 border-l-4 border-transparent hover:border-primary text-gray-700`}
                 >
                   {link.label}
