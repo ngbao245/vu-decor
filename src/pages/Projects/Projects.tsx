@@ -75,7 +75,7 @@ export const Projects = () => {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto py-20">
+      <div className="max-w-7xl mx-auto py-20 px-4">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
@@ -86,14 +86,14 @@ export const Projects = () => {
             <motion.div
               key={project.id}
               variants={itemVariants}
-              className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300"
+              className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer group"
               onClick={() => navigate(`/projects/${project.id}`)}
             >
-              <div className="relative h-64">
+              <div className="relative h-64 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
               <div className="p-6">
