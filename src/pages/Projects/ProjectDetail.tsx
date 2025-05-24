@@ -264,9 +264,11 @@ export const ProjectDetail = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.3 }}
           onClick={() => navigate("/projects")}
-          className="absolute top-18 left-6 bg-white/90 p-3 rounded-full shadow-lg hover:bg-white transition-colors"
+          className="fixed top-1/2 -translate-y-1/2 left-6 z-50 bg-[#D6B26D] p-3 rounded-full shadow-lg backdrop-blur-sm 
+          hover:bg-[#9d7e3b] hover:text-black transform hover:scale-110 transition-all duration-300 ease-in-out
+          group"
         >
-          <ArrowLeft className="w-6 h-6" />
+          <ArrowLeft className="w-6 h-6 group-hover:translate-x-[-2px] transition-transform duration-300" />
         </motion.button>
       </div>
 

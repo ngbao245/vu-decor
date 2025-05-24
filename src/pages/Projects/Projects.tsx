@@ -86,7 +86,7 @@ export const Projects = () => {
             <motion.div
               key={project.id}
               variants={itemVariants}
-              className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer group"
+              className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer group transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
               onClick={() => navigate(`/projects/${project.id}`)}
             >
               <div className="relative h-64 overflow-hidden">
@@ -95,12 +95,13 @@ export const Projects = () => {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
+                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <div className="p-6 transition-colors duration-300 group-hover:bg-gray-50">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 transition-colors duration-300 group-hover:text-[#D6B26D]">
                   {project.title}
                 </h3>
-                <p className="text-gray-600">{project.description}</p>
+                <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">{project.description}</p>
               </div>
             </motion.div>
           ))}
