@@ -11,6 +11,7 @@ import {
   X,
   ChevronLeft,
   ChevronRight,
+  TrafficCone,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -128,7 +129,8 @@ const projects: Project[] = [
     title: "Bếp Căn BS10 - The Beverly Solari",
     image:
       "https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/498213824_122133969548618470_6851937525598168220_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=7vtAEUbyVasQ7kNvwENPMDl&_nc_oc=Adn9tBtzLxylJFIWjOPO02HP-A16DHMTMAaa4dO80C4RmGXxhl8XK08vK1_kje15xqo&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=NDo-UToWYjbEy3FHwTiMtQ&oh=00_AfIYl1RomWEplUaOOdXcGk5wJIiAA0G77Ml1GnjuVxXnZA&oe=6833C7C6",
-    description: "Vu Decor tin rằng căn bếp không chỉ là nơi thể hiện tính thẩm mỹ cho căn nhà mà còn là \"nơi giữ lửa\" cho gia đình, còn điều gì tuyệt vời hơn sau một ngày dài làm việc ta được trở về ăn bữa cơm với người mình yêu thương, nuôi dưỡng cơ thể bằng những bữa ăn lành mạnh, tái tạo lại năng lượng và lại bắt đầu một ngày mới.",
+    description:
+      'Vu Decor tin rằng căn bếp không chỉ là nơi thể hiện tính thẩm mỹ cho căn nhà mà còn là "nơi giữ lửa" cho gia đình, còn điều gì tuyệt vời hơn sau một ngày dài làm việc ta được trở về ăn bữa cơm với người mình yêu thương, nuôi dưỡng cơ thể bằng những bữa ăn lành mạnh, tái tạo lại năng lượng và lại bắt đầu một ngày mới.',
     details: {
       location: "Quận 9,\nTP. Hồ Chí Minh",
       area: "45m²",
@@ -277,7 +279,7 @@ export const ProjectDetail = () => {
             transition={{ delay: 0.4 }}
             className="bg-white rounded-xl shadow-lg p-6 flex items-center space-x-4"
           >
-            <MapPin className="w-8 h-8 text-blue-600" />
+            <MapPin className="w-8 h-8 text-[#d6b26d]" />
             <div>
               <p className="text-gray-500 text-sm">Vị Trí</p>
               <p className="font-semibold">{project.details?.location}</p>
@@ -289,7 +291,7 @@ export const ProjectDetail = () => {
             transition={{ delay: 0.5 }}
             className="bg-white rounded-xl shadow-lg p-6 flex items-center space-x-4"
           >
-            <Ruler className="w-8 h-8 text-green-600" />
+            <Ruler className="w-8 h-8 text-[#d6b26d]" />
             <div>
               <p className="text-gray-500 text-sm">Diện Tích</p>
               <p className="font-semibold">{project.details?.area}</p>
@@ -301,7 +303,7 @@ export const ProjectDetail = () => {
             transition={{ delay: 0.6 }}
             className="bg-white rounded-xl shadow-lg p-6 flex items-center space-x-4"
           >
-            <Calendar className="w-8 h-8 text-purple-600" />
+            <Calendar className="w-8 h-8 text-[#d6b26d]" />
             <div>
               <p className="text-gray-500 text-sm">Thời Gian Thực Hiện</p>
               <p className="font-semibold">{project.details?.duration}</p>
@@ -313,7 +315,7 @@ export const ProjectDetail = () => {
             transition={{ delay: 0.7 }}
             className="bg-white rounded-xl shadow-lg p-6 flex items-center space-x-4"
           >
-            <Users className="w-8 h-8 text-orange-600" />
+            <Users className="w-8 h-8 text-[#d6b26d]" />
             <div>
               <p className="text-gray-500 text-sm">Khách Hàng</p>
               <p className="font-semibold">{project.details?.client}</p>
@@ -334,12 +336,10 @@ export const ProjectDetail = () => {
               className="bg-white rounded-xl shadow-lg p-8 capitalize"
             >
               <h2 className="text-2xl font-bold mb-6 flex items-center">
-                <Home className="w-6 h-6 mr-2 text-blue-600" />
+                <Home className="w-6 h-6 mr-2 text-[#D6B26D]" />
                 Tổng quan dự án
               </h2>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                {project.description}
-              </p>
+              <p className=" mb-6 leading-relaxed">{project.description}</p>
 
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="bg-gray-50 p-4 rounded-lg">
@@ -362,7 +362,7 @@ export const ProjectDetail = () => {
               </div>
 
               <h3 className="text-xl font-semibold mb-4 flex items-center">
-                <CheckCircle2 className="w-5 h-5 mr-2 text-green-600" />
+                <CheckCircle2 className="w-5 h-5 mr-2 text-[#D6B26D]" />
                 Tính năng
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -374,7 +374,7 @@ export const ProjectDetail = () => {
                     transition={{ delay: 0.9 + index * 0.1 }}
                     className="flex items-center space-x-2 bg-gray-50 p-3 rounded-lg"
                   >
-                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-[#D6B26D] flex-shrink-0" />
                     <span className="text-gray-600">{feature}</span>
                   </motion.div>
                 ))}
@@ -387,10 +387,13 @@ export const ProjectDetail = () => {
               transition={{ delay: 1 }}
               className="bg-white rounded-xl shadow-lg p-8"
             >
-              <h2 className="text-2xl font-bold mb-6">Khó khăn & giải pháp</h2>
+              <h2 className="text-2xl font-bold mb-6 flex items-center">
+                <TrafficCone className="w-6 h-6 mr-2 text-[#D6B26D]" />
+                Khó khăn & giải pháp
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-lg font-semibold mb-4 text-red-600">
+                  <h3 className="text-lg font-semibold mb-4 text-[#c1564c]">
                     Khó khăn
                   </h3>
                   <ul className="space-y-3">
@@ -402,14 +405,14 @@ export const ProjectDetail = () => {
                         transition={{ delay: 1.1 + index * 0.1 }}
                         className="flex items-start space-x-2"
                       >
-                        <span className="text-red-600">•</span>
+                        <span className="text-[#c1564c]">•</span>
                         <span className="text-gray-600">{challenge}</span>
                       </motion.li>
                     ))}
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-4 text-green-600">
+                  <h3 className="text-lg font-semibold mb-4 text-[#7A876D]">
                     Giải pháp
                   </h3>
                   <ul className="space-y-3">
@@ -421,7 +424,7 @@ export const ProjectDetail = () => {
                         transition={{ delay: 1.1 + index * 0.1 }}
                         className="flex items-start space-x-2"
                       >
-                        <span className="text-green-600">•</span>
+                        <span className="text-[#7A876D]">•</span>
                         <span className="text-gray-600">{solution}</span>
                       </motion.li>
                     ))}
@@ -480,7 +483,7 @@ export const ProjectDetail = () => {
                     className={`px-3 py-1 rounded-md ${
                       currentPage === 1
                         ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                        : "bg-blue-600 text-white hover:bg-blue-700"
+                        : "bg-[#377b72] text-white hover:bg-[#2a626c]"
                     }`}
                   >
                     Trước
@@ -507,7 +510,7 @@ export const ProjectDetail = () => {
                     className={`px-3 py-1 rounded-md ${
                       currentPage === totalPages
                         ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                        : "bg-blue-600 text-white hover:bg-blue-700"
+                        : "bg-[#377b72] text-white hover:bg-[#2a626c]"
                     }`}
                   >
                     Sau

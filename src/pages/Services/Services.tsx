@@ -3,6 +3,15 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import HeroPage from "../../components/Hero/HeroPage";
+import {
+  MessageCircle,
+  Monitor,
+  FileText,
+  Settings,
+  Home,
+  CheckCircle2,
+  Wrench,
+} from "lucide-react";
 
 type TimeoutType = ReturnType<typeof setTimeout>;
 
@@ -28,84 +37,28 @@ const processSteps: ProcessStep[] = [
     title: "Tư Vấn & Khảo Sát",
     description:
       "Đội ngũ chuyên viên của VuDecor sẽ trao đổi chi tiết về ý tưởng, phong cách và ngân sách của bạn. Chúng tôi sẽ khảo sát không gian để đưa ra giải pháp tối ưu nhất.",
-    icon: (
-      <svg
-        className="w-12 h-12 text-[#D6B26D]"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-        />
-      </svg>
-    ),
+    icon: <MessageCircle className="w-12 h-12 text-[#D6B26D]" />,
   },
   {
     id: 2,
     title: "Thiết Kế & Phác Thảo",
     description:
       "Dựa trên yêu cầu của bạn, chúng tôi sẽ tạo ra các bản phác thảo 2D và 3D chi tiết. Bạn có thể xem trước không gian tương lai của mình một cách trực quan nhất.",
-    icon: (
-      <svg
-        className="w-12 h-12 text-[#D6B26D]"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-        />
-      </svg>
-    ),
+    icon: <Monitor className="w-12 h-12 text-[#D6B26D]" />,
   },
   {
     id: 3,
     title: "Báo Giá & Ký Kết",
     description:
       "VuDecor sẽ cung cấp báo giá chi tiết và minh bạch. Sau khi thống nhất, chúng tôi sẽ ký hợp đồng và lên kế hoạch thi công cụ thể.",
-    icon: (
-      <svg
-        className="w-12 h-12 text-[#D6B26D]"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-        />
-      </svg>
-    ),
+    icon: <FileText className="w-12 h-12 text-[#D6B26D]" />,
   },
   {
     id: 4,
     title: "Thi Công & Hoàn Thiện",
     description:
       "Đội ngũ thi công chuyên nghiệp sẽ biến thiết kế thành hiện thực. Chúng tôi cam kết thi công đúng tiến độ và đảm bảo chất lượng cao nhất.",
-    icon: (
-      <svg
-        className="w-12 h-12 text-[#D6B26D]"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
-        />
-      </svg>
-    ),
+    icon: <Settings className="w-12 h-12 text-[#D6B26D]" />,
   },
 ];
 
@@ -130,22 +83,7 @@ export const Services = () => {
       title: "Thiết Kế Nội Thất",
       description:
         "Chúng tôi cung cấp dịch vụ thiết kế nội thất chuyên nghiệp, tạo ra không gian sống độc đáo và phù hợp với phong cách của bạn.",
-      icon: (
-        <svg
-          className="w-12 h-12 text-[#D6B26D]"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-          />
-        </svg>
-      ),
+      icon: <Home className="w-12 h-12 text-[#7A876D]" />,
       features: [
         "Tư vấn phong cách thiết kế",
         "Lên ý tưởng và phác thảo 2D",
@@ -160,22 +98,7 @@ export const Services = () => {
       title: "Thi Công Nội Thất",
       description:
         "Đội ngũ thi công chuyên nghiệp của chúng tôi sẽ biến những bản vẽ thiết kế thành hiện thực với chất lượng cao nhất.",
-      icon: (
-        <svg
-          className="w-12 h-12 text-[#E34225]"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
-          />
-        </svg>
-      ),
+      icon: <Wrench className="w-12 h-12 text-[#7A876D]" />,
       features: [
         "Thi công đúng bản vẽ thiết kế",
         "Sử dụng vật liệu chất lượng cao",
@@ -190,22 +113,7 @@ export const Services = () => {
       title: "Tư Vấn Thiết Kế",
       description:
         "Chúng tôi cung cấp dịch vụ tư vấn chuyên sâu, giúp bạn lựa chọn phong cách và giải pháp thiết kế phù hợp nhất.",
-      icon: (
-        <svg
-          className="w-12 h-12 text-[#D6B26D]"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-          />
-        </svg>
-      ),
+      icon: <MessageCircle className="w-12 h-12 text-[#7A876D]" />,
       features: [
         "Phân tích nhu cầu khách hàng",
         "Tư vấn phong cách phù hợp",
@@ -222,7 +130,6 @@ export const Services = () => {
     sliderInterval.current = setInterval(() => {
       setCurrentStep((prev) => (prev + 1) % processSteps.length);
       console.log(currentStep);
-      
     }, 5000);
 
     return () => {
@@ -272,7 +179,7 @@ export const Services = () => {
           {/* Timeline Steps */}
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-[20px] md:left-1/2 transform md:-translate-x-1/2 h-full w-px bg-gradient-to-b from-[#D6B26D] to-[#E34225]" />
+            <div className="absolute left-[20px] md:left-1/2 transform md:-translate-x-1/2 h-full w-px bg-gradient-to-b from-[#D6B26D] to-[#7A876D]" />
 
             {processSteps.map((step, index) => (
               <motion.div
@@ -306,9 +213,7 @@ export const Services = () => {
                         className="bg-white rounded-2xl shadow-xl p-6 md:p-8 transform hover:-translate-y-1 transition-transform duration-300"
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-full bg-gradient-to-br from-[#D6B26D] to-[#E34225] text-white">
-                            {step.icon}
-                          </div>
+                          <div className="flex-shrink-0">{step.icon}</div>
                           <div>
                             <span className="text-[#D6B26D] font-bold text-sm md:text-base">
                               Bước {step.id}
@@ -333,7 +238,7 @@ export const Services = () => {
                         whileInView={{ scale: 1 }}
                         transition={{ duration: 0.2 }}
                         viewport={{ once: true }}
-                        className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-gradient-to-r from-[#D6B26D] to-[#E34225] shadow-lg"
+                        className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-gradient-to-r from-[#D6B26D] to-[#7A876D] shadow-lg"
                       />
                     </div>
                   </div>
@@ -499,19 +404,7 @@ const ServiceSection = ({
               }}
               className="flex items-center space-x-2"
             >
-              <svg
-                className="w-5 h-5 text-green-500 flex-shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
+              <CheckCircle2 className="w-5 h-5 text-[#7A876D] flex-shrink-0" />
               <span className="text-gray-600">{feature}</span>
             </motion.div>
           ))}
