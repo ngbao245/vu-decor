@@ -19,7 +19,7 @@ const MainLayout = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsSticky(window.scrollY > 10)
+      setIsSticky(window.scrollY > 1)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
