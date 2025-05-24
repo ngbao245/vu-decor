@@ -7,7 +7,7 @@ import StoryValue from "../../components/StoryValue/StoryValue"
 
 export const OurStory = () => {
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen text-justify">
             <div>
                 <HeroPage
                     page="Về Chúng Tôi"

@@ -3,7 +3,7 @@ import HeroPage from "../../components/Hero/HeroPage";
 
 const ContactUs = () => {
   return (
-    <div>
+    <div className="min-h-screen">
       <div id="contact">
         <HeroPage
           page="Liên Hệ"

@@ -228,7 +228,7 @@ export const ProjectDetail = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen bg-gray-50 whitespace-pre-wrap"
+      className="min-h-screen bg-gray-50 whitespace-pre-wrap text-justify"
     >
       {/* Hero Section */}
       <div className="relative h-[70vh] overflow-hidden">

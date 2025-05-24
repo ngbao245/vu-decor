@@ -53,7 +53,7 @@ const Header = ({ isSticky }: HeaderProps) => {
     }
   };
 
-  const getStart = () => {
+  const getContact = () => {
     navigate("/contact");
     setTimeout(() => {
       const element = document.getElementById("contact-form");
@@ -115,7 +115,7 @@ const Header = ({ isSticky }: HeaderProps) => {
           }`}
         >
           <button
-            onClick={getStart}
+            onClick={getContact}
             className={`hidden md:flex items-center group active:scale-90 transition-transform ${
               isSticky ? "text-[#2f2f2f]" : "text-[#F5F5F3]"
             }`}
