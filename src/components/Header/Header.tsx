@@ -9,8 +9,9 @@ import clsx from "clsx";
 const navLinks = [
   { label: "Trang Chủ", href: "/" },
   { label: "Dự Án", href: "/projects" },
-  { label: "Thiết kế", href: "/styles" },
-  { label: "Bài Viết", href: "/news" },
+  { label: "Thiết Kế", href: "/styles" },
+  { label: "Dịch Vụ", href: "/services" },
+  // { label: "Bài Viết", href: "/news" },
   { label: "Về Chúng Tôi", href: "/ourStory" },
   { label: "Liên Hệ", href: "/contact" },
 ];
