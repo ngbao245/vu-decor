@@ -15,7 +15,7 @@ const ContactForm = () => {
     }, [controls, isInView])
 
     return (
-        <section ref={ref} className="py-20 bg-white">
+        <section ref={ref} className="py-20 bg-white" id="contact-form">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <motion.div

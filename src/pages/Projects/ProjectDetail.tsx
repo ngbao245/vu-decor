@@ -37,12 +37,13 @@ interface Project {
 const projects: Project[] = [
   {
     id: "7e164cb1-49d5-4709-b53d-7a92c7a65320",
-    title: "The Beverly Vinhomes",
+    title: "Căn BE1 - The Beverly Vinhomes",
     image:
       "https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/473806759_122117412578618470_1205087045803481247_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=kEN9x-ZpxtYQ7kNvwHQJnqn&_nc_oc=AdmcEQOCPCG8fN_4t-qZ2N4qVqBES7DM5ZM3ZmKoSoaIS2K7do_9st0N8uUtlg5C7V8&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=hBE3_npexKkOls6XsYM28w&oh=00_AfI4hRw4PHy8dvZdbEIcZuPAm4LwRQsr8lGhHrVUuKGhsg&oe=68329F33",
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+    description:
+      'Hình ảnh thực tế từ công trình của căn 1pn, những ngày cuối năm ai ai cũng tốc độ hoàn thành những công việc cuối cùng để chính thức đón Tết Ất Tỵ 2025, đội ngũ nhà Vu Decor cũng vậy, đảm bảo đúng tiến độ, chất lượng cho khách để anh em đều có cái "Tết đong đầy"✨',
     details: {
-      location: "Toà BE1 Quận 9, TP. Hồ Chí Minh",
+      location: "Căn BE1, Quận 9,\nTP. Hồ Chí Minh",
       area: "45m²",
       duration: "2 months",
       client: "Mr. & Mrs. Nguyen",
@@ -66,22 +67,22 @@ const projects: Project[] = [
         "Hệ thống lưu trữ dạng mô-đun",
       ],
       images: [
-        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000",
-        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000",
-        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000",
-        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000",
+        "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/473522308_122117412542618470_2171786139999124298_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=TdbRo5h4D34Q7kNvwEjdOkp&_nc_oc=Adl3HULmhm5ZEFCTVsyTU0xrAgMZ1ADE2Fi5ZvAdR_gzqPvS6B_aeTlJ5fNBcocSW-nzNcGihJrSeBdI8w5lN89h&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=J52fYVbttI5mUhjr72BMYQ&oh=00_AfJRtAX8Nt4zCq5efBG63LbXstZ2aGjTwIlz8r-lIog-Vw&oe=6833933A",
+        "https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/473806759_122117412578618470_1205087045803481247_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=kEN9x-ZpxtYQ7kNvwEP7WQi&_nc_oc=Adl4SNFKn4pLlujznGfZWoCNE7FWcILoQxZB4WSHfvU9EyJk1EGevocFMPeQ1kWTrd3cPqhel0lGpdJuJbnSQE9U&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=r1Cg3bEZbhSw28f6kgEWjw&oh=00_AfJPe819qiEecDqGz3V_srmyyGg2nxe15ajMQNY5EnG_GA&oe=6833B873",
+        "https://scontent.fsgn5-12.fna.fbcdn.net/v/t39.30808-6/474702606_122117412638618470_9085434426572049700_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=zJmkRsd4HXwQ7kNvwGv_qXp&_nc_oc=Adki84Im4YTrRLm5WiK0a0dbsc2Xb68kVrvqRBlOShOZ4XYLmDbyUdhfLIEgHvecbmATWWxOSWS1M57YR6uvRPNj&_nc_zt=23&_nc_ht=scontent.fsgn5-12.fna&_nc_gid=kBVClZMpjPasxXOGDbeMHQ&oh=00_AfI4NwLiGR7wVBAg8t0vYmdcJ7hWw16ebSzSpOKBxhEXQw&oe=68339F82",
+        "https://scontent.fsgn5-12.fna.fbcdn.net/v/t39.30808-6/474163971_122117412554618470_6285346111792169121_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=5Mxgx4ZTKKwQ7kNvwExTCyh&_nc_oc=Adm_6T6mtkm__MABtBS2qG2kaWOGn-hBz6P1oO6QnS9DK46QLxBw6Wmf6X6jUjiRtpfgI5mZO6pG_GOsd5mcgRGX&_nc_zt=23&_nc_ht=scontent.fsgn5-12.fna&_nc_gid=jdPeA4Y6rEzFVc8uhUqwKQ&oh=00_AfLmWjlbUt2bo7KTEBMWGDsbgWDFid30YTh9HYaqSmCYmw&oe=6833A4D1",
       ],
     },
   },
   {
     id: "4a64ed59-d264-44dc-ab95-56ab74848ea9",
-    title: "The Glory Heights",
+    title: "Căn GH1 - The Glory Heights",
     image:
       "https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/473526944_122117507252618470_8918935857155496066_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=rQiJSDX5q3UQ7kNvwGRRSoQ&_nc_oc=Adk32e6D5NnRfQKQdHm_bzaQJABTqOrb1jQBnXrn6LP6xoJU3r7yeKo_K62JYZXJ_oqHwu28HPJ76KVofw9JVsCu&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=RdKpas1QsRm78_I9hA36BQ&oh=00_AfLG8dE36WL0Am3JY7L54Obv4HEU6Tw21M5Hpk0D_qTelg&oe=683355D2",
     description:
       "Đang đi YEP bên cồn mà nghe đồn chị Khách Hà Nội đã chốt được phần thiết kế, ta nói trong lòng nô nức rộn ràng hihi, thế là giám đốc sản xuất vừa được ăn tết vừa đựợc lên kế hoạch sản xuất cho anh em ra tết chạy vèo vèo bàn giao cho chị hen☺️\n\nBật mí đây là căn thứ hai Vu Decor thực hiện cho chị Khách đó nha mọi người, đội ngũ rất hạnh phúc khi tiếp tục được chị lựa chọn.\n\nĐừng quên chúng mình nhận thiết kế và thi công nhoa!",
     details: {
-      location: "Quận 9, TP. Hồ Chí Minh",
+      location: "Căn GH1, Quận 9,\nTP. Hồ Chí Minh",
       area: "45m²",
       duration: "2 tháng",
       client: "anh Nguyên",
@@ -123,13 +124,13 @@ const projects: Project[] = [
     },
   },
   {
-    id: "3",
-    title: "Modern Living Room",
+    id: "5c107602-c66b-41ef-a69c-90acc4e9fea7",
+    title: "Bếp Căn BS10 - The Beverly Solari",
     image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000",
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+      "https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/498213824_122133969548618470_6851937525598168220_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=7vtAEUbyVasQ7kNvwENPMDl&_nc_oc=Adn9tBtzLxylJFIWjOPO02HP-A16DHMTMAaa4dO80C4RmGXxhl8XK08vK1_kje15xqo&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=NDo-UToWYjbEy3FHwTiMtQ&oh=00_AfIYl1RomWEplUaOOdXcGk5wJIiAA0G77Ml1GnjuVxXnZA&oe=6833C7C6",
+    description: "Vu Decor tin rằng căn bếp không chỉ là nơi thể hiện tính thẩm mỹ cho căn nhà mà còn là \"nơi giữ lửa\" cho gia đình, còn điều gì tuyệt vời hơn sau một ngày dài làm việc ta được trở về ăn bữa cơm với người mình yêu thương, nuôi dưỡng cơ thể bằng những bữa ăn lành mạnh, tái tạo lại năng lượng và lại bắt đầu một ngày mới.",
     details: {
-      location: "District 1, Ho Chi Minh City",
+      location: "Quận 9,\nTP. Hồ Chí Minh",
       area: "45m²",
       duration: "2 months",
       client: "Mr. & Mrs. Nguyen",
@@ -152,10 +153,12 @@ const projects: Project[] = [
         "Hệ thống lưu trữ dạng mô-đun",
       ],
       images: [
-        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000",
-        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000",
-        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000",
-        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000",
+        "https://scontent.fsgn5-3.fna.fbcdn.net/v/t39.30808-6/499221817_122133969560618470_7542221533059836553_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=6sNxBnHRc-gQ7kNvwHbZQ8Q&_nc_oc=AdlJDrN7UZzZyHg9NU-eN_99Lim-PwxohAYyauFNtY9SBSiF0vK3jMnK75TFSbE0AfU&_nc_zt=23&_nc_ht=scontent.fsgn5-3.fna&_nc_gid=0qYNjhm2GSuFRkfSHCQ0Hg&oh=00_AfLsRF7G0bH__j00J6k25gbUeWS6bbpbg3-qIHsCyQ81nw&oe=6833EB28",
+        "https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/498213824_122133969548618470_6851937525598168220_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=7vtAEUbyVasQ7kNvwENPMDl&_nc_oc=Adn9tBtzLxylJFIWjOPO02HP-A16DHMTMAaa4dO80C4RmGXxhl8XK08vK1_kje15xqo&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=NDo-UToWYjbEy3FHwTiMtQ&oh=00_AfIYl1RomWEplUaOOdXcGk5wJIiAA0G77Ml1GnjuVxXnZA&oe=6833C7C6",
+        "https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/499378682_122133969590618470_3366880959960670107_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=l4jM08gU3qIQ7kNvwFzsDbP&_nc_oc=Adn8Z8ZWuZ4ViNEuqLH9jYtIn9ss8D0lVhYsJC4ZyQXuUyvMyo97Yk8S5ZdwzINEAHY&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=4BLMWTu42iLbcsCVads5gg&oh=00_AfJ7Hss0ZLRTwtM5H8C8oSYgPeIbiO-PPt5K2Hg5VLVhLA&oe=6833F4FA",
+        "https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/499339264_122133969530618470_3095973869182188006_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=CTdvbJUwgrkQ7kNvwHqEz23&_nc_oc=Adn1vj57I4-Fl_-SN3gxj5ET7gD3PdqGzPTh3-reW6bwWeUh3dERyg0I90tkoNK6prE&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=p_6AOSJ2neXGzNLVeKAWtQ&oh=00_AfL_TvROQTkCUdN-2xJZqtmFVbrnN2QSuSAXEAw3nNXdFQ&oe=6833D80C",
+        "https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/498176785_122133969596618470_7196264313840046581_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=0yTkQfhMoqsQ7kNvwG3MCjD&_nc_oc=AdkjQitp1d3RQd3YYqv7f9-9L61Vo0ARmC2kGWQeJ0DbOr6eLb_ygKglCEKXrgeRmb8&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=R3kmydiM0qQVHRTYbHGdpg&oh=00_AfJSNPSCJi8xLHdJ-yNyoFBefUG6NsZhuXznShf-hrfuDQ&oe=6833ECD6",
+        "https://scontent.fsgn5-15.fna.fbcdn.net/v/t39.30808-6/498166510_122133969518618470_2852905110698745605_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=KG0Do2T9FqYQ7kNvwH0CekZ&_nc_oc=AdndxTEDdOyBpHTupGY2gTVEtEmYGS35LTdqaDj0Y9DaM37jtWISxvdGuQmwUyU6XNA&_nc_zt=23&_nc_ht=scontent.fsgn5-15.fna&_nc_gid=u9YQ2ogDcAKlbSpHIyElMA&oh=00_AfLB7K-hrmjBH03RHZmhBaFJ_IcwB3GY7vcsSTSXupH-Ow&oe=6833F7D4",
       ],
     },
   },
@@ -225,7 +228,7 @@ export const ProjectDetail = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen bg-gray-50"
+      className="min-h-screen bg-gray-50 whitespace-pre-wrap"
     >
       {/* Hero Section */}
       <div className="relative h-[70vh] overflow-hidden">
@@ -334,7 +337,7 @@ export const ProjectDetail = () => {
                 <Home className="w-6 h-6 mr-2 text-blue-600" />
                 Tổng quan dự án
               </h2>
-              <p className="text-gray-600 mb-6 leading-relaxed whitespace-pre-wrap">
+              <p className="text-gray-600 mb-6 leading-relaxed">
                 {project.description}
               </p>
 
@@ -482,9 +485,9 @@ export const ProjectDetail = () => {
                   >
                     Trước
                   </motion.button>
-                  
+
                   <AnimatePresence mode="wait">
-                    <motion.span 
+                    <motion.span
                       key={currentPage}
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
@@ -582,3 +585,5 @@ export const ProjectDetail = () => {
     </motion.div>
   );
 };
+
+export default ProjectDetail;

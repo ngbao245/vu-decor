@@ -1,10 +1,10 @@
 import {
-  FaFacebook,
-  // FaTwitter,
-  FaInstagram,
-  FaLinkedin,
-  FaYoutube,
-} from "react-icons/fa";
+  SiZalo,
+  SiFacebook,
+  SiInstagram,
+  SiLinkedin,
+  SiYoutube,
+} from "react-icons/si";
 import { MdEmail, MdPhone, MdLocationOn, MdSend } from "react-icons/md";
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
@@ -23,18 +23,19 @@ const navLinks = [
 
 const socialLinks = [
   {
-    icon: FaFacebook,
+    icon: SiFacebook,
     href: "https://www.facebook.com/vudecor24",
     label: "Facebook",
   },
   // { icon: FaTwitter, href: "https://twitter.com/", label: "Twitter" },
-  { icon: FaInstagram, href: "https://instagram.com/", label: "Instagram" },
-  { icon: FaYoutube, href: "https://youtube.com/", label: "Youtube" },
+  { icon: SiInstagram, href: "https://instagram.com/", label: "Instagram" },
+  { icon: SiYoutube, href: "https://youtube.com/", label: "Youtube" },
   {
-    icon: FaLinkedin,
+    icon: SiLinkedin,
     href: "https://linkedin.com/company/vudecor",
     label: "LinkedIn",
   },
+  { icon: SiZalo, href: "https://youtube.com/", label: "Zalo" },
 ];
 
 const Footer = () => {

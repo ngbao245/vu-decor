@@ -1,20 +1,5 @@
-/* index.css */
-/* @import "tailwindcss/preflight"; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
-
-/* Custom style layer nếu cần */
-/* @layer utilities {
-  .text-shadow {
-    text-shadow: 1px 1px 2px black;
-  }
-} */
-
-/* *, */
-/* *::before,
-*::after {
-  padding: 0;
-  margin: 0;
-} */
 
 input::-ms-reveal,
 input::-ms-clear {
@@ -22,9 +7,24 @@ input::-ms-clear {
 }
 
 :root {
+  --font-primary: 'Inter', sans-serif;
+  --font-heading: 'Roboto', sans-serif;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
 }
 
 .bgColor {
@@ -35,19 +35,11 @@ input::-ms-clear {
 .text-priamry {
   color: #2c2c2c2c;
 }
-/* .text-title:hover {
-  color: #E34225;
-  cursor: pointer;
-  font-weight: bold;
-  border-bottom: 3px solid #E34225;
-  
-} */
 
 .text-navbar {
   position: relative;
   display: inline-block;
   font-weight: 600;
-  color: #2f2f2f;
   transition: color 0.3s ease;
 }
 
@@ -58,12 +50,12 @@ input::-ms-clear {
   bottom: -15px;
   width: 0%;
   height: 2px;
-  background-color: #e34225;
+  background-color: #D6B26D;
   transition: width 0.3s ease;
 }
 
 .text-navbar:hover {
-  color: #e34225;
+  color: #D6B26D;
   cursor: pointer;
 }
 
@@ -80,6 +72,7 @@ input::-ms-clear {
 .linear-button:hover {
   opacity: 80%;
 }
+
 .linear-button:active {
   opacity: 90%;
   box-shadow: 0 5px 10px -2px rgba(170, 60, 36, 0.8);
