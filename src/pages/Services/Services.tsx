@@ -281,7 +281,7 @@ export const Services = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
                 viewport={{ once: true, amount: 0.3 }}
-                className="relative mb-24 last:mb-0"
+                className="relative last:mb-0"
               >
                 <div
                   className={`flex flex-col md:flex-row items-start md:items-center gap-8 ${
