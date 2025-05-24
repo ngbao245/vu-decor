@@ -78,7 +78,7 @@ export default function Styles() {
 
       <div className="w-full max-w-7xl mx-auto">
         {/* Mobile Dropdown */}
-        <div className="lg:hidden px-4 py-4 sticky top-0 z-50 bg-white/95 backdrop-blur-sm">
+        <div className="lg:hidden px-4 py-4 sticky top-0 z-30 bg-white/95 backdrop-blur-sm">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="w-full flex items-center justify-between px-4 py-2 bg-white rounded-lg shadow-md"
@@ -104,7 +104,7 @@ export default function Styles() {
           </button>
 
           {isMenuOpen && (
-            <div className="absolute z-50 mt-2 w-[calc(100%-2rem)] bg-white rounded-lg shadow-lg">
+            <div className="absolute z-30 mt-2 w-[calc(100%-2rem)] bg-white rounded-lg shadow-lg">
               {designStyles.map((style) => (
                 <button
                   key={style.id}
