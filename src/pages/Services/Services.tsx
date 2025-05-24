@@ -83,7 +83,7 @@ export const Services = () => {
       title: "Thiết Kế Nội Thất",
       description:
         "Chúng tôi cung cấp dịch vụ thiết kế nội thất chuyên nghiệp, tạo ra không gian sống độc đáo và phù hợp với phong cách của bạn.",
-      icon: <Home className="w-12 h-12 text-[#7A876D]" />,
+      icon: <Home className="w-12 h-12 text-[#d6b26d]" />,
       features: [
         "Tư vấn phong cách thiết kế",
         "Lên ý tưởng và phác thảo 2D",
@@ -98,7 +98,7 @@ export const Services = () => {
       title: "Thi Công Nội Thất",
       description:
         "Đội ngũ thi công chuyên nghiệp của chúng tôi sẽ biến những bản vẽ thiết kế thành hiện thực với chất lượng cao nhất.",
-      icon: <Wrench className="w-12 h-12 text-[#7A876D]" />,
+      icon: <Wrench className="w-12 h-12 text-[#d6b26d]" />,
       features: [
         "Thi công đúng bản vẽ thiết kế",
         "Sử dụng vật liệu chất lượng cao",
@@ -113,7 +113,7 @@ export const Services = () => {
       title: "Tư Vấn Thiết Kế",
       description:
         "Chúng tôi cung cấp dịch vụ tư vấn chuyên sâu, giúp bạn lựa chọn phong cách và giải pháp thiết kế phù hợp nhất.",
-      icon: <MessageCircle className="w-12 h-12 text-[#7A876D]" />,
+      icon: <MessageCircle className="w-12 h-12 text-[#d6b26d]" />,
       features: [
         "Phân tích nhu cầu khách hàng",
         "Tư vấn phong cách phù hợp",
@@ -404,7 +404,7 @@ const ServiceSection = ({
               }}
               className="flex items-center space-x-2"
             >
-              <CheckCircle2 className="w-5 h-5 text-[#7A876D] flex-shrink-0" />
+              <CheckCircle2 className="w-5 h-5 text-[#d6b26d] flex-shrink-0" />
               <span className="text-gray-600">{feature}</span>
             </motion.div>
           ))}
