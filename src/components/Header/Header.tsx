@@ -66,7 +66,7 @@ const Header = ({ isSticky }: HeaderProps) => {
   return (
     <header
       className={clsx(
-        "w-full grid grid-cols-2 lg:grid-cols-4 px-4 items-center fixed top-0 left-0 right-0 z-50 transition-all duration-1000",
+        "w-full grid grid-cols-2 lg:grid-cols-4 px-4 items-center sticky top-0 left-0 right-0 z-50 transition-all duration-1000",
         isSticky ? "bg-white shadow-md" : "bg-transparent"
       )}
     >
