@@ -276,12 +276,14 @@ const ContactForm = () => {
                         Gửi
                         <Send className="w-5 h-5 ml-1" />
                       </button>
-                      {isTouched && !isFormValid && (
-                        <p className="text-red-500 text-sm mt-2 text-center">
-                          Vui lòng điền đầy đủ tất cả các trường thông tin trước
-                          khi gửi.
-                        </p>
-                      )}
+                      <p
+                        className="w-full text-red-500 text-xs mt-2 text-start min-h-[24px] transition-opacity duration-200"
+                        style={{
+                          opacity: isTouched && !isFormValid ? 1 : 0,
+                        }}
+                      >
+                        Vui lòng điền đầy đủ tất cả thông tin trước khi gửi.
+                      </p>
                     </div>
                   </form>
                   <AnimatePresence>
