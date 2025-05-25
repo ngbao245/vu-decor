@@ -64,6 +64,16 @@ const Header = ({ isSticky }: HeaderProps) => {
     }, 100);
   };
 
+  const getContactMobile = () => {
+    navigate("/contact");
+    setTimeout(() => {
+      const element = document.getElementById("contact-form-mobile");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
+
   return (
     <header
       className={clsx(
@@ -248,9 +258,7 @@ const Header = ({ isSticky }: HeaderProps) => {
             {/* Contact button */}
             <div className="p-10 border-t">
               <button
-                onClick={() => {
-                  handleNavigation("/contact", true);
-                }}
+                onClick={getContactMobile}
                 className="group relative inline-flex items-center justify-center w-full overflow-hidden rounded-lg bg-gradient-to-r from-[#404040] via-[#1a1a1a] to-[#404040] px-6 py-4 font-medium tracking-[0.2em] text-white transition-all duration-300 hover:scale-[0.98] active:scale-95 shadow-lg"
               >
                 <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-20 transition-all duration-1000 ease-out group-hover:-translate-x-96"></span>
