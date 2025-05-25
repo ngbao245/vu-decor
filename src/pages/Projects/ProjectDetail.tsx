@@ -259,7 +259,7 @@ export const ProjectDetail = () => {
             className="text-xl text-center max-w-2xl"
           ></motion.p>
         </div>
-        <motion.button
+        {/* <motion.button
           initial={{ x: -20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.3 }}
@@ -269,7 +269,7 @@ export const ProjectDetail = () => {
           group"
         >
           <ArrowLeft className="w-6 h-6 group-hover:translate-x-[-2px] transition-transform duration-300" />
-        </motion.button>
+        </motion.button> */}
       </div>
 
       {/* Project Info Cards */}

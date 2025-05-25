@@ -3,10 +3,7 @@ import asm from "../../assets/asm.png";
 import asmLight from "../../assets/asm-light.png";
 import { Link, useNavigate } from "react-router-dom";
 import { RxTextAlignJustify } from "react-icons/rx";
-import {
-  MessageSquare,
-  Send,
-} from "lucide-react";
+import { MessageSquare, Send } from "lucide-react";
 import { useState, useEffect } from "react";
 import clsx from "clsx";
 
@@ -217,7 +214,7 @@ const Header = ({ isSticky }: HeaderProps) => {
             </div>
 
             {/* Navigation links */}
-            <nav className="flex-1 px-4 py-6">
+            <nav className=" px-4 py-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.label}
