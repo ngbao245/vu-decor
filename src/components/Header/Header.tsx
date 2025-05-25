@@ -3,6 +3,10 @@ import asm from "../../assets/asm.png";
 import asmLight from "../../assets/asm-light.png";
 import { Link, useNavigate } from "react-router-dom";
 import { RxTextAlignJustify } from "react-icons/rx";
+import {
+  MessageSquare,
+  Send,
+} from "lucide-react";
 import { useState, useEffect } from "react";
 import clsx from "clsx";
 
@@ -121,34 +125,14 @@ const Header = ({ isSticky }: HeaderProps) => {
             }`}
           >
             <span className="relative overflow-hidden pr-2 md:pr-3 border-r-2 border-current">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
+              <Send
                 className="h-5 w-5 md:h-5 md:w-5 lg:h-6 lg:w-6 transform transition-transform duration-300 ease-out group-hover:translate-y-[-100%]"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
+                strokeWidth={1.5}
+              />
+              <MessageSquare
                 className="h-5 w-5 md:h-5 md:w-5 lg:h-6 lg:w-6 transform transition-transform duration-300 ease-out translate-y-[100%] group-hover:translate-y-0 absolute top-0 left-0"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-                />
-              </svg>
+                strokeWidth={1.5}
+              />
             </span>
             <span className="pl-2 md:pl-3 font-light text-sm md:text-sm lg:text-lg tracking-[0.2em] relative overflow-hidden">
               <span className="inline-block transform transition-transform duration-300 ease-out group-hover:translate-y-[-100%]">
@@ -209,7 +193,9 @@ const Header = ({ isSticky }: HeaderProps) => {
           <div className="flex flex-col h-full">
             {/* Close button */}
             <div className="flex justify-between items-center p-6 border-b">
-              <h3 className="text-2xl font-semibold text-[#2f2f2f]">Vu Decor</h3>
+              <h3 className="text-2xl font-semibold text-[#D6B26D]">
+                Vu Decor
+              </h3>
               <button
                 onClick={toggleMenu}
                 className="p-2 hover:bg-gray-100 rounded-full transition-colors group"
@@ -263,7 +249,7 @@ const Header = ({ isSticky }: HeaderProps) => {
             </nav>
 
             {/* Contact button */}
-            <div className="p-6 border-t">
+            <div className="p-10 border-t">
               <button
                 onClick={() => {
                   handleNavigation("/contact", true);
@@ -273,34 +259,14 @@ const Header = ({ isSticky }: HeaderProps) => {
                 <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-20 transition-all duration-1000 ease-out group-hover:-translate-x-96"></span>
                 <div className="flex items-center gap-3">
                   <span className="relative overflow-hidden pr-3 border-r border-white/30">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
+                    <Send
                       className="h-6 w-6 transform transition-transform duration-300 ease-out group-hover:translate-y-[-100%]"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                      />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
+                      strokeWidth={1.5}
+                    />
+                    <MessageSquare
                       className="h-6 w-6 absolute top-0 left-0 transform transition-transform duration-300 ease-out translate-y-[100%] group-hover:translate-y-0"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-                      />
-                    </svg>
+                      strokeWidth={1.5}
+                    />
                   </span>
                   <span className="relative overflow-hidden">
                     <span className="inline-block transform transition-transform duration-300 ease-out group-hover:translate-y-[-100%]">

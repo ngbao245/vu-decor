@@ -11,6 +11,8 @@ import {
   Home,
   CheckCircle2,
   Wrench,
+  Send,
+  MessageSquare,
 } from "lucide-react";
 
 type TimeoutType = ReturnType<typeof setTimeout>;
@@ -283,34 +285,14 @@ export const Services = () => {
                     <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-20 transition-all duration-1000 ease-out group-hover:-translate-x-96"></span>
                     <div className="flex items-center gap-3">
                       <span className="relative overflow-hidden pr-3 border-r border-white/30">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
+                        <Send
                           className="h-6 w-6 transform transition-transform duration-300 ease-out group-hover:translate-y-[-100%]"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.5}
-                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                          />
-                        </svg>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
+                          strokeWidth={1.5}
+                        />
+                        <MessageSquare
                           className="h-6 w-6 absolute top-0 left-0 transform transition-transform duration-300 ease-out translate-y-[100%] group-hover:translate-y-0"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.5}
-                            d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-                          />
-                        </svg>
+                          strokeWidth={1.5}
+                        />
                       </span>
                       <span className="relative overflow-hidden">
                         <span className="inline-block transform transition-transform duration-300 ease-out group-hover:translate-y-[-100%]">
