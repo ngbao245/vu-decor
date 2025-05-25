@@ -12,6 +12,30 @@ const ContactForm = () => {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
   const controls = useAnimation();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  // State cho các trường input
+  const [lastName, setLastName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [projectType, setProjectType] = useState("");
+  const [message, setMessage] = useState("");
+  const [isTouched, setIsTouched] = useState(false);
+
+  // Hàm kiểm tra số điện thoại Việt Nam
+  const isValidVietnamesePhone = (phone: string) => {
+    const regex = /^(0|\+84)[3|5|7|8|9][0-9]{8}$/;
+    return regex.test(phone.trim());
+  };
+
+  const isMessageRequired = projectType === 'other';
+  const isFormValid =
+    lastName.trim() &&
+    firstName.trim() &&
+    email.trim() &&
+    phone.trim() &&
+    isValidVietnamesePhone(phone) &&
+    projectType.trim() &&
+    (!isMessageRequired || message.trim());
 
   useEffect(() => {
     if (isInView) {
@@ -68,7 +92,7 @@ const ContactForm = () => {
                         <MapPin className="h-6 w-6 text-[#D6B26D]" />
                       </div>
                       <div>
-                        <h4 className="font-medium mb-1">Văn Phòng</h4>
+                        <h4 className="font-medium mb-1">Địa Chỉ</h4>
                         <p className="text-gray-600">
                           Vinhomes Grand Park, đường Nguyễn Xiển, <br /> Phường
                           Long Thạnh Mỹ, Thủ Đức, TP.HCM
@@ -111,6 +135,8 @@ const ContactForm = () => {
                     className="space-y-6"
                     onSubmit={(e) => {
                       e.preventDefault();
+                      setIsTouched(true);
+                      if (!isFormValid) return;
                       setIsSubmitted(true);
                     }}
                   >
@@ -126,6 +152,8 @@ const ContactForm = () => {
                           id="lastName"
                           placeholder="Nhập họ của bạn"
                           className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#D6B26D] focus:outline-none"
+                          value={lastName}
+                          onChange={(e) => { setLastName(e.target.value); setIsTouched(true); }}
                         />
                       </div>
                       <div className="space-y-2">
@@ -139,6 +167,8 @@ const ContactForm = () => {
                           id="firstName"
                           placeholder="Nhập tên của bạn"
                           className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#D6B26D] focus:outline-none"
+                          value={firstName}
+                          onChange={(e) => { setFirstName(e.target.value); setIsTouched(true); }}
                         />
                       </div>
                     </div>
@@ -151,6 +181,8 @@ const ContactForm = () => {
                         type="email"
                         placeholder="Nhập email của bạn"
                         className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#D6B26D] focus:outline-none"
+                        value={email}
+                        onChange={(e) => { setEmail(e.target.value); setIsTouched(true); }}
                       />
                     </div>
                     <div className="space-y-2">
@@ -162,7 +194,12 @@ const ContactForm = () => {
                         type="tel"
                         placeholder="Nhập số điện thoại của bạn"
                         className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#D6B26D] focus:outline-none"
+                        value={phone}
+                        onChange={(e) => { setPhone(e.target.value); setIsTouched(true); }}
                       />
+                      {isTouched && phone && !isValidVietnamesePhone(phone) && (
+                        <p className="text-red-500 text-xs mt-1">Số điện thoại không hợp lệ.</p>
+                      )}
                     </div>
                     <div className="space-y-2">
                       <label
@@ -174,6 +211,8 @@ const ContactForm = () => {
                       <select
                         id="projectType"
                         className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#D6B26D] focus:outline-none"
+                        value={projectType}
+                        onChange={(e) => { setProjectType(e.target.value); setIsTouched(true); }}
                       >
                         <option value="">Chọn Dịch Vụ</option>
                         <option value="residential">Thiết Kế Nội Thất</option>
@@ -188,21 +227,33 @@ const ContactForm = () => {
                       </label>
                       <textarea
                         id="message"
-                        placeholder="Hãy cho chúng tôi biết về dự án của bạn"
+                        placeholder="Hãy cho chúng tôi biết về yêu cầu của bạn"
                         rows={5}
                         className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#D6B26D] focus:outline-none"
+                        value={message}
+                        onChange={(e) => { setMessage(e.target.value); setIsTouched(true); }}
                       ></textarea>
+                      {isTouched && isMessageRequired && !message.trim() && (
+                        <p className="text-red-500 text-xs mt-1">Vui lòng nhập lời nhắn.</p>
+                      )}
                     </div>
 
-                    <div className="flex justify-center">
+                    <div className="flex flex-col items-center gap-2">
                       <button
                         type="submit"
-                        className="w-full flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold rounded-md bg-[#D6B26D] hover:bg-[#9d7e3b] transition-all duration-200 text-white focus:outline-none focus:ring-2 focus:ring-[#E34225]/40 mt-2"
-                        disabled={isSubmitted}
+                        className={`w-full flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#E34225]/40 mt-2
+                          ${isSubmitted || !isFormValid
+                            ? 'bg-[#dcccb5] text-white cursor-not-allowed'
+                            : 'bg-[#D6B26D] hover:bg-[#9d7e3b] text-white'}
+                        `}
+                        disabled={isSubmitted || !isFormValid}
                       >
                         Gửi
                         <Send className="w-5 h-5 ml-1" />
                       </button>
+                      {isTouched && !isFormValid && (
+                        <p className="text-red-500 text-sm mt-2 text-center">Vui lòng điền đầy đủ tất cả các trường thông tin trước khi gửi.</p>
+                      )}
                     </div>
                   </form>
                   <AnimatePresence>
