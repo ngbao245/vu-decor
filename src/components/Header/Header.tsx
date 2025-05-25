@@ -66,7 +66,7 @@ const Header = ({ isSticky }: HeaderProps) => {
   return (
     <header
       className={clsx(
-        "w-full grid grid-cols-2 md:grid-cols-12 px-4 items-center sticky top-0 left-0 right-0 z-50 transition-all duration-1000",
+        "select-none w-full grid grid-cols-2 md:grid-cols-12 px-4 items-center sticky top-0 left-0 right-0 z-50 transition-all duration-1000",
         isSticky ? "bg-white shadow-md" : "bg-transparent"
       )}
     >
@@ -208,13 +208,14 @@ const Header = ({ isSticky }: HeaderProps) => {
         >
           <div className="flex flex-col h-full">
             {/* Close button */}
-            <div className="flex justify-end p-4">
+            <div className="flex justify-between items-center p-6 border-b">
+              <h3 className="text-2xl font-semibold text-[#2f2f2f]">Vu Decor</h3>
               <button
                 onClick={toggleMenu}
-                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                className="p-2 hover:bg-gray-100 rounded-full transition-colors group"
               >
                 <svg
-                  className="w-6 h-6"
+                  className="w-6 h-6 text-gray-500 group-hover:text-[#D6B26D] transition-colors"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -230,18 +231,88 @@ const Header = ({ isSticky }: HeaderProps) => {
             </div>
 
             {/* Navigation links */}
-            <nav className="flex-1 px-4 py-2">
+            <nav className="flex-1 px-4 py-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.label}
                   to={link.href}
                   onClick={() => handleNavigation(link.href, true)}
-                  className={`block py-3 px-4 hover:bg-gray-100 rounded-lg transition-all duration-300 hover:translate-x-2 hover:text-primary active:scale-95 border-l-4 border-transparent hover:border-primary text-gray-700`}
+                  className="block py-3 px-4 mb-2 rounded-lg transition-all duration-300 relative group overflow-hidden"
                 >
-                  {link.label}
+                  <div className="absolute inset-0 bg-[#D6B26D]/10 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                  <div className="relative flex items-center justify-between">
+                    <span className="text-[#2f2f2f] group-hover:text-[#D6B26D] transition-colors">
+                      {link.label}
+                    </span>
+                    <svg
+                      className="w-5 h-5 text-gray-400 group-hover:text-[#D6B26D] transform group-hover:translate-x-1 transition-all"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
                 </Link>
               ))}
             </nav>
+
+            {/* Contact button */}
+            <div className="p-6 border-t">
+              <button
+                onClick={() => {
+                  handleNavigation("/contact", true);
+                }}
+                className="group relative inline-flex items-center justify-center w-full overflow-hidden rounded-lg bg-gradient-to-r from-[#404040] via-[#1a1a1a] to-[#404040] px-6 py-4 font-medium tracking-[0.2em] text-white transition-all duration-300 hover:scale-[0.98] active:scale-95 shadow-lg"
+              >
+                <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-20 transition-all duration-1000 ease-out group-hover:-translate-x-96"></span>
+                <div className="flex items-center gap-3">
+                  <span className="relative overflow-hidden pr-3 border-r border-white/30">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6 transform transition-transform duration-300 ease-out group-hover:translate-y-[-100%]"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6 absolute top-0 left-0 transform transition-transform duration-300 ease-out translate-y-[100%] group-hover:translate-y-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                      />
+                    </svg>
+                  </span>
+                  <span className="relative overflow-hidden">
+                    <span className="inline-block transform transition-transform duration-300 ease-out group-hover:translate-y-[-100%]">
+                      LIÊN HỆ
+                    </span>
+                    <span className="absolute top-0 left-0 transform transition-transform duration-300 ease-out translate-y-[100%] group-hover:translate-y-0">
+                      TƯ VẤN
+                    </span>
+                  </span>
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </div>
