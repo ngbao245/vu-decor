@@ -1,7 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import {
-  ArrowLeft,
   MapPin,
   Calendar,
   Ruler,
@@ -169,7 +168,6 @@ const projects: Project[] = [
 
 export const ProjectDetail = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
   const project = projects.find((p) => p.id === id);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
