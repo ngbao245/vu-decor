@@ -1,7 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import {
-  ArrowLeft,
   MapPin,
   Calendar,
   Ruler,
@@ -11,6 +10,7 @@ import {
   X,
   ChevronLeft,
   ChevronRight,
+  TrafficCone,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -39,7 +39,7 @@ const projects: Project[] = [
     id: "7e164cb1-49d5-4709-b53d-7a92c7a65320",
     title: "Căn BE1 - The Beverly Vinhomes",
     image:
-      "https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/473806759_122117412578618470_1205087045803481247_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=kEN9x-ZpxtYQ7kNvwHQJnqn&_nc_oc=AdmcEQOCPCG8fN_4t-qZ2N4qVqBES7DM5ZM3ZmKoSoaIS2K7do_9st0N8uUtlg5C7V8&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=hBE3_npexKkOls6XsYM28w&oh=00_AfI4hRw4PHy8dvZdbEIcZuPAm4LwRQsr8lGhHrVUuKGhsg&oe=68329F33",
+      "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/470618028_122112537152618470_3580512490494805686_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=26tThRdEFGcQ7kNvwHtf0z_&_nc_oc=Adkgxj-JRZrzH8qc_cYLZa9ajqRUNnz9_ZmcxCp0fJbTIQ6Ma0eblmi-4AD-nE1EOJU&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=NZdarDTYL59BJWkpdyWNxQ&oh=00_AfLUimS-A_pwqexN4Y2557edSJ5RBNkaT1OILIj0l2S0vw&oe=6838D75A",
     description:
       'Hình ảnh thực tế từ công trình của căn 1pn, những ngày cuối năm ai ai cũng tốc độ hoàn thành những công việc cuối cùng để chính thức đón Tết Ất Tỵ 2025, đội ngũ nhà Vu Decor cũng vậy, đảm bảo đúng tiến độ, chất lượng cho khách để anh em đều có cái "Tết đong đầy"✨',
     details: {
@@ -128,7 +128,8 @@ const projects: Project[] = [
     title: "Bếp Căn BS10 - The Beverly Solari",
     image:
       "https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/498213824_122133969548618470_6851937525598168220_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=7vtAEUbyVasQ7kNvwENPMDl&_nc_oc=Adn9tBtzLxylJFIWjOPO02HP-A16DHMTMAaa4dO80C4RmGXxhl8XK08vK1_kje15xqo&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=NDo-UToWYjbEy3FHwTiMtQ&oh=00_AfIYl1RomWEplUaOOdXcGk5wJIiAA0G77Ml1GnjuVxXnZA&oe=6833C7C6",
-    description: "Vu Decor tin rằng căn bếp không chỉ là nơi thể hiện tính thẩm mỹ cho căn nhà mà còn là \"nơi giữ lửa\" cho gia đình, còn điều gì tuyệt vời hơn sau một ngày dài làm việc ta được trở về ăn bữa cơm với người mình yêu thương, nuôi dưỡng cơ thể bằng những bữa ăn lành mạnh, tái tạo lại năng lượng và lại bắt đầu một ngày mới.",
+    description:
+      'Vu Decor tin rằng căn bếp không chỉ là nơi thể hiện tính thẩm mỹ cho căn nhà mà còn là "nơi giữ lửa" cho gia đình, còn điều gì tuyệt vời hơn sau một ngày dài làm việc ta được trở về ăn bữa cơm với người mình yêu thương, nuôi dưỡng cơ thể bằng những bữa ăn lành mạnh, tái tạo lại năng lượng và lại bắt đầu một ngày mới.',
     details: {
       location: "Quận 9,\nTP. Hồ Chí Minh",
       area: "45m²",
@@ -167,7 +168,6 @@ const projects: Project[] = [
 
 export const ProjectDetail = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
   const project = projects.find((p) => p.id === id);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -257,15 +257,17 @@ export const ProjectDetail = () => {
             className="text-xl text-center max-w-2xl"
           ></motion.p>
         </div>
-        <motion.button
+        {/* <motion.button
           initial={{ x: -20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.3 }}
           onClick={() => navigate("/projects")}
-          className="absolute top-18 left-6 bg-white/90 p-3 rounded-full shadow-lg hover:bg-white transition-colors"
+          className="fixed top-1/2 -translate-y-1/2 left-6 z-50 bg-[#D6B26D] p-3 rounded-full shadow-lg backdrop-blur-sm 
+          hover:bg-[#9d7e3b] hover:text-black transform hover:scale-110 transition-all duration-300 ease-in-out
+          group"
         >
-          <ArrowLeft className="w-6 h-6" />
-        </motion.button>
+          <ArrowLeft className="w-6 h-6 group-hover:translate-x-[-2px] transition-transform duration-300" />
+        </motion.button> */}
       </div>
 
       {/* Project Info Cards */}
@@ -277,7 +279,7 @@ export const ProjectDetail = () => {
             transition={{ delay: 0.4 }}
             className="bg-white rounded-xl shadow-lg p-6 flex items-center space-x-4"
           >
-            <MapPin className="w-8 h-8 text-blue-600" />
+            <MapPin className="w-8 h-8 text-[#d6b26d]" />
             <div>
               <p className="text-gray-500 text-sm">Vị Trí</p>
               <p className="font-semibold">{project.details?.location}</p>
@@ -289,7 +291,7 @@ export const ProjectDetail = () => {
             transition={{ delay: 0.5 }}
             className="bg-white rounded-xl shadow-lg p-6 flex items-center space-x-4"
           >
-            <Ruler className="w-8 h-8 text-green-600" />
+            <Ruler className="w-8 h-8 text-[#d6b26d]" />
             <div>
               <p className="text-gray-500 text-sm">Diện Tích</p>
               <p className="font-semibold">{project.details?.area}</p>
@@ -301,7 +303,7 @@ export const ProjectDetail = () => {
             transition={{ delay: 0.6 }}
             className="bg-white rounded-xl shadow-lg p-6 flex items-center space-x-4"
           >
-            <Calendar className="w-8 h-8 text-purple-600" />
+            <Calendar className="w-8 h-8 text-[#d6b26d]" />
             <div>
               <p className="text-gray-500 text-sm">Thời Gian Thực Hiện</p>
               <p className="font-semibold">{project.details?.duration}</p>
@@ -313,7 +315,7 @@ export const ProjectDetail = () => {
             transition={{ delay: 0.7 }}
             className="bg-white rounded-xl shadow-lg p-6 flex items-center space-x-4"
           >
-            <Users className="w-8 h-8 text-orange-600" />
+            <Users className="w-8 h-8 text-[#d6b26d]" />
             <div>
               <p className="text-gray-500 text-sm">Khách Hàng</p>
               <p className="font-semibold">{project.details?.client}</p>
@@ -334,12 +336,10 @@ export const ProjectDetail = () => {
               className="bg-white rounded-xl shadow-lg p-8 capitalize"
             >
               <h2 className="text-2xl font-bold mb-6 flex items-center">
-                <Home className="w-6 h-6 mr-2 text-blue-600" />
+                <Home className="w-6 h-6 mr-2 text-[#D6B26D]" />
                 Tổng quan dự án
               </h2>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                {project.description}
-              </p>
+              <p className=" mb-6 leading-relaxed">{project.description}</p>
 
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="bg-gray-50 p-4 rounded-lg">
@@ -362,7 +362,7 @@ export const ProjectDetail = () => {
               </div>
 
               <h3 className="text-xl font-semibold mb-4 flex items-center">
-                <CheckCircle2 className="w-5 h-5 mr-2 text-green-600" />
+                <CheckCircle2 className="w-5 h-5 mr-2 text-[#D6B26D]" />
                 Tính năng
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -374,7 +374,7 @@ export const ProjectDetail = () => {
                     transition={{ delay: 0.9 + index * 0.1 }}
                     className="flex items-center space-x-2 bg-gray-50 p-3 rounded-lg"
                   >
-                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-[#D6B26D] flex-shrink-0" />
                     <span className="text-gray-600">{feature}</span>
                   </motion.div>
                 ))}
@@ -387,10 +387,13 @@ export const ProjectDetail = () => {
               transition={{ delay: 1 }}
               className="bg-white rounded-xl shadow-lg p-8"
             >
-              <h2 className="text-2xl font-bold mb-6">Khó khăn & giải pháp</h2>
+              <h2 className="text-2xl font-bold mb-6 flex items-center">
+                <TrafficCone className="w-6 h-6 mr-2 text-[#D6B26D]" />
+                Khó khăn & giải pháp
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-lg font-semibold mb-4 text-red-600">
+                  <h3 className="text-lg font-semibold mb-4 text-[#c1564c]">
                     Khó khăn
                   </h3>
                   <ul className="space-y-3">
@@ -402,14 +405,14 @@ export const ProjectDetail = () => {
                         transition={{ delay: 1.1 + index * 0.1 }}
                         className="flex items-start space-x-2"
                       >
-                        <span className="text-red-600">•</span>
+                        <span className="text-[#c1564c]">•</span>
                         <span className="text-gray-600">{challenge}</span>
                       </motion.li>
                     ))}
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-4 text-green-600">
+                  <h3 className="text-lg font-semibold mb-4 text-[#7A876D]">
                     Giải pháp
                   </h3>
                   <ul className="space-y-3">
@@ -421,7 +424,7 @@ export const ProjectDetail = () => {
                         transition={{ delay: 1.1 + index * 0.1 }}
                         className="flex items-start space-x-2"
                       >
-                        <span className="text-green-600">•</span>
+                        <span className="text-[#7A876D]">•</span>
                         <span className="text-gray-600">{solution}</span>
                       </motion.li>
                     ))}
@@ -480,7 +483,7 @@ export const ProjectDetail = () => {
                     className={`px-3 py-1 rounded-md ${
                       currentPage === 1
                         ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                        : "bg-blue-600 text-white hover:bg-blue-700"
+                        : "bg-[#377b72] text-white hover:bg-[#2a626c]"
                     }`}
                   >
                     Trước
@@ -507,7 +510,7 @@ export const ProjectDetail = () => {
                     className={`px-3 py-1 rounded-md ${
                       currentPage === totalPages
                         ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                        : "bg-blue-600 text-white hover:bg-blue-700"
+                        : "bg-[#377b72] text-white hover:bg-[#2a626c]"
                     }`}
                   >
                     Sau

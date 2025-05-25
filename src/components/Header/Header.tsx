@@ -3,6 +3,7 @@ import asm from "../../assets/asm.png";
 import asmLight from "../../assets/asm-light.png";
 import { Link, useNavigate } from "react-router-dom";
 import { RxTextAlignJustify } from "react-icons/rx";
+import { MessageSquare, Send } from "lucide-react";
 import { useState, useEffect } from "react";
 import clsx from "clsx";
 
@@ -63,43 +64,53 @@ const Header = ({ isSticky }: HeaderProps) => {
     }, 100);
   };
 
+  const getContactMobile = () => {
+    navigate("/contact");
+    setTimeout(() => {
+      const element = document.getElementById("contact-form-mobile");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
+
   return (
     <header
       className={clsx(
-        "w-full grid grid-cols-2 lg:grid-cols-4 px-4 items-center fixed top-0 left-0 right-0 z-50 transition-all duration-1000",
+        "select-none w-full grid grid-cols-2 md:grid-cols-12 px-4 items-center sticky top-0 left-0 right-0 z-50 transition-all duration-1000",
         isSticky ? "bg-white shadow-md" : "bg-transparent"
       )}
     >
       <div
-        className="w-full h-16 col-span-1 cursor-pointer"
+        className="w-full h-16 col-span-1 md:col-span-2 cursor-pointer"
         onClick={() => handleNavigation("/#")}
       >
         <div className="h-full flex items-center">
           <img
             src={logoImage}
-            className="aspect-square h-[50px] md:h-[75px] md:ml-3 py-3 object-contain transition-all duration-300"
+            className="aspect-square h-[50px] md:h-[60px] lg:h-[75px] md:ml-3 py-3 object-contain transition-all duration-300"
             alt="Layers logo"
           />
           <img
             src={isSticky ? asm : asmLight}
-            className="h-[40px] md:h-[50px] sm:h-[30px] py-3 object-contain ml-[-20px] transition-all duration-300"
+            className="h-[40px] md:h-[45px] lg:h-[50px] sm:h-[30px] py-3 object-contain ml-[-20px] transition-all duration-300"
             alt="Layers logo"
           />
         </div>
       </div>
-      <div className="lg:flex lg:col-span-2 h-full  justify-center items-center hidden">
-        <nav className="flex gap-10 px-3 h-full font-medium items-center ">
+      <div className="md:flex md:col-span-8 h-full justify-center items-center hidden">
+        <nav className="flex gap-3 md:gap-6 lg:gap-12 xl:gap-16 px-2 md:px-3 h-full font-medium items-center">
           {navLinks.map((link) => {
             return (
               <Link
                 key={link.label}
                 to={link.href}
                 onClick={() => handleNavigation(link.href, false)}
-                className={`relative group transition-colors duration-300 ${
+                className={`relative group transition-colors duration-300 text-sm md:text-[12px] lg:text-[14px] xl:text-base ${
                   isSticky
                     ? "text-navbar text-[#2f2f2f]"
                     : "text-[#F5F5F3] text-navbar"
-                } hover:text-primary`}
+                } hover:text-primary whitespace-nowrap`}
               >
                 {link.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
@@ -108,7 +119,7 @@ const Header = ({ isSticky }: HeaderProps) => {
           })}
         </nav>
       </div>
-      <div className="flex justify-end gap-4">
+      <div className="flex justify-end gap-4 col-span-1 md:col-span-2">
         <div
           className={`relative ${
             isSticky ? "text-[#2f2f2f]" : "text-[#F5F5F3]"
@@ -120,41 +131,21 @@ const Header = ({ isSticky }: HeaderProps) => {
               isSticky ? "text-[#2f2f2f]" : "text-[#F5F5F3]"
             }`}
           >
-            <span className="relative overflow-hidden pr-3 border-r-2 border-current">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 transform transition-transform duration-300 ease-out group-hover:translate-y-[-100%]"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 transform transition-transform duration-300 ease-out translate-y-[100%] group-hover:translate-y-0 absolute top-0 left-0"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-                />
-              </svg>
+            <span className="relative overflow-hidden pr-2 md:pr-3 border-r-2 border-current">
+              <Send
+                className="h-5 w-5 md:h-5 md:w-5 lg:h-6 lg:w-6 transform transition-transform duration-300 ease-out group-hover:translate-y-[-100%]"
+                strokeWidth={1.5}
+              />
+              <MessageSquare
+                className="h-5 w-5 md:h-5 md:w-5 lg:h-6 lg:w-6 transform transition-transform duration-300 ease-out translate-y-[100%] group-hover:translate-y-0 absolute top-0 left-0"
+                strokeWidth={1.5}
+              />
             </span>
-            <span className="pl-3 font-light text-lg tracking-[0.2em] relative overflow-hidden">
+            <span className="pl-2 md:pl-3 font-light text-sm md:text-sm lg:text-lg tracking-[0.2em] relative overflow-hidden">
               <span className="inline-block transform transition-transform duration-300 ease-out group-hover:translate-y-[-100%]">
                 LIÊN HỆ
               </span>
-              <span className="absolute top-0 left-3 transform transition-transform duration-300 ease-out translate-y-[100%] group-hover:translate-y-0">
+              <span className="absolute top-0 left-2 md:left-3 transform transition-transform duration-300 ease-out translate-y-[100%] group-hover:translate-y-0">
                 TƯ VẤN
               </span>
             </span>
@@ -166,7 +157,6 @@ const Header = ({ isSticky }: HeaderProps) => {
           className={`feather feather-menu md:hidden ${
             isSticky ? "text-[#2f2f2f]" : "text-[#F5F5F3]"
           }`}
-          // style={{ marginRight: '20px' }}
         />
       </div>
 
@@ -209,13 +199,16 @@ const Header = ({ isSticky }: HeaderProps) => {
         >
           <div className="flex flex-col h-full">
             {/* Close button */}
-            <div className="flex justify-end p-4">
+            <div className="flex justify-between items-center p-6 border-b">
+              <h3 className="text-2xl font-semibold text-[#D6B26D]">
+                Vu Decor
+              </h3>
               <button
                 onClick={toggleMenu}
-                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                className="p-2 hover:bg-gray-100 rounded-full transition-colors group"
               >
                 <svg
-                  className="w-6 h-6"
+                  className="w-6 h-6 text-gray-500 group-hover:text-[#D6B26D] transition-colors"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -231,18 +224,66 @@ const Header = ({ isSticky }: HeaderProps) => {
             </div>
 
             {/* Navigation links */}
-            <nav className="flex-1 px-4 py-2">
+            <nav className=" px-4 py-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.label}
                   to={link.href}
                   onClick={() => handleNavigation(link.href, true)}
-                  className={`block py-3 px-4 hover:bg-gray-100 rounded-lg transition-all duration-300 hover:translate-x-2 hover:text-primary active:scale-95 border-l-4 border-transparent hover:border-primary text-gray-700`}
+                  className="block py-3 px-4 mb-2 rounded-lg transition-all duration-300 relative group overflow-hidden"
                 >
-                  {link.label}
+                  <div className="absolute inset-0 bg-[#D6B26D]/10 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                  <div className="relative flex items-center justify-between">
+                    <span className="text-[#2f2f2f] group-hover:text-[#D6B26D] transition-colors">
+                      {link.label}
+                    </span>
+                    <svg
+                      className="w-5 h-5 text-gray-400 group-hover:text-[#D6B26D] transform group-hover:translate-x-1 transition-all"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
                 </Link>
               ))}
             </nav>
+
+            {/* Contact button */}
+            <div className="p-10 border-t">
+              <button
+                onClick={getContactMobile}
+                className="group relative inline-flex items-center justify-center w-full overflow-hidden rounded-lg bg-gradient-to-r from-[#404040] via-[#1a1a1a] to-[#404040] px-6 py-4 font-medium tracking-[0.2em] text-white transition-all duration-300 hover:scale-[0.98] active:scale-95 shadow-lg"
+              >
+                <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-20 transition-all duration-1000 ease-out group-hover:-translate-x-96"></span>
+                <div className="flex items-center gap-3">
+                  <span className="relative overflow-hidden pr-3 border-r border-white/30">
+                    <Send
+                      className="h-6 w-6 transform transition-transform duration-300 ease-out group-hover:translate-y-[-100%]"
+                      strokeWidth={1.5}
+                    />
+                    <MessageSquare
+                      className="h-6 w-6 absolute top-0 left-0 transform transition-transform duration-300 ease-out translate-y-[100%] group-hover:translate-y-0"
+                      strokeWidth={1.5}
+                    />
+                  </span>
+                  <span className="relative overflow-hidden">
+                    <span className="inline-block transform transition-transform duration-300 ease-out group-hover:translate-y-[-100%]">
+                      LIÊN HỆ
+                    </span>
+                    <span className="absolute top-0 left-0 transform transition-transform duration-300 ease-out translate-y-[100%] group-hover:translate-y-0">
+                      TƯ VẤN
+                    </span>
+                  </span>
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </div>
