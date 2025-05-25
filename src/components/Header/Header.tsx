@@ -66,40 +66,40 @@ const Header = ({ isSticky }: HeaderProps) => {
   return (
     <header
       className={clsx(
-        "w-full grid grid-cols-2 lg:grid-cols-4 px-4 items-center sticky top-0 left-0 right-0 z-50 transition-all duration-1000",
+        "w-full grid grid-cols-2 md:grid-cols-12 px-4 items-center sticky top-0 left-0 right-0 z-50 transition-all duration-1000",
         isSticky ? "bg-white shadow-md" : "bg-transparent"
       )}
     >
       <div
-        className="w-full h-16 col-span-1 cursor-pointer"
+        className="w-full h-16 col-span-1 md:col-span-2 cursor-pointer"
         onClick={() => handleNavigation("/#")}
       >
         <div className="h-full flex items-center">
           <img
             src={logoImage}
-            className="aspect-square h-[50px] md:h-[75px] md:ml-3 py-3 object-contain transition-all duration-300"
+            className="aspect-square h-[50px] md:h-[60px] lg:h-[75px] md:ml-3 py-3 object-contain transition-all duration-300"
             alt="Layers logo"
           />
           <img
             src={isSticky ? asm : asmLight}
-            className="h-[40px] md:h-[50px] sm:h-[30px] py-3 object-contain ml-[-20px] transition-all duration-300"
+            className="h-[40px] md:h-[45px] lg:h-[50px] sm:h-[30px] py-3 object-contain ml-[-20px] transition-all duration-300"
             alt="Layers logo"
           />
         </div>
       </div>
-      <div className="lg:flex lg:col-span-2 h-full  justify-center items-center hidden">
-        <nav className="flex gap-10 px-3 h-full font-medium items-center ">
+      <div className="md:flex md:col-span-8 h-full justify-center items-center hidden">
+        <nav className="flex gap-3 md:gap-6 lg:gap-12 xl:gap-16 px-2 md:px-3 h-full font-medium items-center">
           {navLinks.map((link) => {
             return (
               <Link
                 key={link.label}
                 to={link.href}
                 onClick={() => handleNavigation(link.href, false)}
-                className={`relative group transition-colors duration-300 ${
+                className={`relative group transition-colors duration-300 text-sm md:text-[12px] lg:text-[14px] xl:text-base ${
                   isSticky
                     ? "text-navbar text-[#2f2f2f]"
                     : "text-[#F5F5F3] text-navbar"
-                } hover:text-primary`}
+                } hover:text-primary whitespace-nowrap`}
               >
                 {link.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
@@ -108,7 +108,7 @@ const Header = ({ isSticky }: HeaderProps) => {
           })}
         </nav>
       </div>
-      <div className="flex justify-end gap-4">
+      <div className="flex justify-end gap-4 col-span-1 md:col-span-2">
         <div
           className={`relative ${
             isSticky ? "text-[#2f2f2f]" : "text-[#F5F5F3]"
@@ -120,10 +120,10 @@ const Header = ({ isSticky }: HeaderProps) => {
               isSticky ? "text-[#2f2f2f]" : "text-[#F5F5F3]"
             }`}
           >
-            <span className="relative overflow-hidden pr-3 border-r-2 border-current">
+            <span className="relative overflow-hidden pr-2 md:pr-3 border-r-2 border-current">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 transform transition-transform duration-300 ease-out group-hover:translate-y-[-100%]"
+                className="h-5 w-5 md:h-5 md:w-5 lg:h-6 lg:w-6 transform transition-transform duration-300 ease-out group-hover:translate-y-[-100%]"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -137,7 +137,7 @@ const Header = ({ isSticky }: HeaderProps) => {
               </svg>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 transform transition-transform duration-300 ease-out translate-y-[100%] group-hover:translate-y-0 absolute top-0 left-0"
+                className="h-5 w-5 md:h-5 md:w-5 lg:h-6 lg:w-6 transform transition-transform duration-300 ease-out translate-y-[100%] group-hover:translate-y-0 absolute top-0 left-0"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -150,11 +150,11 @@ const Header = ({ isSticky }: HeaderProps) => {
                 />
               </svg>
             </span>
-            <span className="pl-3 font-light text-lg tracking-[0.2em] relative overflow-hidden">
+            <span className="pl-2 md:pl-3 font-light text-sm md:text-sm lg:text-lg tracking-[0.2em] relative overflow-hidden">
               <span className="inline-block transform transition-transform duration-300 ease-out group-hover:translate-y-[-100%]">
                 LIÊN HỆ
               </span>
-              <span className="absolute top-0 left-3 transform transition-transform duration-300 ease-out translate-y-[100%] group-hover:translate-y-0">
+              <span className="absolute top-0 left-2 md:left-3 transform transition-transform duration-300 ease-out translate-y-[100%] group-hover:translate-y-0">
                 TƯ VẤN
               </span>
             </span>
@@ -166,7 +166,6 @@ const Header = ({ isSticky }: HeaderProps) => {
           className={`feather feather-menu md:hidden ${
             isSticky ? "text-[#2f2f2f]" : "text-[#F5F5F3]"
           }`}
-          // style={{ marginRight: '20px' }}
         />
       </div>
 

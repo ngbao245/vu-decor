@@ -17,7 +17,7 @@ const MainLayout = () => {
 
   return (
     <div className="flex justify-center items-center ">
-      <div className="relative container w-screen max-w-8xl min-w-[300px] shadow-lg bgColor">
+      <div className="relative container max-w-8xl min-w-[300px] shadow-lg bgColor">
         <div
           className={clsx(
             "absolute w-full top-0 z-50 transition-all duration-1000 ease-in-out",
