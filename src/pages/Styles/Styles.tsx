@@ -1,5 +1,5 @@
 import HeroPage from "../../components/Hero/HeroPage";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 interface DesignStyle {
   id: string;
@@ -107,6 +107,32 @@ export default function Styles() {
   );
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const sectionRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setSelectedStyle(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: "-50% 0px",
+        threshold: 0
+      }
+    );
+
+    Object.values(sectionRefs.current).forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      Object.values(sectionRefs.current).forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
 
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
