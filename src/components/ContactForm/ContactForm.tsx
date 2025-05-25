@@ -27,7 +27,7 @@ const ContactForm = () => {
     return regex.test(phone.trim());
   };
 
-  const isMessageRequired = projectType === 'other';
+  const isMessageRequired = projectType === "other";
   const isFormValid =
     lastName.trim() &&
     firstName.trim() &&
@@ -120,7 +120,7 @@ const ContactForm = () => {
           </motion.div>
 
           <motion.div
-          id="contact-form-mobile"
+            id="contact-form-mobile"
             variants={{
               hidden: { opacity: 0, x: 50 },
               visible: { opacity: 1, x: 0 },
@@ -154,7 +154,10 @@ const ContactForm = () => {
                           placeholder="Nhập họ của bạn"
                           className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#D6B26D] focus:outline-none"
                           value={lastName}
-                          onChange={(e) => { setLastName(e.target.value); setIsTouched(true); }}
+                          onChange={(e) => {
+                            setLastName(e.target.value);
+                            setIsTouched(true);
+                          }}
                         />
                       </div>
                       <div className="space-y-2">
@@ -169,7 +172,10 @@ const ContactForm = () => {
                           placeholder="Nhập tên của bạn"
                           className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#D6B26D] focus:outline-none"
                           value={firstName}
-                          onChange={(e) => { setFirstName(e.target.value); setIsTouched(true); }}
+                          onChange={(e) => {
+                            setFirstName(e.target.value);
+                            setIsTouched(true);
+                          }}
                         />
                       </div>
                     </div>
@@ -183,7 +189,10 @@ const ContactForm = () => {
                         placeholder="Nhập email của bạn"
                         className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#D6B26D] focus:outline-none"
                         value={email}
-                        onChange={(e) => { setEmail(e.target.value); setIsTouched(true); }}
+                        onChange={(e) => {
+                          setEmail(e.target.value);
+                          setIsTouched(true);
+                        }}
                       />
                     </div>
                     <div className="space-y-2">
@@ -196,10 +205,15 @@ const ContactForm = () => {
                         placeholder="Nhập số điện thoại của bạn"
                         className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#D6B26D] focus:outline-none"
                         value={phone}
-                        onChange={(e) => { setPhone(e.target.value); setIsTouched(true); }}
+                        onChange={(e) => {
+                          setPhone(e.target.value);
+                          setIsTouched(true);
+                        }}
                       />
                       {isTouched && phone && !isValidVietnamesePhone(phone) && (
-                        <p className="text-red-500 text-xs mt-1">Số điện thoại không hợp lệ.</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          Số điện thoại không hợp lệ.
+                        </p>
                       )}
                     </div>
                     <div className="space-y-2">
@@ -213,7 +227,10 @@ const ContactForm = () => {
                         id="projectType"
                         className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#D6B26D] focus:outline-none"
                         value={projectType}
-                        onChange={(e) => { setProjectType(e.target.value); setIsTouched(true); }}
+                        onChange={(e) => {
+                          setProjectType(e.target.value);
+                          setIsTouched(true);
+                        }}
                       >
                         <option value="">Chọn Dịch Vụ</option>
                         <option value="residential">Thiết Kế Nội Thất</option>
@@ -232,20 +249,27 @@ const ContactForm = () => {
                         rows={5}
                         className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#D6B26D] focus:outline-none"
                         value={message}
-                        onChange={(e) => { setMessage(e.target.value); setIsTouched(true); }}
+                        onChange={(e) => {
+                          setMessage(e.target.value);
+                          setIsTouched(true);
+                        }}
                       ></textarea>
                       {isTouched && isMessageRequired && !message.trim() && (
-                        <p className="text-red-500 text-xs mt-1">Vui lòng nhập lời nhắn.</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          Vui lòng nhập lời nhắn.
+                        </p>
                       )}
                     </div>
 
                     <div className="flex flex-col items-center gap-2">
                       <button
                         type="submit"
-                        className={`w-full flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#E34225]/40 mt-2
-                          ${isSubmitted || !isFormValid
-                            ? 'bg-[#dcccb5] text-white cursor-not-allowed'
-                            : 'bg-[#D6B26D] hover:bg-[#9d7e3b] text-white'}
+                        className={`w-full flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold rounded-md transition-all duration-200 mt-2
+                          ${
+                            isSubmitted || !isFormValid
+                              ? "bg-[#dcccb5] text-white cursor-not-allowed"
+                              : "bg-[#D6B26D] hover:bg-[#9d7e3b] text-white"
+                          }
                         `}
                         disabled={isSubmitted || !isFormValid}
                       >
@@ -253,7 +277,10 @@ const ContactForm = () => {
                         <Send className="w-5 h-5 ml-1" />
                       </button>
                       {isTouched && !isFormValid && (
-                        <p className="text-red-500 text-sm mt-2 text-center">Vui lòng điền đầy đủ tất cả các trường thông tin trước khi gửi.</p>
+                        <p className="text-red-500 text-sm mt-2 text-center">
+                          Vui lòng điền đầy đủ tất cả các trường thông tin trước
+                          khi gửi.
+                        </p>
                       )}
                     </div>
                   </form>
