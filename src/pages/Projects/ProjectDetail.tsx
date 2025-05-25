@@ -40,7 +40,7 @@ const projects: Project[] = [
     id: "7e164cb1-49d5-4709-b53d-7a92c7a65320",
     title: "Căn BE1 - The Beverly Vinhomes",
     image:
-      "https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/473806759_122117412578618470_1205087045803481247_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=kEN9x-ZpxtYQ7kNvwHQJnqn&_nc_oc=AdmcEQOCPCG8fN_4t-qZ2N4qVqBES7DM5ZM3ZmKoSoaIS2K7do_9st0N8uUtlg5C7V8&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=hBE3_npexKkOls6XsYM28w&oh=00_AfI4hRw4PHy8dvZdbEIcZuPAm4LwRQsr8lGhHrVUuKGhsg&oe=68329F33",
+      "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/470618028_122112537152618470_3580512490494805686_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=26tThRdEFGcQ7kNvwHtf0z_&_nc_oc=Adkgxj-JRZrzH8qc_cYLZa9ajqRUNnz9_ZmcxCp0fJbTIQ6Ma0eblmi-4AD-nE1EOJU&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=NZdarDTYL59BJWkpdyWNxQ&oh=00_AfLUimS-A_pwqexN4Y2557edSJ5RBNkaT1OILIj0l2S0vw&oe=6838D75A",
     description:
       'Hình ảnh thực tế từ công trình của căn 1pn, những ngày cuối năm ai ai cũng tốc độ hoàn thành những công việc cuối cùng để chính thức đón Tết Ất Tỵ 2025, đội ngũ nhà Vu Decor cũng vậy, đảm bảo đúng tiến độ, chất lượng cho khách để anh em đều có cái "Tết đong đầy"✨',
     details: {
