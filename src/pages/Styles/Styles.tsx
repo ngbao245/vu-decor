@@ -108,6 +108,14 @@ export default function Styles() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const sectionRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setSelectedStyle(id);
+    }
+  };
+
   const setRef = (el: HTMLDivElement | null, id: string) => {
     if (sectionRefs.current) {
       sectionRefs.current[id] = el;
@@ -191,7 +199,7 @@ export default function Styles() {
                 {designStyles.map((style) => (
                   <button
                     key={style.id}
-                    onClick={() => scrollToSection(style.id)}
+                    onClick={() => handleScroll(style.id)}
                     className={`w-full text-left px-4 py-2 transition-colors duration-300 ${
                       selectedStyle === style.id
                         ? "text-[#D6B26D] font-medium"
