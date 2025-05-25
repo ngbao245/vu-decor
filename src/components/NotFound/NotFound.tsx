@@ -24,6 +24,64 @@ export default function NotFound() {
         className="max-w-5xl w-full bg-[#D8D3CD] rounded-xl shadow-xl overflow-hidden"
       >
         <div className="flex flex-col md:flex-row">
+          {/* Content side */}
+          <div className="w-full md:w-3/5 p-8 md:p-12 bg-[#F5F5F3]">
+            <motion.h1
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-6xl md:text-8xl font-bold text-[#2F2F2F] mb-4"
+            >
+              404
+            </motion.h1>
+
+            <motion.h2
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-2xl md:text-3xl font-semibold text-[#6B4F3B] mb-6"
+            >
+              Không gian này đang được trang trí!
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-[#2F2F2F] mb-8 text-lg"
+            >
+              Có vẻ như bạn đã ghé vào một không gian đang trong quá trình thiết
+              kế. Hãy để chúng tôi đưa bạn về khu vực đã hoàn thiện nhé!
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => navigate(-1)}
+                className="flex items-center justify-center gap-2 bg-[#F5F5F3] border-2 border-[#6B4F3B] text-[#6B4F3B] hover:bg-[#e9e9e7] font-medium py-3 px-6 rounded-lg transition-colors"
+              >
+                <ArrowLeft className="w-5 h-5" />
+                <span>Quay Lại</span>
+              </motion.button>
+
+              <motion.button
+                onClick={() => navigate("/")}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center justify-center gap-2 bg-[#D6B26D] hover:bg-[#c9a45f] text-[#2F2F2F] font-medium py-3 px-6 rounded-lg transition-colors"
+              >
+                <Home className="w-5 h-5" />
+                <span>Trang Chủ</span>
+              </motion.button>
+            </motion.div>
+          </div>
+
           {/* Decorative side */}
           <div className="w-full md:w-2/5 bg-[#D8D3CD] p-6 flex flex-col items-center justify-center">
             <div className="relative w-full h-64 md:h-full">
@@ -114,64 +172,6 @@ export default function NotFound() {
                 className="absolute bottom-1/3 left-1/3"
               ></motion.div>
             </div>
-          </div>
-
-          {/* Content side */}
-          <div className="w-full md:w-3/5 p-8 md:p-12 bg-[#F5F5F3]">
-            <motion.h1
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-6xl md:text-8xl font-bold text-[#2F2F2F] mb-4"
-            >
-              404
-            </motion.h1>
-
-            <motion.h2
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-2xl md:text-3xl font-semibold text-[#6B4F3B] mb-6"
-            >
-              Không gian này đang được trang trí!
-            </motion.h2>
-
-            <motion.p
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-[#2F2F2F] mb-8 text-lg"
-            >
-              Có vẻ như bạn đã ghé vào một không gian đang trong quá trình thiết
-              kế. Hãy để chúng tôi đưa bạn về khu vực đã hoàn thiện nhé!
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <motion.button
-                onClick={() => navigate("/")}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex items-center justify-center gap-2 bg-[#D6B26D] hover:bg-[#c9a45f] text-[#2F2F2F] font-medium py-3 px-6 rounded-lg transition-colors"
-              >
-                <Home className="w-5 h-5" />
-                <span>Trang Chủ</span>
-              </motion.button>
-
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => navigate(-1)}
-                className="flex items-center justify-center gap-2 bg-[#F5F5F3] border-2 border-[#6B4F3B] text-[#6B4F3B] hover:bg-[#e9e9e7] font-medium py-3 px-6 rounded-lg transition-colors"
-              >
-                <ArrowLeft className="w-5 h-5" />
-                <span>Quay Lại</span>
-              </motion.button>
-            </motion.div>
           </div>
         </div>
       </motion.div>
