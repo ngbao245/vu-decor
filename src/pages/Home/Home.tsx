@@ -1,6 +1,5 @@
 import GalleryHome from "../../components/GalleryHome/GalleryHome"
 import Hero from "../../components/Hero/Hero"
-import ProjectCate from "../../components/ProjectCate/ProjectCate"
 import ServiceHome from "../../components/ServiceHome/ServiceHome"
 import StoryTeam from "../../components/StoryTeam/StoryTeam"
 import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs"

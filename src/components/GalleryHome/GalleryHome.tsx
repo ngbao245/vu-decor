@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { motion, useAnimation, useInView } from "framer-motion";
+import {  useAnimation, useInView } from "framer-motion";
 
 const GalleryHome = () => {
     const ref = useRef(null);
