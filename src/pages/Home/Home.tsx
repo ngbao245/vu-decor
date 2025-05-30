@@ -1,6 +1,7 @@
 import Hero from "../../components/Hero/Hero"
 import ProjectCate from "../../components/ProjectCate/ProjectCate"
 import StoryTeam from "../../components/StoryTeam/StoryTeam"
+import FAQ from "../../components/FAQ/FAQ"
 
 export const Home = () => {
     return (
@@ -23,6 +24,7 @@ export const Home = () => {
             <div className="bg-white">
                 <StoryTeam />
             </div>
+            <FAQ />
         </div>
     )
 }
