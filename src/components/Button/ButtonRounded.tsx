@@ -3,22 +3,19 @@ import { cva } from 'class-variance-authority';
 import type { ButtonHTMLAttributes } from 'react';
 
 
-const classes = cva('flex items-center w-max py-3 px-5 hover:scale-105 active:scale-95', {
+const classes = cva('flex items-center rounded-md h-10 ', {
   variants: {
     variant: {
       primary: ' text-white px-10 linear-button',
-      secondary: 'bg-white bg-transparent'
-
+      secondary: 'bg-white text-white bg-transparent'
     },
     size: {
       sm: 'h-10',
     },
-    weight: {
-      xs: 'font-light',
-      sm: 'font-normal',
-      md: 'font-medium',
-      lg: 'font-semibold',
-      xl: 'font-bold'
+    font: {
+      sm: 'font-sm',
+      md: 'font-md',
+      lg: 'font-lg'
     },
     color: {
       white: 'text-white',
@@ -35,36 +32,27 @@ const classes = cva('flex items-center w-max py-3 px-5 hover:scale-105 active:sc
       md: 'shadow-md',
       lg: 'shadow-lg'
     }
-  },
-  defaultVariants: {
-    variant: 'primary',
-    size: 'sm',
-    weight: 'sm',
-    color: 'white',
-    rounded: 'sm',
-    shadow: 'sm'
   }
+
 })
 
 export default function Button(
   props: {
-    variant?: 'primary' | 'secondary';
+    variant: 'primary' | 'secondary';
     size?: 'sm';
-    weight?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    font?: 'sm' | 'md' | 'lg';
     color?: 'white' | 'black';
     rounded?: 'sm' | 'md' | 'lg' | 'full';
     shadow?: 'sm' | 'md' | 'lg';
+
   } & ButtonHTMLAttributes<HTMLButtonElement>) {
-  const { variant, className, size, weight, color, rounded, shadow, ...otherProps } = props
+  const { variant, className, size, font, color, rounded, shadow, ...otherProps } = props
   return (
     <button
       className={classes({
         variant,
         size,
-        weight,
-        color,
-        rounded,
-        shadow,
+        font,
         className,
       })}
       {...otherProps}
