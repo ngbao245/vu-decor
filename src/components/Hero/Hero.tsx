@@ -64,7 +64,6 @@ const Hero = () => {
             className=" h-50 w-50"
             style={{ backgroundImage: hero1Img, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
             >
-              sdfdsfz 
             </div>
           </div>
 

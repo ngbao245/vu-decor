@@ -12,15 +12,15 @@ export const Home = () => {
                 {/* <div className="h-16 bg-[#2f2f2f]"></div> */}
                 <Hero />
             </div>
-            <div className="flex bg-white h-[700px] px-5 py-5 lg:px-20 items-center">
+            <div className="flex bg-white min-h-[700px] px-4 py-8 md:px-8 lg:px-20 items-center">
                 <ServiceHome />
             </div>
-            <div className="flex bg-white h-[700px] px-5 py-5 lg:px-20 items-center"
+            <div className="flex bg-white min-h-[700px] px-4 py-8 md:px-8 lg:px-20 items-center"
                 style={{ backgroundImage: 'url("/images/whyChooseUs.jpg")', backgroundSize: "cover", backgroundPosition: "center" }}
             >
                 <WhyChooseUs />
             </div>
-            <div className="flex bg-white h-[800px] px-5 py-5 lg:px-20 items-center">
+            <div className="flex bg-white min-h-[800px] px-4 py-8 md:px-8 lg:px-20 items-center">
                 <GalleryHome />
             </div>
 
