@@ -39,28 +39,28 @@ const processSteps: ProcessStep[] = [
     title: "Tư Vấn & Khảo Sát",
     description:
       "Đội ngũ chuyên viên của VuDecor sẽ trao đổi chi tiết về ý tưởng, phong cách và ngân sách của bạn. Chúng tôi sẽ khảo sát không gian để đưa ra giải pháp tối ưu nhất.",
-    icon: <MessageCircle className="w-12 h-12 text-[#D6B26D]" />,
+    icon: <MessageCircle className="w-12 h-12 text-[#E34225]" />,
   },
   {
     id: 2,
     title: "Thiết Kế & Phác Thảo",
     description:
       "Dựa trên yêu cầu của bạn, chúng tôi sẽ tạo ra các bản phác thảo 2D và 3D chi tiết. Bạn có thể xem trước không gian tương lai của mình một cách trực quan nhất.",
-    icon: <Monitor className="w-12 h-12 text-[#D6B26D]" />,
+    icon: <Monitor className="w-12 h-12 text-[#E34225]" />,
   },
   {
     id: 3,
     title: "Báo Giá & Ký Kết",
     description:
       "VuDecor sẽ cung cấp báo giá chi tiết và minh bạch. Sau khi thống nhất, chúng tôi sẽ ký hợp đồng và lên kế hoạch thi công cụ thể.",
-    icon: <FileText className="w-12 h-12 text-[#D6B26D]" />,
+    icon: <FileText className="w-12 h-12 text-[#E34225]" />,
   },
   {
     id: 4,
     title: "Thi Công & Hoàn Thiện",
     description:
       "Đội ngũ thi công chuyên nghiệp sẽ biến thiết kế thành hiện thực. Chúng tôi cam kết thi công đúng tiến độ và đảm bảo chất lượng cao nhất.",
-    icon: <Settings className="w-12 h-12 text-[#D6B26D]" />,
+    icon: <Settings className="w-12 h-12 text-[#E34225]" />,
   },
 ];
 
@@ -85,7 +85,7 @@ export const Services = () => {
       title: "Thiết Kế Nội Thất",
       description:
         "Chúng tôi cung cấp dịch vụ thiết kế nội thất chuyên nghiệp, tạo ra không gian sống độc đáo và phù hợp với phong cách của bạn.",
-      icon: <Home className="w-12 h-12 text-[#d6b26d]" />,
+      icon: <Home className="w-12 h-12 text-[#E34225]" />,
       features: [
         "Tư vấn phong cách thiết kế",
         "Lên ý tưởng và phác thảo 2D",
@@ -100,7 +100,7 @@ export const Services = () => {
       title: "Thi Công Nội Thất",
       description:
         "Đội ngũ thi công chuyên nghiệp của chúng tôi sẽ biến những bản vẽ thiết kế thành hiện thực với chất lượng cao nhất.",
-      icon: <Wrench className="w-12 h-12 text-[#d6b26d]" />,
+      icon: <Wrench className="w-12 h-12 text-[#E34225]" />,
       features: [
         "Thi công đúng bản vẽ thiết kế",
         "Sử dụng vật liệu chất lượng cao",
@@ -115,7 +115,7 @@ export const Services = () => {
       title: "Tư Vấn Thiết Kế",
       description:
         "Chúng tôi cung cấp dịch vụ tư vấn chuyên sâu, giúp bạn lựa chọn phong cách và giải pháp thiết kế phù hợp nhất.",
-      icon: <MessageCircle className="w-12 h-12 text-[#d6b26d]" />,
+      icon: <MessageCircle className="w-12 h-12 text-[#E34225]" />,
       features: [
         "Phân tích nhu cầu khách hàng",
         "Tư vấn phong cách phù hợp",
@@ -171,7 +171,7 @@ export const Services = () => {
             >
               Quy Trình Làm Việc
             </motion.h2>
-            <div className="w-24 h-1 bg-[#D6B26D] mx-auto mb-8" />
+            <div className="w-24 h-1 bg-[#E34225] mx-auto mb-8" />
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
               Chúng tôi cam kết mang đến trải nghiệm thiết kế và thi công chuyên
               nghiệp thông qua quy trình làm việc chuẩn mực
@@ -181,7 +181,7 @@ export const Services = () => {
           {/* Timeline Steps */}
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-[20px] md:left-1/2 transform md:-translate-x-1/2 h-full w-px bg-gradient-to-b from-[#D6B26D] to-[#7A876D]" />
+            <div className="absolute left-[20px] md:left-1/2 transform md:-translate-x-1/2 h-full w-px bg-gradient-to-b from-[#E34225] to-[#7A876D]" />
 
             {processSteps.map((step, index) => (
               <motion.div
@@ -217,7 +217,7 @@ export const Services = () => {
                         <div className="flex items-center gap-4 mb-6">
                           <div className="flex-shrink-0">{step.icon}</div>
                           <div>
-                            <span className="text-[#D6B26D] font-bold text-sm md:text-base">
+                            <span className="text-[#E34225] font-bold text-sm md:text-base">
                               Bước {step.id}
                             </span>
                             <h3 className="text-[17px] leading-tight md:text-2xl font-bold whitespace-nowrap [@media(width<=320px)]:whitespace-normal">
@@ -240,7 +240,7 @@ export const Services = () => {
                         whileInView={{ scale: 1 }}
                         transition={{ duration: 0.2 }}
                         viewport={{ once: true }}
-                        className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-gradient-to-r from-[#D6B26D] to-[#7A876D] shadow-lg"
+                        className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-gradient-to-r from-[#E34225] to-[#7A876D] shadow-lg"
                       />
                     </div>
                   </div>
@@ -386,7 +386,7 @@ const ServiceSection = ({
               }}
               className="flex items-center space-x-2"
             >
-              <CheckCircle2 className="w-5 h-5 text-[#d6b26d] flex-shrink-0" />
+              <CheckCircle2 className="w-5 h-5 text-[#E34225] flex-shrink-0" />
               <span className="text-gray-600">{feature}</span>
             </motion.div>
           ))}

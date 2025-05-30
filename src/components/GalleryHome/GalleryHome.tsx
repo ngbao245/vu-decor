@@ -40,8 +40,6 @@ const GalleryHome = () => {
                     style={{ backgroundImage: `url(${imageURL})`, backgroundSize: "cover", backgroundPosition: "right" }}
                 ></div>
 
-
-
             </div>
         </section>
     )

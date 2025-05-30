@@ -98,7 +98,7 @@ export const Projects = () => {
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
               </div>
               <div className="p-6 transition-colors duration-300 group-hover:bg-gray-50">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 transition-colors duration-300 group-hover:text-[#D6B26D]">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 transition-colors duration-300 group-hover:text-[#E34225]">
                   {project.title}
                 </h3>
                 <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">{project.description}</p>

@@ -4,6 +4,7 @@ import ProjectCate from "../../components/ProjectCate/ProjectCate"
 import ServiceHome from "../../components/ServiceHome/ServiceHome"
 import StoryTeam from "../../components/StoryTeam/StoryTeam"
 import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs"
+import FAQ from "../../components/FAQ/FAQ"
 
 export const Home = () => {
     return (
@@ -15,23 +16,26 @@ export const Home = () => {
             <div className="flex bg-white h-[700px] px-5 py-5 lg:px-20 items-center">
                 <ServiceHome />
             </div>
-            <div className="flex bg-white h-[700px] px-5 py-5 lg:px-20 items-center">
+            <div className="flex bg-white h-[700px] px-5 py-5 lg:px-20 items-center"
+                style={{ backgroundImage: 'url("/images/whyChooseUs.jpg")', backgroundSize: "cover", backgroundPosition: "center" }}
+            >
                 <WhyChooseUs />
             </div>
             <div className="flex bg-white h-[800px] px-5 py-5 lg:px-20 items-center">
                 <GalleryHome />
             </div>
 
-            <div className="bg-[#2f2f2f] flex flex-col items-center pt-10">
+            {/* <div className="bg-[#2f2f2f] flex flex-col items-center pt-10">
                 <div className=" flex flex-col gap-5 items-center text-white text-[3rem] leading-none font-bold">
                     <span className="">Projects</span>
                     <div className="w-50 h-2 bg-[#7A876D]"></div>
                 </div>
                 <ProjectCate />
-            </div>
+            </div> */}
             <div className="bg-white">
                 <StoryTeam />
             </div>
+            <FAQ />
         </div>
     )
 }

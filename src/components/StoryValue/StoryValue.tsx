@@ -18,19 +18,19 @@ const StoryValue = () => {
       title: "Khách Hàng Là Trọng Tâm",
       description:
         "Lắng nghe, thấu hiểu và đáp ứng tối ưu nhu cầu của khách hàng. Chúng tôi cam kết mang đến trải nghiệm dịch vụ tốt nhất.",
-      icon: <Users className="w-8 h-8 text-[#D6B26D]" />,
+      icon: <Users className="w-8 h-8 text-[#E34225]" />,
     },
     {
       title: "Chất Lượng Vượt Trội",
       description:
         "Sản phẩm tinh tế, bền đẹp theo thời gian. Chúng tôi không ngừng cập nhật xu hướng và nâng cao chất lượng dịch vụ.",
-      icon: <Star className="w-8 h-8 text-[#D6B26D]" />,
+      icon: <Star className="w-8 h-8 text-[#E34225]" />,
     },
     {
       title: "Uy Tín Hàng Đầu",
       description:
         "Minh bạch trong quy trình, đúng tiến độ cam kết và dịch vụ tận tâm. Chúng tôi luôn đặt chữ tín lên hàng đầu.",
-      icon: <Shield className="w-8 h-8 text-[#D6B26D]" />,
+      icon: <Shield className="w-8 h-8 text-[#E34225]" />,
     },
   ];
 
@@ -51,7 +51,7 @@ const StoryValue = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 uppercase">
             Giá Trị Cốt Lõi
           </h2>
-          <div className="w-20 h-1 bg-[#D6B26D] mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-[#E34225] mx-auto mb-6"></div>
           <p className="max-w-3xl mx-auto text-gray-600">
             Những giá trị định hình cách chúng tôi làm việc và phục vụ khách
             hàng.
@@ -74,13 +74,13 @@ const StoryValue = () => {
             >
               <div className="p-8">
                 {/* Icon */}
-                <div className="w-16 h-16 bg-[#D6B26D]/10 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#D6B26D]/20 transition-colors duration-300">
+                <div className="w-16 h-16 bg-[#E34225]/10 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#E34225]/20 transition-colors duration-300">
                   {value.icon}
                 </div>
 
                 {/* Content */}
                 <div className="text-center">
-                  <h3 className="text-xl font-bold mb-4 text-[#2F2F2F] group-hover:text-[#D6B26D] transition-colors duration-300">
+                  <h3 className="text-xl font-bold mb-4 text-[#2F2F2F] group-hover:text-[#E34225] transition-colors duration-300">
                     {value.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
@@ -90,7 +90,7 @@ const StoryValue = () => {
               </div>
 
               {/* Decorative Bottom Bar */}
-              <div className="h-1 bg-[#D6B26D] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+              <div className="h-1 bg-[#E34225] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
             </motion.div>
           ))}
         </div>

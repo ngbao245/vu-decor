@@ -33,7 +33,9 @@ const WhyChooseUs = () => {
         },
     ];
     return (
-        <section ref={ref} className='w-full h-max flex flex-col gap-5'>
+        <section ref={ref} className='w-full h-max flex flex-col gap-5'
+
+        >
             <div className='text-center'>
                 <h6 className='text-[#828282]'>Tại sao chọn chúng tôi</h6>
                 <h1 className='text-[2.5rem]'><span className='text-[#E34225]'>Giá trị</span> cốt lõi</h1>

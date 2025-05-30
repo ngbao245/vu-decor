@@ -3,8 +3,8 @@ import Button from '../Button/Button'
 import { FaArrowRight } from "react-icons/fa6";
 const ServiceHome = () => {
     return (
-        <div className='w-full h-max flex flex-col gap-5'>
-            <div >
+        <div className='w-full h-max flex flex-col gap-10'>
+            <div className='text-center'>
                 <h6 className='text-[#828282]'>Dịch vụ</h6>
                 <h1 className='text-[2.5rem]'><span className='text-[#E34225]'>Thiết kế</span> nội thất</h1>
             </div>

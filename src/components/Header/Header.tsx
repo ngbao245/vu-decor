@@ -200,7 +200,7 @@ const Header = ({ isSticky }: HeaderProps) => {
           <div className="flex flex-col h-full">
             {/* Close button */}
             <div className="flex justify-between items-center p-6 border-b">
-              <h3 className="text-2xl font-semibold text-[#D6B26D]">
+              <h3 className="text-2xl font-semibold text-[#E34225]">
                 Vu Decor
               </h3>
               <button
@@ -208,7 +208,7 @@ const Header = ({ isSticky }: HeaderProps) => {
                 className="p-2 hover:bg-gray-100 rounded-full transition-colors group"
               >
                 <svg
-                  className="w-6 h-6 text-gray-500 group-hover:text-[#D6B26D] transition-colors"
+                  className="w-6 h-6 text-gray-500 group-hover:text-[#E34225] transition-colors"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -232,13 +232,13 @@ const Header = ({ isSticky }: HeaderProps) => {
                   onClick={() => handleNavigation(link.href, true)}
                   className="block py-3 px-4 mb-2 rounded-lg transition-all duration-300 relative group overflow-hidden"
                 >
-                  <div className="absolute inset-0 bg-[#D6B26D]/10 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                  <div className="absolute inset-0 bg-[#E34225]/10 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
                   <div className="relative flex items-center justify-between">
-                    <span className="text-[#2f2f2f] group-hover:text-[#D6B26D] transition-colors">
+                    <span className="text-[#2f2f2f] group-hover:text-[#E34225] transition-colors">
                       {link.label}
                     </span>
                     <svg
-                      className="w-5 h-5 text-gray-400 group-hover:text-[#D6B26D] transform group-hover:translate-x-1 transition-all"
+                      className="w-5 h-5 text-gray-400 group-hover:text-[#E34225] transform group-hover:translate-x-1 transition-all"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
