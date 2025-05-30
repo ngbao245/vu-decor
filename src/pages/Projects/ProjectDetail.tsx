@@ -262,7 +262,7 @@ export const ProjectDetail = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.3 }}
           onClick={() => navigate("/projects")}
-          className="fixed top-1/2 -translate-y-1/2 left-6 z-50 bg-[#D6B26D] p-3 rounded-full shadow-lg backdrop-blur-sm 
+          className="fixed top-1/2 -translate-y-1/2 left-6 z-50 bg-[#E34225] p-3 rounded-full shadow-lg backdrop-blur-sm 
           hover:bg-[#9d7e3b] hover:text-black transform hover:scale-110 transition-all duration-300 ease-in-out
           group"
         >
@@ -279,7 +279,7 @@ export const ProjectDetail = () => {
             transition={{ delay: 0.4 }}
             className="bg-white rounded-xl shadow-lg p-6 flex items-center space-x-4"
           >
-            <MapPin className="w-8 h-8 text-[#d6b26d]" />
+            <MapPin className="w-8 h-8 text-[#E34225]" />
             <div>
               <p className="text-gray-500 text-sm">Vị Trí</p>
               <p className="font-semibold">{project.details?.location}</p>
@@ -291,7 +291,7 @@ export const ProjectDetail = () => {
             transition={{ delay: 0.5 }}
             className="bg-white rounded-xl shadow-lg p-6 flex items-center space-x-4"
           >
-            <Ruler className="w-8 h-8 text-[#d6b26d]" />
+            <Ruler className="w-8 h-8 text-[#E34225]" />
             <div>
               <p className="text-gray-500 text-sm">Diện Tích</p>
               <p className="font-semibold">{project.details?.area}</p>
@@ -303,7 +303,7 @@ export const ProjectDetail = () => {
             transition={{ delay: 0.6 }}
             className="bg-white rounded-xl shadow-lg p-6 flex items-center space-x-4"
           >
-            <Calendar className="w-8 h-8 text-[#d6b26d]" />
+            <Calendar className="w-8 h-8 text-[#E34225]" />
             <div>
               <p className="text-gray-500 text-sm">Thời Gian Thực Hiện</p>
               <p className="font-semibold">{project.details?.duration}</p>
@@ -315,7 +315,7 @@ export const ProjectDetail = () => {
             transition={{ delay: 0.7 }}
             className="bg-white rounded-xl shadow-lg p-6 flex items-center space-x-4"
           >
-            <Users className="w-8 h-8 text-[#d6b26d]" />
+            <Users className="w-8 h-8 text-[#E34225]" />
             <div>
               <p className="text-gray-500 text-sm">Khách Hàng</p>
               <p className="font-semibold">{project.details?.client}</p>
@@ -336,7 +336,7 @@ export const ProjectDetail = () => {
               className="bg-white rounded-xl shadow-lg p-8 capitalize"
             >
               <h2 className="text-2xl font-bold mb-6 flex items-center">
-                <Home className="w-6 h-6 mr-2 text-[#D6B26D]" />
+                <Home className="w-6 h-6 mr-2 text-[#E34225]" />
                 Tổng quan dự án
               </h2>
               <p className=" mb-6 leading-relaxed">{project.description}</p>
@@ -362,7 +362,7 @@ export const ProjectDetail = () => {
               </div>
 
               <h3 className="text-xl font-semibold mb-4 flex items-center">
-                <CheckCircle2 className="w-5 h-5 mr-2 text-[#D6B26D]" />
+                <CheckCircle2 className="w-5 h-5 mr-2 text-[#E34225]" />
                 Tính năng
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -374,7 +374,7 @@ export const ProjectDetail = () => {
                     transition={{ delay: 0.9 + index * 0.1 }}
                     className="flex items-center space-x-2 bg-gray-50 p-3 rounded-lg"
                   >
-                    <CheckCircle2 className="w-5 h-5 text-[#D6B26D] flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-[#E34225] flex-shrink-0" />
                     <span className="text-gray-600">{feature}</span>
                   </motion.div>
                 ))}
@@ -388,7 +388,7 @@ export const ProjectDetail = () => {
               className="bg-white rounded-xl shadow-lg p-8"
             >
               <h2 className="text-2xl font-bold mb-6 flex items-center">
-                <TrafficCone className="w-6 h-6 mr-2 text-[#D6B26D]" />
+                <TrafficCone className="w-6 h-6 mr-2 text-[#E34225]" />
                 Khó khăn & giải pháp
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

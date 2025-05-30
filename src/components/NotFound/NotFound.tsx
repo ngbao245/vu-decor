@@ -74,7 +74,7 @@ export default function NotFound() {
                 onClick={() => navigate("/")}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center justify-center gap-2 bg-[#D6B26D] hover:bg-[#c9a45f] text-[#2F2F2F] font-medium py-3 px-6 rounded-lg transition-colors"
+                className="flex items-center justify-center gap-2 bg-[#E34225] hover:bg-[#c9a45f] text-[#2F2F2F] font-medium py-3 px-6 rounded-lg transition-colors"
               >
                 <Home className="w-5 h-5" />
                 <span>Trang Chủ</span>
@@ -107,7 +107,7 @@ export default function NotFound() {
                     repeat: Number.POSITIVE_INFINITY,
                     repeatType: "reverse",
                   }}
-                  className="w-32 h-32 md:w-48 md:h-48 bg-[#D6B26D] rounded-full flex items-center justify-center"
+                  className="w-32 h-32 md:w-48 md:h-48 bg-[#E34225] rounded-full flex items-center justify-center"
                 >
                   <Home className="w-16 h-16 md:w-24 md:h-24 text-[#2F2F2F]" />
                 </motion.div>
@@ -161,7 +161,7 @@ export default function NotFound() {
                     repeat: Number.POSITIVE_INFINITY,
                     ease: "linear",
                   }}
-                  className="w-6 h-6 bg-[#D6B26D] rounded-full"
+                  className="w-6 h-6 bg-[#E34225] rounded-full"
                 />
               </motion.div>
 
@@ -200,7 +200,7 @@ export default function NotFound() {
               repeat: Number.POSITIVE_INFINITY,
               repeatType: "reverse",
             }}
-            className="h-2 bg-[#D6B26D] rounded-full"
+            className="h-2 bg-[#E34225] rounded-full"
           />
           <motion.div
             animate={{ width: ["30px", "50px", "30px"] }}

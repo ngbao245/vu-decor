@@ -62,7 +62,7 @@ const ContactForm = () => {
                   <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
                     Liên Hệ
                   </h2>
-                  <div className="w-20 h-1 bg-[#D6B26D] mb-6"></div>
+                  <div className="w-20 h-1 bg-[#E34225] mb-6"></div>
                   <p className="text-gray-600 mb-8">
                     Chúng tôi rất mong nhận được phản hồi từ bạn. Hãy điền vào
                     mẫu dưới đây và một trong những chuyên gia tư vấn thiết kế
@@ -70,8 +70,8 @@ const ContactForm = () => {
                   </p>
                   <div className="mb-8">
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="bg-[#D6B26D]/20 rounded-full flex items-center justify-center h-12 w-12">
-                        <Phone className="h-6 w-6 text-[#D6B26D]" />
+                      <div className="bg-[#E34225]/20 rounded-full flex items-center justify-center h-12 w-12">
+                        <Phone className="h-6 w-6 text-[#E34225]" />
                       </div>
                       <div>
                         <h4 className="font-medium mb-1">Số điện thoại</h4>
@@ -79,8 +79,8 @@ const ContactForm = () => {
                       </div>
                     </div>
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="bg-[#D6B26D]/20 rounded-full flex items-center justify-center h-12 w-12">
-                        <Mail className="h-6 w-6 text-[#D6B26D]" />
+                      <div className="bg-[#E34225]/20 rounded-full flex items-center justify-center h-12 w-12">
+                        <Mail className="h-6 w-6 text-[#E34225]" />
                       </div>
                       <div>
                         <h4 className="font-medium mb-1">Email</h4>
@@ -88,8 +88,8 @@ const ContactForm = () => {
                       </div>
                     </div>
                     <div className="flex items-center gap-4 mb-0">
-                      <div className="bg-[#D6B26D]/20 rounded-full flex items-center justify-center h-12 w-12">
-                        <MapPin className="h-6 w-6 text-[#D6B26D]" />
+                      <div className="bg-[#E34225]/20 rounded-full flex items-center justify-center h-12 w-12">
+                        <MapPin className="h-6 w-6 text-[#E34225]" />
                       </div>
                       <div>
                         <h4 className="font-medium mb-1">Địa Chỉ</h4>
@@ -152,7 +152,7 @@ const ContactForm = () => {
                         <input
                           id="lastName"
                           placeholder="Nhập họ của bạn"
-                          className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#D6B26D] focus:outline-none"
+                          className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#E34225] focus:outline-none"
                           value={lastName}
                           onChange={(e) => {
                             setLastName(e.target.value);
@@ -170,7 +170,7 @@ const ContactForm = () => {
                         <input
                           id="firstName"
                           placeholder="Nhập tên của bạn"
-                          className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#D6B26D] focus:outline-none"
+                          className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#E34225] focus:outline-none"
                           value={firstName}
                           onChange={(e) => {
                             setFirstName(e.target.value);
@@ -187,7 +187,7 @@ const ContactForm = () => {
                         id="email"
                         type="email"
                         placeholder="Nhập email của bạn"
-                        className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#D6B26D] focus:outline-none"
+                        className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#E34225] focus:outline-none"
                         value={email}
                         onChange={(e) => {
                           setEmail(e.target.value);
@@ -203,7 +203,7 @@ const ContactForm = () => {
                         id="phone"
                         type="tel"
                         placeholder="Nhập số điện thoại của bạn"
-                        className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#D6B26D] focus:outline-none"
+                        className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#E34225] focus:outline-none"
                         value={phone}
                         onChange={(e) => {
                           setPhone(e.target.value);
@@ -225,7 +225,7 @@ const ContactForm = () => {
                       </label>
                       <select
                         id="projectType"
-                        className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#D6B26D] focus:outline-none"
+                        className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#E34225] focus:outline-none"
                         value={projectType}
                         onChange={(e) => {
                           setProjectType(e.target.value);
@@ -247,7 +247,7 @@ const ContactForm = () => {
                         id="message"
                         placeholder="Hãy cho chúng tôi biết về yêu cầu của bạn"
                         rows={5}
-                        className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#D6B26D] focus:outline-none"
+                        className="w-full px-[10px] py-[10px] border border-[#f0f0f0] rounded-[4px] transition-colors duration-300 focus:border-[#E34225] focus:outline-none"
                         value={message}
                         onChange={(e) => {
                           setMessage(e.target.value);
@@ -268,7 +268,7 @@ const ContactForm = () => {
                           ${
                             isSubmitted || !isFormValid
                               ? "bg-[#dcccb5] text-white cursor-not-allowed"
-                              : "bg-[#D6B26D] hover:bg-[#9d7e3b] text-white"
+                              : "bg-[#E34225] hover:bg-[#9d7e3b] text-white"
                           }
                         `}
                         disabled={isSubmitted || !isFormValid}
@@ -296,7 +296,7 @@ const ContactForm = () => {
                         className="absolute inset-0 flex flex-col items-center justify-center bg-white z-10"
                       >
                         <svg
-                          className="w-14 h-14 text-[#D6B26D] mb-4"
+                          className="w-14 h-14 text-[#E34225] mb-4"
                           fill="none"
                           stroke="currentColor"
                           strokeWidth="2"

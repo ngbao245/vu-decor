@@ -204,7 +204,7 @@ export default function Styles() {
                   key={style.id}
                   onClick={() => scrollToSection(style.id)}
                   className={`w-full text-left px-4 py-3 transition-colors duration-300 ${
-                    selectedStyle === style.id ? 'text-[#D6B26D] font-medium' : 'text-gray-700 hover:bg-[#D6B26D]/5 hover:text-[#D6B26D]'
+                    selectedStyle === style.id ? 'text-[#E34225] font-medium' : 'text-gray-700 hover:bg-[#E34225]/5 hover:text-[#E34225]'
                   }`}
                 >
                   {style.title}
@@ -228,8 +228,8 @@ export default function Styles() {
                     onClick={() => handleScroll(style.id)}
                     className={`w-full text-left px-4 py-2 transition-colors duration-300 ${
                       selectedStyle === style.id
-                        ? "text-[#D6B26D] font-medium"
-                        : "text-gray-600 hover:bg-[#D6B26D]/10 hover:text-[#D6B26D]"
+                        ? "text-[#E34225] font-medium"
+                        : "text-gray-600 hover:bg-[#E34225]/10 hover:text-[#E34225]"
                     }`}
                   >
                     {style.title}

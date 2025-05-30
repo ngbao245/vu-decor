@@ -30,7 +30,7 @@ const HeroPage = ({
             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">
               {page}
             </h1>
-            <div className="w-20 h-1 bg-[#D6B26D] mx-auto mb-6"></div>
+            <div className="w-20 h-1 bg-[#E34225] mx-auto mb-6"></div>
             <p className="text-xl text-white/90">{title}</p>
           </motion.div>
         </div>

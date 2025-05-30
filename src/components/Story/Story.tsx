@@ -28,7 +28,7 @@ const Story = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 uppercase">Về Chúng Tôi</h2>
-                    <div className="w-20 h-1 bg-[#D6B26D] mx-auto mb-6"></div>
+                    <div className="w-20 h-1 bg-[#E34225] mx-auto mb-6"></div>
                 </motion.div>
 
                 {/* Main Content Grid */}
@@ -70,10 +70,10 @@ const Story = () => {
                                 className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
                             >
                                 <div className="flex items-center gap-4 mb-4">
-                                    <div className="w-12 h-12 bg-[#D6B26D]/10 rounded-full flex items-center justify-center">
-                                        <Eye className="w-6 h-6 text-[#D6B26D]" />
+                                    <div className="w-12 h-12 bg-[#E34225]/10 rounded-full flex items-center justify-center">
+                                        <Eye className="w-6 h-6 text-[#E34225]" />
                                     </div>
-                                    <h3 className="text-2xl font-bold text-[#D6B26D]">Tầm Nhìn</h3>
+                                    <h3 className="text-2xl font-bold text-[#E34225]">Tầm Nhìn</h3>
                                 </div>
                                 <p className="text-gray-600">
                                     Từng bước khẳng định vị thế trên thị trường, cung cấp giải pháp thiết kế và thi công nội thất chất lượng, 
@@ -90,10 +90,10 @@ const Story = () => {
                                 className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
                             >
                                 <div className="flex items-center gap-4 mb-4">
-                                    <div className="w-12 h-12 bg-[#D6B26D]/10 rounded-full flex items-center justify-center">
-                                        <Flag className="w-6 h-6 text-[#D6B26D]" />
+                                    <div className="w-12 h-12 bg-[#E34225]/10 rounded-full flex items-center justify-center">
+                                        <Flag className="w-6 h-6 text-[#E34225]" />
                                     </div>
-                                    <h3 className="text-2xl font-bold text-[#D6B26D]">Sứ Mệnh</h3>
+                                    <h3 className="text-2xl font-bold text-[#E34225]">Sứ Mệnh</h3>
                                 </div>
                                 <p className="text-gray-600">
                                     Mang đến không gian sống chất lượng, kết hợp thẩm mỹ và công năng, tối ưu theo nhu cầu khách hàng.
@@ -133,7 +133,7 @@ const Story = () => {
                         </div>
 
                         {/* Decorative Element */}
-                        <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#D6B26D]/10 rounded-full"></div>
+                        <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#E34225]/10 rounded-full"></div>
                     </motion.div>
                 </div>
             </div>
