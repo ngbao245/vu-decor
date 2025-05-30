@@ -88,12 +88,12 @@ const Header = ({ isSticky }: HeaderProps) => {
         <div className="h-full flex items-center">
           <img
             src={logoImage}
-            className="aspect-square h-[50px] md:h-[60px] lg:h-[75px] md:ml-3 py-3 object-contain transition-all duration-300"
+            className="aspect-square h-[65px] md:h-[60px] lg:h-[75px] md:ml-3 py-3 object-contain transition-all duration-300"
             alt="Layers logo"
           />
           <img
             src={isSticky ? asm : asmLight}
-            className="h-[40px] md:h-[45px] lg:h-[50px] sm:h-[30px] py-3 object-contain ml-[-20px] transition-all duration-300"
+            className="h-[50px] md:h-[45px] lg:h-[50px] sm:h-[30px] py-3 object-contain ml-[-20px] transition-all duration-300"
             alt="Layers logo"
           />
         </div>
@@ -153,7 +153,7 @@ const Header = ({ isSticky }: HeaderProps) => {
         </div>
         <RxTextAlignJustify
           onClick={toggleMenu}
-          size={25}
+          size={30}
           className={`feather feather-menu md:hidden ${
             isSticky ? "text-[#2f2f2f]" : "text-[#F5F5F3]"
           }`}

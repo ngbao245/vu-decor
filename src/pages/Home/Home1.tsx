@@ -1,4 +1,4 @@
-import Hero from "../../components/Hero/Hero"
+import Hero from "../../components/Hero/Hero1"
 import ProjectCate from "../../components/ProjectCate/ProjectCate"
 import StoryTeam from "../../components/StoryTeam/StoryTeam"
 
@@ -6,7 +6,7 @@ export const Home = () => {
     return (
         <div className="min-h-screen flex flex-col w-full gap-20">
             <div>
-                {/* <div className="h-16 bg-[#2f2f2f]"></div> */}
+                <div className="h-16 bg-[#2f2f2f]"></div>
                 <Hero />
             </div>
             <div className="bg-white h-[500px]">
