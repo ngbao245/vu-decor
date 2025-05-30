@@ -80,7 +80,7 @@ const StoryValue = () => {
 
                 {/* Content */}
                 <div className="text-center">
-                  <h3 className="text-xl font-bold mb-4 text-[#7A876D] group-hover:text-[#D6B26D] transition-colors duration-300">
+                  <h3 className="text-xl font-bold mb-4 text-[#2F2F2F] group-hover:text-[#D6B26D] transition-colors duration-300">
                     {value.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
