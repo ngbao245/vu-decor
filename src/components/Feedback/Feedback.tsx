@@ -52,7 +52,7 @@ const Feedback = () => {
                     className="text-center mb-16"
                 >
                     <h6 className="text-[#828282] text-md mb-2">Đánh giá</h6>
-                    <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Khách Hàng Nói Gì Về Chúng Tôi</h2>
+                    <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4"><span className="text-[#E34225]">Khách Hàng</span> Nói <br className="block md:hidden"/> Gì Về Chúng Tôi</h2>
                     <div className="w-20 h-1 bg-[#E34225] mx-auto mb-6 rounded-full"></div>
                     <p className="max-w-3xl mx-auto text-gray-600">
                         Những đánh giá từ khách hàng đã trải nghiệm dịch vụ thiết kế và thi công nội thất của VuDecor.
