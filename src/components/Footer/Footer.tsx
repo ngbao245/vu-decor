@@ -60,9 +60,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full bg-gray-900 text-white py-12 text-justify">
+    <footer className="w-full h-max bg-[#2f2f2f] text-white text-justify">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 px-8 pt-12">
           {/* Company Info */}
           <div className="space-y-6">
             <div>
@@ -89,29 +89,26 @@ const Footer = () => {
                     className="font-medium bg-gradient-to-l from-blue-400 via-blue-400 to-transparent bg-clip-text text-transparent transition-all duration-500 ease-in-out"
                     style={{
                       backgroundImage: `linear-gradient(to left, 
-                        rgba(96, 165, 250, ${
-                          mousePosition.x === 0
-                            ? 0.3
-                            : Math.min(
-                                1,
-                                Math.max(0.3, (300 - mousePosition.x) / 150)
-                              )
+                        rgba(96, 165, 250, ${mousePosition.x === 0
+                          ? 0.3
+                          : Math.min(
+                            1,
+                            Math.max(0.3, (300 - mousePosition.x) / 150)
+                          )
                         }) 0%,
-                        rgba(96, 165, 250, ${
-                          mousePosition.x === 0
-                            ? 0.3
-                            : Math.min(
-                                1,
-                                Math.max(0.3, (300 - mousePosition.x) / 200)
-                              )
+                        rgba(96, 165, 250, ${mousePosition.x === 0
+                          ? 0.3
+                          : Math.min(
+                            1,
+                            Math.max(0.3, (300 - mousePosition.x) / 200)
+                          )
                         }) 50%,
-                        rgba(96, 165, 250, ${
-                          mousePosition.x === 0
-                            ? 0.3
-                            : Math.min(
-                                1,
-                                Math.max(0.3, (300 - mousePosition.x) / 250)
-                              )
+                        rgba(96, 165, 250, ${mousePosition.x === 0
+                          ? 0.3
+                          : Math.min(
+                            1,
+                            Math.max(0.3, (300 - mousePosition.x) / 250)
+                          )
                         }) 100%)`,
                     }}
                   >
@@ -122,20 +119,17 @@ const Footer = () => {
                     className="font-medium bg-gradient-to-r from-blue-400 via-blue-400 to-transparent bg-clip-text text-transparent transition-all duration-500 ease-in-out"
                     style={{
                       backgroundImage: `linear-gradient(to right, 
-                        rgba(96, 165, 250, ${
-                          mousePosition.x === 0
-                            ? 0.3
-                            : Math.min(1, Math.max(0.3, mousePosition.x / 150))
+                        rgba(96, 165, 250, ${mousePosition.x === 0
+                          ? 0.3
+                          : Math.min(1, Math.max(0.3, mousePosition.x / 150))
                         }) 0%,
-                        rgba(96, 165, 250, ${
-                          mousePosition.x === 0
-                            ? 0.3
-                            : Math.min(1, Math.max(0.3, mousePosition.x / 200))
+                        rgba(96, 165, 250, ${mousePosition.x === 0
+                          ? 0.3
+                          : Math.min(1, Math.max(0.3, mousePosition.x / 200))
                         }) 50%,
-                        rgba(96, 165, 250, ${
-                          mousePosition.x === 0
-                            ? 0.3
-                            : Math.min(1, Math.max(0.3, mousePosition.x / 250))
+                        rgba(96, 165, 250, ${mousePosition.x === 0
+                          ? 0.3
+                          : Math.min(1, Math.max(0.3, mousePosition.x / 250))
                         }) 100%)`,
                     }}
                   >
@@ -162,7 +156,7 @@ const Footer = () => {
                 <a
                   key={social.label}
                   href={social.href}
-                  className="hover:text-blue-400 transition-colors"
+                  className="hover:text-[#E34225] transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -176,7 +170,7 @@ const Footer = () => {
           <div className="space-y-6">
             <h4 className="text-xl font-semibold relative inline-block">
               Trang chủ
-              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-blue-500 rounded-full"></span>
+              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-[#E34225] rounded-full"></span>
             </h4>
             <ul className="space-y-4 grid grid-cols-2">
               {navLinks.map((link) => (
@@ -196,7 +190,7 @@ const Footer = () => {
           <div className="space-y-6">
             <h4 className="text-xl font-semibold relative inline-block">
               Liên hệ
-              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-blue-500 rounded-full"></span>
+              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-[#E34225] rounded-full"></span>
             </h4>
             <ul className="space-y-4">
               <li className="flex items-center space-x-3">
@@ -230,7 +224,7 @@ const Footer = () => {
           <div className="space-y-6">
             <h4 className="text-xl font-semibold relative inline-block">
               Hỗ trợ tư vấn
-              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-blue-500 rounded-full"></span>
+              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-[#E34225] rounded-full"></span>
             </h4>
             <p className="text-gray-400 flex flex-wrap">
               Hãy để lại email, chúng tôi sẽ liên hệ tư vấn thiết kế cho bạn.
@@ -242,12 +236,12 @@ const Footer = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Vui lập nhập email để được tư vấn"
-                  className="w-full px-4 py-2.5 text-sm rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-blue-500 text-white pr-12"
+                  className="w-full px-4 py-2.5 text-sm rounded-lg bg-[#444444] border border-gray-700 focus:outline-none focus:border-[#E34225] text-white pr-12"
                   required
                 />
                 <button
                   type="submit"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-blue-500 hover:text-blue-400 transition-colors duration-200"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-[#E34225] hover:text-blue-400 transition-colors duration-200"
                 >
                   <MdSend size={20} />
                 </button>
@@ -258,10 +252,10 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <div className="h-0.5 border-t border-gray-800 mt-6 pt-6 text-center text-gray-400">
-        <p>
-          &copy; {new Date().getFullYear()} VuDecor. Giữ bản quyển website này.
-        </p>
+      <div className="h-full border-t flex justify-center  bg-[#1f1f1f]  mt-6 py-5 text-center text-white">
+          <p>
+            &copy; {new Date().getFullYear()} VuDecor. Giữ bản quyển website này.
+          </p>
       </div>
     </footer>
   );

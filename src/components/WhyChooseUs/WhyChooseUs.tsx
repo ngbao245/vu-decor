@@ -53,7 +53,7 @@ const WhyChooseUs = () => {
                         transition={{ duration: 0.5, delay: index * 0.2 }}
                         className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1"
                     >
-                        <div className="p-8">
+                        <div className="p-8 h-full  ">
                             {/* Icon */}
                             <div className="w-16 h-16 bg-[#E34225]/10 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#E34225]/20 transition-colors duration-300">
                                 {value.icon}
