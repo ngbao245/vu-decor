@@ -35,11 +35,11 @@ const GalleryHome = () => {
             >
                 <h6 className='text-[#828282]'>Thư viện</h6>
                 <h1 className='text-[1.8rem] md:text-[2.5rem] whitespace-nowrap'><span className='text-[#E34225]'>Cảm hứng</span> & không gian </h1>
-                <h5 className='text-sm md:text-base hidden lg:flex text-justify max-w-[800px] mx-auto leading-relaxed tracking-wide whitespace-normal'>
+                <p className='text-sm md:text-base hidden md:flex text-justify max-w-[800px] mx-auto leading-relaxed tracking-wide whitespace-normal'>
                     Không gian sống lý tưởng chính là nơi nuôi dưỡng cảm hứng và khơi gợi sự hứng khởi mỗi sớm mai thức giấc. 
                     Với niềm đam mê kiến tạo, chúng tôi mong muốn thổi hồn vào từng mét vuông, biến ngôi nhà thành nguồn năng lượng tích cực, 
                     nơi bạn tìm thấy niềm vui và sự thư thái trọn vẹn.
-                </h5>
+                </p>
             </motion.div>
             
             {/* Mobile Layout */}

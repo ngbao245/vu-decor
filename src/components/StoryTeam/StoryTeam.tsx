@@ -35,7 +35,7 @@ const StoryTeam = () => {
                 >
                     <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Đội Ngũ Của Chúng Tôi</h2>
                     <div className="w-20 h-1 bg-[#E34225] mx-auto mb-6"></div>
-                    <p className="max-w-3xl mx-auto text-gray-600">
+                    <p className="max-w-3xl mx-auto text-gray-600 hidden md:flex">
                         Với kinh nghiệm và đam mê, chúng tôi cam kết mang đến những thiết kế độc đáo và chất lượng.
                     </p>
                 </motion.div>

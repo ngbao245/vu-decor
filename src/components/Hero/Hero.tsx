@@ -76,19 +76,19 @@ const Hero = () => {
               <b className='text-[1rem] sm:text-[1.5rem]'>
                 <CountUp end={150} duration={2.5} enableScrollSpy={true} suffix="+"/>
               </b>
-              <span className='font-medium'>Satisfied Clients</span>
+              <span className='font-medium'>Khách Hàng</span>
             </div>
             <div className='flex flex-col items-center'>
               <b className='text-[1rem] sm:text-[1.5rem]'>
                 <CountUp end={500} duration={2.5} enableScrollSpy={true} suffix="+" />
               </b>
-              <span className="font-medium">Complete Projects</span>
+              <span className="font-medium">Dự Án</span>
             </div>
             <div className='flex flex-col items-center'>
               <b className='text-[1rem] sm:text-[1.5rem]'>
                 <CountUp end={10} duration={2.5} enableScrollSpy={true} suffix="+" />
               </b>
-              <span className="font-medium">Years Experience</span>
+              <span className="font-medium">Kinh Nghiệm</span>
             </div>
           </div>
         </div>
