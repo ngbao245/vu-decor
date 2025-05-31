@@ -86,7 +86,7 @@ const Footer = () => {
               >
                 <p className="text-white text-lg font-light tracking-wide relative hidden 2xl:block cursor-default select-none">
                   <span
-                    className="font-medium bg-gradient-to-l from-blue-400 via-blue-400 to-transparent bg-clip-text text-transparent transition-all duration-500 ease-in-out"
+                    className="font-medium bg-gradient-to-l from-red-400 via-red-400 to-transparent bg-clip-text text-transparent transition-all duration-500 ease-in-out"
                     style={{
                       backgroundImage: `linear-gradient(to left, 
                         rgba(96, 165, 250, ${mousePosition.x === 0
@@ -116,7 +116,7 @@ const Footer = () => {
                   </span>
                   <span className="mx-2 text-gray-400">|</span>
                   <span
-                    className="font-medium bg-gradient-to-r from-blue-400 via-blue-400 to-transparent bg-clip-text text-transparent transition-all duration-500 ease-in-out"
+                    className="font-medium bg-gradient-to-r from-red-400 via-red-400 to-transparent bg-clip-text text-transparent transition-all duration-500 ease-in-out"
                     style={{
                       backgroundImage: `linear-gradient(to right, 
                         rgba(96, 165, 250, ${mousePosition.x === 0
@@ -137,7 +137,7 @@ const Footer = () => {
                   </span>
                 </p>
                 <div
-                  className="absolute -bottom-1 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-400 to-transparent"
+                  className="absolute -bottom-1 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-red-400 to-transparent"
                   style={{
                     backgroundImage: `linear-gradient(to right, 
                       transparent 0%,
@@ -241,7 +241,7 @@ const Footer = () => {
                 />
                 <button
                   type="submit"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-[#E34225] hover:text-blue-400 transition-colors duration-200"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-[#E34225] hover:text-red-400 transition-colors duration-200"
                 >
                   <MdSend size={20} />
                 </button>

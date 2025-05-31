@@ -1,6 +1,6 @@
-import "./hero.css"
+import "./hero.css";
 import hero1Img from "../../assets/hero1-img.jpg";
-import CountUp from 'react-countup';
+import CountUp from "react-countup";
 
 const Hero = () => {
   return (
@@ -14,12 +14,17 @@ const Hero = () => {
       <div className="absolute inset-0 flex items-center justify-center px-3">
         <div className="relative w-full h-full flex flex-col gap-5 justify-center items-center px-3 ">
           <div className="flex flex-col gap-5">
-            <b className="text-[1.6rem] md:text-[3.5rem] font-sans text-white uppercase">Kiến tạo không gian, <br />nâng tầm cuộc sống</b>
-            <span className="text-lg md:text-2xl font-sans text-white">Mỗi không gian là một câu chuyện, mỗi trải nghiệm là một đẳng cấp mới</span>
+            <b className="text-[1.6rem] md:text-[3.5rem] font-sans text-white uppercase">
+              Kiến tạo không gian, <br />
+              nâng tầm cuộc sống
+            </b>
+            <span className="text-lg md:text-2xl font-sans text-white">
+              Mỗi không gian là một câu chuyện, mỗi trải nghiệm là một đẳng cấp
+              mới
+            </span>
           </div>
 
-
-          <div className="hidden absolute lg:flex w-[200px] aspect-square top-20 right-5 bg-white p-1 rounded-lg">
+          {/* <div className="hidden absolute lg:flex w-[200px] aspect-square top-20 right-5 bg-white p-1 rounded-lg">
             <div className="relative w-full h-full">
               <img
                 src="https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/473526882_122117507666618470_3369083212097705845_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=JyaGM6H8rgUQ7kNvwHt0rTm&_nc_oc=AdlQQAohH1vk-kpgJBNp7PgLznXtFAghkJzZCNkDWmggu2nnpDRItbfqoxuXzT-8CHpcsshLznIfeaYnc8aSxUHU&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=7ljIjJBd3bjMSDPwi12BMg&oh=00_AfKAhlmN13-N4Yc3zdo7qzD7-79H_zuaIyGTYeTSJRzoTQ&oe=683CC4C4"
@@ -36,9 +41,9 @@ const Hero = () => {
                 alt=""
                 className=" w-full h-full object-cover rounded-md"
               />
-              {/* <div className="absolute w-1/2 bottom-0 rounded-tr-md aspect-3/2 bg-white"></div> */}
             </div>
-          </div>
+          </div> */}
+          {/* <div className="absolute w-1/2 bottom-0 rounded-tr-md aspect-3/2 bg-white"></div> */}
 
           {/* <div className="relative max-w-xs sm:max-w-[340px] rounded-xl overflow-hidden shadow-2xl group">
             <img src="https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/473526882_122117507666618470_3369083212097705845_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=JyaGM6H8rgUQ7kNvwHt0rTm&_nc_oc=AdlQQAohH1vk-kpgJBNp7PgLznXtFAghkJzZCNkDWmggu2nnpDRItbfqoxuXzT-8CHpcsshLznIfeaYnc8aSxUHU&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=7ljIjJBd3bjMSDPwi12BMg&oh=00_AfKAhlmN13-N4Yc3zdo7qzD7-79H_zuaIyGTYeTSJRzoTQ&oe=683CC4C4"
@@ -61,32 +66,52 @@ const Hero = () => {
           </div> */}
 
           <div className="absolute  w-full">
-            <div 
-            className=" h-50 w-50"
-            style={{ backgroundImage: hero1Img, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
-            >
-            </div>
+            <div
+              className=" h-50 w-50"
+              style={{
+                backgroundImage: hero1Img,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
           </div>
 
-          <div className='
+          <div
+            className="
             absolute bottom-2 w-full grid grid-cols-3 py-2 rounded-md text-xs md:text-sm
-            text-center text-white bg-[#2f2f2f]/50 backdrop-blur-xs backdrop-saturate-200'
+            text-center text-white bg-[#2f2f2f]/50 backdrop-blur-xs backdrop-saturate-200"
           >
-            <div className='flex flex-col items-center'>
-              <b className='text-[1rem] sm:text-[1.5rem]'>
-                <CountUp end={150} duration={2.5} enableScrollSpy={true} suffix="+"/>
+            <div className="flex flex-col items-center">
+              <b className="text-[1rem] sm:text-[1.5rem]">
+                <CountUp
+                  end={150}
+                  duration={2.5}
+                  enableScrollSpy={true}
+                  suffix="+"
+                />
               </b>
-              <span className='font-medium'>Khách Hàng</span>
+              <span className="font-medium">Khách Hàng</span>
             </div>
-            <div className='flex flex-col items-center'>
-              <b className='text-[1rem] sm:text-[1.5rem]'>
-                <CountUp end={500} duration={2.5} enableScrollSpy={true} suffix="+" />
+            <div className="flex flex-col items-center">
+              <b className="text-[1rem] sm:text-[1.5rem]">
+                <CountUp
+                  end={500}
+                  duration={2.5}
+                  enableScrollSpy={true}
+                  suffix="+"
+                />
               </b>
               <span className="font-medium">Dự Án</span>
             </div>
-            <div className='flex flex-col items-center'>
-              <b className='text-[1rem] sm:text-[1.5rem]'>
-                <CountUp end={10} duration={2.5} enableScrollSpy={true} suffix="+" />
+            <div className="flex flex-col items-center">
+              <b className="text-[1rem] sm:text-[1.5rem]">
+                <CountUp
+                  end={10}
+                  duration={2.5}
+                  enableScrollSpy={true}
+                  suffix="+"
+                />
               </b>
               <span className="font-medium">Kinh Nghiệm</span>
             </div>
@@ -94,7 +119,7 @@ const Hero = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
