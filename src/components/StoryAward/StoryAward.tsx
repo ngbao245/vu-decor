@@ -55,7 +55,7 @@ const StoryAward = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Awards & Recognition</h2>
-                    <div className="w-20 h-1 bg-[#E34225] mx-auto mb-6"></div>
+                    <div className="w-20 h-1 bg-[#E34225] mx-auto mb-6 rounded-full"></div>
                     <p className="max-w-3xl mx-auto text-gray-600">
                         Our commitment to excellence has been recognized by leading organizations in the design industry.
                     </p>

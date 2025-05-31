@@ -51,7 +51,7 @@ const StoryValue = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Giá Trị Cốt Lõi
           </h2>
-          <div className="w-20 h-1 bg-[#E34225] mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-[#E34225] mx-auto mb-6 rounded-full"></div>
           <p className="max-w-3xl mx-auto text-gray-600">
             Những giá trị định hình cách chúng tôi làm việc và phục vụ khách
             hàng.
