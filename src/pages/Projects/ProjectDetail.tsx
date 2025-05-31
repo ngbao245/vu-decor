@@ -33,13 +33,12 @@ interface Project {
   };
 }
 
-// Sample projects data - replace with your actual data
 const projects: Project[] = [
   {
     id: "7e164cb1-49d5-4709-b53d-7a92c7a65320",
     title: "Căn BE1 - The Beverly Vinhomes",
     image:
-      "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/470618028_122112537152618470_3580512490494805686_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=26tThRdEFGcQ7kNvwHtf0z_&_nc_oc=Adkgxj-JRZrzH8qc_cYLZa9ajqRUNnz9_ZmcxCp0fJbTIQ6Ma0eblmi-4AD-nE1EOJU&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=NZdarDTYL59BJWkpdyWNxQ&oh=00_AfLUimS-A_pwqexN4Y2557edSJ5RBNkaT1OILIj0l2S0vw&oe=6838D75A",
+      "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668663/473806759_122117412578618470_1205087045803481247_n_jltlsj.jpg",
     description:
       'Hình ảnh thực tế từ công trình của căn 1pn, những ngày cuối năm ai ai cũng tốc độ hoàn thành những công việc cuối cùng để chính thức đón Tết Ất Tỵ 2025, đội ngũ nhà Vu Decor cũng vậy, đảm bảo đúng tiến độ, chất lượng cho khách để anh em đều có cái "Tết đong đầy"✨',
     details: {
@@ -67,10 +66,14 @@ const projects: Project[] = [
         "Hệ thống lưu trữ dạng mô-đun",
       ],
       images: [
-        "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/473522308_122117412542618470_2171786139999124298_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=TdbRo5h4D34Q7kNvwEjdOkp&_nc_oc=Adl3HULmhm5ZEFCTVsyTU0xrAgMZ1ADE2Fi5ZvAdR_gzqPvS6B_aeTlJ5fNBcocSW-nzNcGihJrSeBdI8w5lN89h&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=J52fYVbttI5mUhjr72BMYQ&oh=00_AfJRtAX8Nt4zCq5efBG63LbXstZ2aGjTwIlz8r-lIog-Vw&oe=6833933A",
-        "https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/473806759_122117412578618470_1205087045803481247_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=kEN9x-ZpxtYQ7kNvwEP7WQi&_nc_oc=Adl4SNFKn4pLlujznGfZWoCNE7FWcILoQxZB4WSHfvU9EyJk1EGevocFMPeQ1kWTrd3cPqhel0lGpdJuJbnSQE9U&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=r1Cg3bEZbhSw28f6kgEWjw&oh=00_AfJPe819qiEecDqGz3V_srmyyGg2nxe15ajMQNY5EnG_GA&oe=6833B873",
-        "https://scontent.fsgn5-12.fna.fbcdn.net/v/t39.30808-6/474702606_122117412638618470_9085434426572049700_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=zJmkRsd4HXwQ7kNvwGv_qXp&_nc_oc=Adki84Im4YTrRLm5WiK0a0dbsc2Xb68kVrvqRBlOShOZ4XYLmDbyUdhfLIEgHvecbmATWWxOSWS1M57YR6uvRPNj&_nc_zt=23&_nc_ht=scontent.fsgn5-12.fna&_nc_gid=kBVClZMpjPasxXOGDbeMHQ&oh=00_AfI4NwLiGR7wVBAg8t0vYmdcJ7hWw16ebSzSpOKBxhEXQw&oe=68339F82",
-        "https://scontent.fsgn5-12.fna.fbcdn.net/v/t39.30808-6/474163971_122117412554618470_6285346111792169121_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=5Mxgx4ZTKKwQ7kNvwExTCyh&_nc_oc=Adm_6T6mtkm__MABtBS2qG2kaWOGn-hBz6P1oO6QnS9DK46QLxBw6Wmf6X6jUjiRtpfgI5mZO6pG_GOsd5mcgRGX&_nc_zt=23&_nc_ht=scontent.fsgn5-12.fna&_nc_gid=jdPeA4Y6rEzFVc8uhUqwKQ&oh=00_AfLmWjlbUt2bo7KTEBMWGDsbgWDFid30YTh9HYaqSmCYmw&oe=6833A4D1",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668663/473806759_122117412578618470_1205087045803481247_n_jltlsj.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668664/474163971_122117412554618470_6285346111792169121_n_v93brk.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668664/474702606_122117412638618470_9085434426572049700_n_orm8ff.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668663/473522308_122117412542618470_2171786139999124298_n_kayhz0.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668663/470236959_122111718662618470_8354748329989370045_n_dm3v7j.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668663/470179083_122111718866618470_4964193957081971556_n_dko0aa.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668663/470207962_122111718308618470_1443124588074599849_n_jyzegj.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668662/470167834_122111718584618470_2046871624640909778_n_irbjuf.jpg",
       ],
     },
   },
@@ -78,7 +81,7 @@ const projects: Project[] = [
     id: "4a64ed59-d264-44dc-ab95-56ab74848ea9",
     title: "Căn GH1 - The Glory Heights",
     image:
-      "https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/473526944_122117507252618470_8918935857155496066_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=rQiJSDX5q3UQ7kNvwGRRSoQ&_nc_oc=Adk32e6D5NnRfQKQdHm_bzaQJABTqOrb1jQBnXrn6LP6xoJU3r7yeKo_K62JYZXJ_oqHwu28HPJ76KVofw9JVsCu&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=RdKpas1QsRm78_I9hA36BQ&oh=00_AfLG8dE36WL0Am3JY7L54Obv4HEU6Tw21M5Hpk0D_qTelg&oe=683355D2",
+      "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748669007/474764109_122117507372618470_2467975998153284394_n_wmlhd8.jpg",
     description:
       "Đang đi YEP bên cồn mà nghe đồn chị Khách Hà Nội đã chốt được phần thiết kế, ta nói trong lòng nô nức rộn ràng hihi, thế là giám đốc sản xuất vừa được ăn tết vừa đựợc lên kế hoạch sản xuất cho anh em ra tết chạy vèo vèo bàn giao cho chị hen☺️\n\nBật mí đây là căn thứ hai Vu Decor thực hiện cho chị Khách đó nha mọi người, đội ngũ rất hạnh phúc khi tiếp tục được chị lựa chọn.\n\nĐừng quên chúng mình nhận thiết kế và thi công nhoa!",
     details: {
@@ -105,21 +108,28 @@ const projects: Project[] = [
         "Hệ thống lưu trữ dạng mô-đun",
       ],
       images: [
-        "https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/473526944_122117507252618470_8918935857155496066_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=rQiJSDX5q3UQ7kNvwGRRSoQ&_nc_oc=Adk32e6D5NnRfQKQdHm_bzaQJABTqOrb1jQBnXrn6LP6xoJU3r7yeKo_K62JYZXJ_oqHwu28HPJ76KVofw9JVsCu&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=RdKpas1QsRm78_I9hA36BQ&oh=00_AfLG8dE36WL0Am3JY7L54Obv4HEU6Tw21M5Hpk0D_qTelg&oe=683355D2",
-        "https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/473527516_122117507396618470_5542111533382416441_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=nV0YwZOR0JoQ7kNvwF7uJIm&_nc_oc=AdkaZQErfP6LHW5HodcF8gSH3OqtlW3IbLuH7Nu038PTDG-0p5Dt4563nzepl0lGqaoeCIbqyxLeMIEqcfuE2olz&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=FizoV63pXJG_DU8mbmcE3g&oh=00_AfIr9ifF1GBlJt0hg0AuE0tsQmB7rP7KDZEWOg6DWKTRxw&oe=68336819",
-        "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/474693850_122117507408618470_6833572208990826419_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=XvzkVUhNWk4Q7kNvwHJow2G&_nc_oc=AdnyzcYIkL_abm7gm5r9wno8vJnE_-CBQGc3vzPgfZXlBavKARQhCt_jDR7VqX7bbEPQ_VK2Oj8sTZ5Xijrh7UTO&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=CaKxoLXM_5KLFFc6ctD6Dg&oh=00_AfL5rYUUcmX7FV1HQF0re2iGzHK-a9wVgouSyIiUH3g8ag&oe=68334F29",
-        "https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/474764109_122117507372618470_2467975998153284394_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=NmwG3_x4LwkQ7kNvwHbaa_R&_nc_oc=Adndmmv6DkWx8cXBQ2X_FT6-4-Uo-e6pCjDgwZsCFa9z175JEH3zp0w8k3ZdpyVMfZ6fHRL18mFZtYM3d2Ed5MpQ&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=MlwBMhz5WLh98JlDms-6DQ&oh=00_AfIh-KzwGnJuiyp4CZI7MMDqZBsR3GPR3E-I1xrWV5nZNg&oe=683373B2",
-        "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/474635398_122117507678618470_2300152676572287118_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=ee4H5huWYiIQ7kNvwEFNFJx&_nc_oc=AdlIeP4wDNs3PJkXoTcIcWmZPkOV3CWD09BJbJ4I4U_ybUv8Lti_IH9UQMH-LYPe5bVZCjGV9IzPubrneSocLO1F&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=x67ADXzpt95niuZB1yjPHQ&oh=00_AfJQdbJ8Xu5YffwfCvgSCgKI1B7V4Jzj9CrKsxanv9dAhA&oe=68336E91",
-        "https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/474745664_122117507288618470_6984210968044790840_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=0kZYGFKi-FcQ7kNvwGNIZHD&_nc_oc=AdlsJepTOKIWDmbeu22tkzII9EXOWvfxLhg4XvzrsPx4g4cKXDTuPKtvLujwcTsLjhWVUK8eWchV5Ee6gucEC1C4&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=6fTyTkFS-q7RBnxYzHDJOQ&oh=00_AfLhvIHblI_m0VSrC0-uonOp07-BoYVvJQ9CD7nJK5h8zg&oe=68336678",
-        "https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/474757402_122117507606618470_5740428839371742761_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=jfiI4_DSSckQ7kNvwFo7IYN&_nc_oc=Adn1bJ9fCu68E0a0fQpawCRqnat5qeYn0DruD8M4ZpHJJuyH0TZ1_bK5Z8zYMKjtiiXWgzuXz7W_rj5FKq9PcLek&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=-VRsvMTlfaRCRi70nI8Ggg&oh=00_AfL00s42KppZQRLCsTnl9HcpDFAdIXxP5s5Xy9W7M5xZnw&oe=68337C24",
-        "https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/473526882_122117507666618470_3369083212097705845_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=YTERVuSPwVkQ7kNvwHHCgab&_nc_oc=AdlWodWTZtcGIvjTcVo60Txu7YGytKRfRD0SmqF7aCstzbhtAhqVN8oSQT48aebeKOzh-xmTOQUE_1IBcRL7UldE&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=G0Nj7GZgWieS2GCEya6zlg&oh=00_AfJSSv8gYDGKZH5xk8LHeDkTgLzhiJX3ZQRksRqbiGP9OQ&oe=68335204",
-        "https://scontent.fsgn5-12.fna.fbcdn.net/v/t39.30808-6/474256557_122117507264618470_2458993751385876198_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=y-brZ1w9qhAQ7kNvwE_OElV&_nc_oc=AdnXky5DaBbJB6gdWffE3q2SzxQS-8qI_L14xTHqh5Ckx0ROvkOZ12gGxQ-OHiviwuwulS1FvGnOZi_H0ZjA8QuI&_nc_zt=23&_nc_ht=scontent.fsgn5-12.fna&_nc_gid=_Tl1aKVdRjlIRO5FLmFUsQ&oh=00_AfIS9UOgyfJa3tLBlh6U86zCnEb-iVXm9-AjuFJA1m7ljw&oe=6833650D",
-        "https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/473528799_122117507720618470_1685065332290092137_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=eVexQ7rcYDAQ7kNvwEUdrzB&_nc_oc=AdkBJxrz1VcJa-XdNGEyJbiUBc3Pm3wbQVmT1e5H9YD42SN-TWqq9SIQRbC9YQ8jYq7_I903NYcBVWHpXqaPjGcw&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=e2HRQlf5UVxyElErFOoUuA&oh=00_AfLvkL1JRvXClGBWJCOaM7bXbbnLv095oksjB_MiJRU5ZA&oe=6833598B",
-        "https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/474762578_122117507498618470_796406394774957181_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=U4kSd9rDksYQ7kNvwFvoRvB&_nc_oc=AdltfCsqHoKR18D-tXUknBkXE0Od_MrnHye9Y4Py7e10Dw-bFLfGXIWvsHSfD2euowetuvvBSYMS3L_3OkPVtC5h&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=c70Vwhqxvi5oV9kZpsk74g&oh=00_AfIq8LwqSrVTBQGRQJpD0taxtkipcAB8xcnJtbjTNwu38Q&oe=68335823",
-        "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/474699701_122117507450618470_2758433090803825961_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=ELd3eXCOuisQ7kNvwGjmD5P&_nc_oc=Adm5wZBiun79fbLpizCdK6UHK2l89hp_HphYathaFAAumPs54DfFJxVWd1E6pftPAN8V_q7fv76pRUQWJcHV4Sha&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=uY-e5_n4QFvfB12LRpQ6-Q&oh=00_AfLqwnONh3zmZgLh4vi3yFM14Q9MrGiT9toTHE5J6JwwAg&oe=6833663B",
-        "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/473808180_122117507276618470_1894949370043405865_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Pa6UU8_KSiQQ7kNvwG0i-B4&_nc_oc=AdmWZfsSZ5Ga5S5oW96yfDu0ty7lYPnLOsiVSFhWF-j9nvQ4jKfTlMxRAfhoYAJhmesvZC6d0HxGtj9Kz_Ynkiyo&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=PUICru0lqosPR0kvgr_fIw&oh=00_AfJ_EzqycW3fV1KsB0TXsVuB-jvUvFVqIWVBrpUkYBj25w&oe=68335CE8",
-        "https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/473442957_122117507588618470_6526909686666761724_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=KE1jqnEp8asQ7kNvwE_ZFrn&_nc_oc=AdlF4oRZyWDV6fw9Tm7SU6QugjoxAlssXEcMkcp6YJ2S-PBkz8y4o-EUchWgqe9IurSe3uPijoBBWQ4y_WQi3WoZ&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=rKXMnjBUp-Ix1GxU8cIyWA&oh=00_AfJIYk6qmtgDb-jZPmekeNaPlOYhmB4QcsypTP0pPImnyg&oe=68335253",
-        "https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/473807765_122117507360618470_2621310494850892689_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=M2CJ94CcVwYQ7kNvwGiNjzQ&_nc_oc=Adn9TwCgl0ALbqTaNrXbTRTqTSx4GkyYC_IeoxUYC53DMzUFk6ciORSmlfanpGFHHeMS-CnVyIwK_Ul5TWoymDo9&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=a0CBYvw1bgmBMWZwF1nhdg&oh=00_AfJ-tfVm8Pr9qlzFe_zclz37kabDfmPFPdriX877omPARQ&oe=683346FA",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748669015/495461037_122131508624618470_8468045824133995839_n_hldood.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748669014/495341203_122131508660618470_5321181397266787130_n_fzmrgv.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748669013/495307403_122131508618618470_6386607100362867728_n_dvry78.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748669012/495037842_122131508570618470_4086890529871778401_n_okyubd.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748669010/495003192_122131508924618470_4839603948637284212_n_mk3xfy.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748669009/494920108_122131508654618470_8964154820094277942_n_rqriee.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748669008/494910056_122131508822618470_1834109329452996836_n_ys8diy.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748669007/474764109_122117507372618470_2467975998153284394_n_wmlhd8.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748669006/474762578_122117507498618470_796406394774957181_n_ofyozj.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748669006/474757402_122117507606618470_5740428839371742761_n_jfklht.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748669005/474745664_122117507288618470_6984210968044790840_n_roeki2.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748669004/474699701_122117507450618470_2758433090803825961_n_lyntw3.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748669003/474693850_122117507408618470_6833572208990826419_n_lmgraw.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748669002/474635398_122117507678618470_2300152676572287118_n_kocp4r.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748669001/474256557_122117507264618470_2458993751385876198_n_qqb4sf.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748669000/473808180_122117507276618470_1894949370043405865_n_q8zwpc.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748669000/473807765_122117507360618470_2621310494850892689_n_zpaq81.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668999/473528799_122117507720618470_1685065332290092137_n_lhdgum.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668990/473527516_122117507396618470_5542111533382416441_n_glwfwy.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668984/473526944_122117507252618470_8918935857155496066_n_hupiyd.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668984/473526882_122117507666618470_3369083212097705845_n_mh2jkp.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668984/473442957_122117507588618470_6526909686666761724_n_wrdaj8.jpg",
       ],
     },
   },
@@ -127,7 +137,7 @@ const projects: Project[] = [
     id: "5c107602-c66b-41ef-a69c-90acc4e9fea7",
     title: "Bếp Căn BS10 - The Beverly Solari",
     image:
-      "https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/498213824_122133969548618470_6851937525598168220_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=7vtAEUbyVasQ7kNvwENPMDl&_nc_oc=Adn9tBtzLxylJFIWjOPO02HP-A16DHMTMAaa4dO80C4RmGXxhl8XK08vK1_kje15xqo&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=NDo-UToWYjbEy3FHwTiMtQ&oh=00_AfIYl1RomWEplUaOOdXcGk5wJIiAA0G77Ml1GnjuVxXnZA&oe=6833C7C6",
+      "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668236/498213824_122133969548618470_6851937525598168220_n_ejbn4b.jpg",
     description:
       'Vu Decor tin rằng căn bếp không chỉ là nơi thể hiện tính thẩm mỹ cho căn nhà mà còn là "nơi giữ lửa" cho gia đình, còn điều gì tuyệt vời hơn sau một ngày dài làm việc ta được trở về ăn bữa cơm với người mình yêu thương, nuôi dưỡng cơ thể bằng những bữa ăn lành mạnh, tái tạo lại năng lượng và lại bắt đầu một ngày mới.',
     details: {
@@ -154,12 +164,12 @@ const projects: Project[] = [
         "Hệ thống lưu trữ dạng mô-đun",
       ],
       images: [
-        "https://scontent.fsgn5-3.fna.fbcdn.net/v/t39.30808-6/499221817_122133969560618470_7542221533059836553_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=6sNxBnHRc-gQ7kNvwHbZQ8Q&_nc_oc=AdlJDrN7UZzZyHg9NU-eN_99Lim-PwxohAYyauFNtY9SBSiF0vK3jMnK75TFSbE0AfU&_nc_zt=23&_nc_ht=scontent.fsgn5-3.fna&_nc_gid=0qYNjhm2GSuFRkfSHCQ0Hg&oh=00_AfLsRF7G0bH__j00J6k25gbUeWS6bbpbg3-qIHsCyQ81nw&oe=6833EB28",
-        "https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/498213824_122133969548618470_6851937525598168220_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=7vtAEUbyVasQ7kNvwENPMDl&_nc_oc=Adn9tBtzLxylJFIWjOPO02HP-A16DHMTMAaa4dO80C4RmGXxhl8XK08vK1_kje15xqo&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=NDo-UToWYjbEy3FHwTiMtQ&oh=00_AfIYl1RomWEplUaOOdXcGk5wJIiAA0G77Ml1GnjuVxXnZA&oe=6833C7C6",
-        "https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/499378682_122133969590618470_3366880959960670107_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=l4jM08gU3qIQ7kNvwFzsDbP&_nc_oc=Adn8Z8ZWuZ4ViNEuqLH9jYtIn9ss8D0lVhYsJC4ZyQXuUyvMyo97Yk8S5ZdwzINEAHY&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=4BLMWTu42iLbcsCVads5gg&oh=00_AfJ7Hss0ZLRTwtM5H8C8oSYgPeIbiO-PPt5K2Hg5VLVhLA&oe=6833F4FA",
-        "https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/499339264_122133969530618470_3095973869182188006_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=CTdvbJUwgrkQ7kNvwHqEz23&_nc_oc=Adn1vj57I4-Fl_-SN3gxj5ET7gD3PdqGzPTh3-reW6bwWeUh3dERyg0I90tkoNK6prE&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=p_6AOSJ2neXGzNLVeKAWtQ&oh=00_AfL_TvROQTkCUdN-2xJZqtmFVbrnN2QSuSAXEAw3nNXdFQ&oe=6833D80C",
-        "https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/498176785_122133969596618470_7196264313840046581_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=0yTkQfhMoqsQ7kNvwG3MCjD&_nc_oc=AdkjQitp1d3RQd3YYqv7f9-9L61Vo0ARmC2kGWQeJ0DbOr6eLb_ygKglCEKXrgeRmb8&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=R3kmydiM0qQVHRTYbHGdpg&oh=00_AfJSNPSCJi8xLHdJ-yNyoFBefUG6NsZhuXznShf-hrfuDQ&oe=6833ECD6",
-        "https://scontent.fsgn5-15.fna.fbcdn.net/v/t39.30808-6/498166510_122133969518618470_2852905110698745605_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=KG0Do2T9FqYQ7kNvwH0CekZ&_nc_oc=AdndxTEDdOyBpHTupGY2gTVEtEmYGS35LTdqaDj0Y9DaM37jtWISxvdGuQmwUyU6XNA&_nc_zt=23&_nc_ht=scontent.fsgn5-15.fna&_nc_gid=u9YQ2ogDcAKlbSpHIyElMA&oh=00_AfLB7K-hrmjBH03RHZmhBaFJ_IcwB3GY7vcsSTSXupH-Ow&oe=6833F7D4",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668237/499339264_122133969530618470_3095973869182188006_n_aate60.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668237/499221817_122133969560618470_7542221533059836553_n_fmh95r.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668236/498166510_122133969518618470_2852905110698745605_n_smvs7u.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668237/499378682_122133969590618470_3366880959960670107_n_ps3ps9.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668236/498213824_122133969548618470_6851937525598168220_n_ejbn4b.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668237/498176785_122133969596618470_7196264313840046581_n_laclhb.jpg",
       ],
     },
   },

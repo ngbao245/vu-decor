@@ -16,7 +16,7 @@ const projects: Project[] = [
     id: "7e164cb1-49d5-4709-b53d-7a92c7a65320",
     title: "Căn BE1 - The Beverly Vinhomes",
     image:
-      "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/470618028_122112537152618470_3580512490494805686_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=26tThRdEFGcQ7kNvwHtf0z_&_nc_oc=Adkgxj-JRZrzH8qc_cYLZa9ajqRUNnz9_ZmcxCp0fJbTIQ6Ma0eblmi-4AD-nE1EOJU&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=NZdarDTYL59BJWkpdyWNxQ&oh=00_AfLUimS-A_pwqexN4Y2557edSJ5RBNkaT1OILIj0l2S0vw&oe=6838D75A",
+      "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668663/473806759_122117412578618470_1205087045803481247_n_jltlsj.jpg",
     description:
       "Hình ảnh thực tế căn 1PN những ngày cuối năm, Vu Decor hoàn thiện đúng tiến độ và chất lượng để khách hàng đón Tết Ất Tỵ 2025 trọn vẹn.",
   },
@@ -24,7 +24,7 @@ const projects: Project[] = [
     id: "4a64ed59-d264-44dc-ab95-56ab74848ea9",
     title: "Căn GH1 - The Glory Heights",
     image:
-      "https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/473526944_122117507252618470_8918935857155496066_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=rQiJSDX5q3UQ7kNvwGRRSoQ&_nc_oc=Adk32e6D5NnRfQKQdHm_bzaQJABTqOrb1jQBnXrn6LP6xoJU3r7yeKo_K62JYZXJ_oqHwu28HPJ76KVofw9JVsCu&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=RdKpas1QsRm78_I9hA36BQ&oh=00_AfLG8dE36WL0Am3JY7L54Obv4HEU6Tw21M5Hpk0D_qTelg&oe=683355D2",
+      "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748669007/474764109_122117507372618470_2467975998153284394_n_wmlhd8.jpg",
     description:
       "Đang đi YEP mà nghe tin chị khách Hà Nội chốt thiết kế, mừng quá trời! Giám đốc sản xuất lên kế hoạch sẵn, ra Tết thi công liền cho kịp bàn giao.",
   },
@@ -32,7 +32,7 @@ const projects: Project[] = [
     id: "5c107602-c66b-41ef-a69c-90acc4e9fea7",
     title: "Bếp Căn BS10 - The Beverly Solari",
     image:
-      "https://scontent.fsgn5-3.fna.fbcdn.net/v/t39.30808-6/499221817_122133969560618470_7542221533059836553_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=6sNxBnHRc-gQ7kNvwHbZQ8Q&_nc_oc=AdlJDrN7UZzZyHg9NU-eN_99Lim-PwxohAYyauFNtY9SBSiF0vK3jMnK75TFSbE0AfU&_nc_zt=23&_nc_ht=scontent.fsgn5-3.fna&_nc_gid=0qYNjhm2GSuFRkfSHCQ0Hg&oh=00_AfLsRF7G0bH__j00J6k25gbUeWS6bbpbg3-qIHsCyQ81nw&oe=6833EB28",
+      "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668236/498213824_122133969548618470_6851937525598168220_n_ejbn4b.jpg",
     description:
       "Vu Decor tin rằng căn bếp không chỉ đẹp mà còn là nơi giữ lửa yêu thương – nơi cả nhà quây quần, tái tạo năng lượng sau một ngày dài.",
   },
@@ -101,7 +101,9 @@ export const Projects = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2 transition-colors duration-300 group-hover:text-[#E34225]">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">{project.description}</p>
+                <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                  {project.description}
+                </p>
               </div>
             </motion.div>
           ))}
