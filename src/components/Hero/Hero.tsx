@@ -112,6 +112,7 @@ const Hero = () => {
                   enableScrollSpy={true}
                   suffix="+"
                 />
+                <span className="text-[0.8rem] sm:text-[1rem]"> năm</span>
               </b>
               <span className="font-medium">Kinh Nghiệm</span>
             </div>
