@@ -1,5 +1,6 @@
 import "./hero.css"
 import hero1Img from "../../assets/hero1-img.jpg";
+import CountUp from 'react-countup';
 
 const Hero = () => {
   return (
@@ -72,15 +73,21 @@ const Hero = () => {
             text-center text-white bg-[#2f2f2f]/50 backdrop-blur-xs backdrop-saturate-200'
           >
             <div className='flex flex-col items-center'>
-              <b className='text-[1rem] sm:text-[1.5rem]'>150</b>
+              <b className='text-[1rem] sm:text-[1.5rem]'>
+                <CountUp end={150} duration={2.5} enableScrollSpy={true} suffix="+"/>
+              </b>
               <span className='font-medium'>Satisfied Clients</span>
-            </div >
+            </div>
             <div className='flex flex-col items-center'>
-              <b className='text-[1rem] sm:text-[1.5rem]'>500+</b>
+              <b className='text-[1rem] sm:text-[1.5rem]'>
+                <CountUp end={500} duration={2.5} enableScrollSpy={true} suffix="+" />
+              </b>
               <span className="font-medium">Complete Projects</span>
             </div>
             <div className='flex flex-col items-center'>
-              <b className='text-[1rem] sm:text-[1.5rem]'>10+</b>
+              <b className='text-[1rem] sm:text-[1.5rem]'>
+                <CountUp end={10} duration={2.5} enableScrollSpy={true} suffix="+" />
+              </b>
               <span className="font-medium">Years Experience</span>
             </div>
           </div>
