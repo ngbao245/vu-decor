@@ -267,8 +267,8 @@ const ContactForm = () => {
                         className={`w-full flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold rounded-md transition-all duration-200 mt-2
                           ${
                             isSubmitted || !isFormValid
-                              ? "bg-[#dcccb5] text-white cursor-not-allowed"
-                              : "bg-[#E34225] hover:bg-[#9d7e3b] text-white"
+                              ? "bg-[#f9d9d3] text-white cursor-not-allowed"
+                              : "bg-[#E34225] hover:bg-[#BD371F] text-white"
                           }
                         `}
                         disabled={isSubmitted || !isFormValid}
