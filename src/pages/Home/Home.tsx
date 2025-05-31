@@ -31,9 +31,6 @@ export const Home = () => {
                 </div>
                 <ProjectCate />
             </div> */}
-            <div className="bg-[#f5f5f3]">
-                <StoryTeam />
-            </div>
             <FAQ />
         </div>
     )
