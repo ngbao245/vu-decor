@@ -48,7 +48,7 @@ const StoryValue = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 uppercase">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Giá Trị Cốt Lõi
           </h2>
           <div className="w-20 h-1 bg-[#E34225] mx-auto mb-6"></div>
@@ -83,7 +83,7 @@ const StoryValue = () => {
                   <h3 className="text-xl font-bold mb-4 text-[#2F2F2F] group-hover:text-[#E34225] transition-colors duration-300">
                     {value.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed text-justify tracking-wide whitespace-normal">
                     {value.description}
                   </p>
                 </div>

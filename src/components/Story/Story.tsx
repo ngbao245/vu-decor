@@ -27,7 +27,7 @@ const Story = () => {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 uppercase">Về Chúng Tôi</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Về Chúng Tôi</h2>
                     <div className="w-20 h-1 bg-[#E34225] mx-auto mb-6"></div>
                 </motion.div>
 
@@ -46,7 +46,7 @@ const Story = () => {
                     >
                         {/* Company Introduction */}
                         <div className="prose prose-lg">
-                            <p className="text-gray-600 leading-relaxed">
+                            <p className="text-gray-600 leading-relaxed ">
                                 Với đội ngũ kiến trúc sư, kỹ sư sáng tạo cùng đội ngũ thợ lành nghề nhiều năm kinh nghiệm, 
                                 chúng tôi lắng nghe, thấu hiểu và hiện thực hóa không gian theo phong cách riêng, cân bằng thẩm mỹ và công năng.
                             </p>
