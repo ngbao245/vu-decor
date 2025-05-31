@@ -1,7 +1,6 @@
 import GalleryHome from "../../components/GalleryHome/GalleryHome";
 import Hero from "../../components/Hero/Hero";
 import ServiceHome from "../../components/ServiceHome/ServiceHome";
-import StoryTeam from "../../components/StoryTeam/StoryTeam";
 import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
 import FAQ from "../../components/FAQ/FAQ";
 import Feedback from "../../components/Feedback/Feedback";
