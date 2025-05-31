@@ -74,6 +74,7 @@ const FAQ = () => {
         <div className="py-16 px-4 md:px-8 lg:px-16 bg-white">
             <div className="max-w-3xl mx-auto">
                 <div className="text-center mb-12">
+                    <h6 className="text-[#828282] text-md mb-2">FAQ</h6>
                     <h2 className="text-3xl font-bold text-gray-900 mb-4"><span className='text-[#E34225]'>Câu Hỏi</span> Thường Gặp</h2>
                     <div className="w-20 h-1 bg-[#E34225] mx-auto mb-6"></div>
                     <p className="text-gray-600">Tìm câu trả lời cho các câu hỏi phổ biến về các dịch vụ và quy trình của chúng tôi</p>
