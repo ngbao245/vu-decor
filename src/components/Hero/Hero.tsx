@@ -10,8 +10,7 @@ const Hero = () => {
         src="https://res.cloudinary.com/dkx0y97jo/image/upload/v1748867933/download_pv2jgg.jpg"
         alt="hero.jpg"
       />
-      <div className="absolute flex items-center justify-center bg-black inset-0 opacity-5"></div>
-      <div className="absolute flex items-center justify-center bg-gradient-to-b from-black/40 to-black/60 inset-0"></div>
+      <div className="absolute flex items-center justify-center bg-gradient-to-b from-black/20 to-black/40 inset-0"></div>
       <div className="absolute inset-0 flex items-center justify-center px-3">
         <div className="relative w-full h-full flex flex-col gap-5 justify-center items-center px-3 ">
           <div className="flex flex-col gap-5">

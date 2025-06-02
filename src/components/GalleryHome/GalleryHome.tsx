@@ -45,7 +45,7 @@ const GalleryHome = () => {
             {/* Mobile Layout */}
             <div className='md:hidden grid grid-cols-2 gap-3 px-4'>
                 <motion.div 
-                    className='aspect-[4/5] col-span-2'
+                    className='aspect-[4/5] col-span-2 relative'
                     variants={floatAnimation}
                     animate="animate"
                     whileHover={{ scale: 1.02 }}
@@ -55,9 +55,11 @@ const GalleryHome = () => {
                         backgroundPosition: "center",
                         borderRadius: '16px'
                     }}
-                ></motion.div>
+                >
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/30 rounded-[16px]"></div>
+                </motion.div>
                 <motion.div 
-                    className='aspect-square'
+                    className='aspect-square relative'
                     variants={floatAnimation}
                     animate="animate"
                     whileHover={{ scale: 1.02 }}
@@ -67,9 +69,11 @@ const GalleryHome = () => {
                         backgroundPosition: "left",
                         borderRadius: '16px'
                     }}
-                ></motion.div>
+                >
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/20 rounded-[16px]"></div>
+                </motion.div>
                 <motion.div 
-                    className='aspect-square'
+                    className='aspect-square relative'
                     variants={floatAnimation}
                     animate="animate"
                     whileHover={{ scale: 1.02 }}
@@ -79,46 +83,58 @@ const GalleryHome = () => {
                         backgroundPosition: "right",
                         borderRadius: '16px'
                     }}
-                ></motion.div>
+                >
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/20 rounded-[16px]"></div>
+                </motion.div>
             </div>
 
             {/* Desktop Layout */}
             <div className='hidden md:flex flex-row w-full flex-nowrap items-center gap-3 px-4 md:px-0'>
                 <motion.div 
-                    className='grow h-[300px] bg-amber-400 rounded-2xl'
+                    className='grow h-[300px] bg-amber-400 rounded-2xl relative'
                     variants={floatAnimation}
                     animate="animate"
                     whileHover={{ scale: 1.02 }}
                     style={{ backgroundImage: `url(${imageURL})`, backgroundSize: "cover", backgroundPosition: "left" }}
-                ></motion.div>
+                >
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/30 rounded-2xl"></div>
+                </motion.div>
                 <motion.div 
-                    className='grow h-[400px] bg-amber-400 rounded-2xl'
+                    className='grow h-[400px] bg-amber-400 rounded-2xl relative'
                     variants={floatAnimation}
                     animate="animate"
                     whileHover={{ scale: 1.02 }}
                     style={{ backgroundImage: `url(${imageURL})`, backgroundSize: "cover" }}
-                ></motion.div>
+                >
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/30 rounded-2xl"></div>
+                </motion.div>
                 <motion.div 
-                    className='grow-[3] h-[500px] bg-amber-400 rounded-2xl'
+                    className='grow-[3] h-[500px] bg-amber-400 rounded-2xl relative'
                     variants={floatAnimation}
                     animate="animate"
                     whileHover={{ scale: 1.02 }}
                     style={{ backgroundImage: `url(${imageURL})`, backgroundSize: "cover", backgroundPosition: "center" }}
-                ></motion.div>
+                >
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/30 rounded-2xl"></div>
+                </motion.div>
                 <motion.div 
-                    className='grow h-[400px] bg-amber-400 rounded-2xl'
+                    className='grow h-[400px] bg-amber-400 rounded-2xl relative'
                     variants={floatAnimation}
                     animate="animate"
                     whileHover={{ scale: 1.02 }}
                     style={{ backgroundImage: `url(${imageURL})`, backgroundSize: "cover" }}
-                ></motion.div>
+                >
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/30 rounded-2xl"></div>
+                </motion.div>
                 <motion.div 
-                    className='grow h-[300px] bg-amber-400 rounded-2xl'
+                    className='grow h-[300px] bg-amber-400 rounded-2xl relative'
                     variants={floatAnimation}
                     animate="animate"
                     whileHover={{ scale: 1.02 }}
                     style={{ backgroundImage: `url(${imageURL})`, backgroundSize: "cover", backgroundPosition: "right" }}
-                ></motion.div>
+                >
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/30 rounded-2xl"></div>
+                </motion.div>
             </div>
         </section>
     )

@@ -45,6 +45,7 @@ const ServiceHome = () => {
               alt=""
               className="w-full h-full object-cover rounded-lg "
             />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40 rounded-lg"></div>
           </div>
 
           <div className="absolute flex flex-col gap-3 md:gap-5 bottom-0 w-full text-white px-4 md:px-5 py-4 md:py-5 bg-black/30 rounded-lg">
@@ -75,6 +76,7 @@ const ServiceHome = () => {
               alt=""
               className="w-full h-full object-cover rounded-lg bg-black/30"
             />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40 rounded-lg"></div>
           </div>
           <div className="absolute flex flex-col gap-3 md:gap-5 bottom-0 w-full text-white px-4 md:px-5 py-4 md:py-5 bg-black/30 rounded-lg">
             <h3 className="text-xl md:text-2xl font-semibold">
@@ -104,6 +106,7 @@ const ServiceHome = () => {
               alt=""
               className="w-full h-full object-cover bg-left rounded-lg bg-black/30"
             />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40 rounded-lg"></div>
           </div>
           <div className="absolute flex flex-col gap-3 md:gap-5 bottom-0 w-full text-white px-4 md:px-5 py-4 md:py-5 bg-black/30 rounded-lg">
             <h3 className="text-xl md:text-2xl font-semibold">
