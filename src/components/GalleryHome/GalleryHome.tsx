@@ -16,7 +16,7 @@ const GalleryHome = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.3 });
     const controls = useAnimation();
-    const imageURL = "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/474635398_122117507678618470_2300152676572287118_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=jsJU4e3-_esQ7kNvwEUJy0O&_nc_oc=Adn7OoitLOfLA_qdbrYgF6hvSiEdy6k0llkFo7LxcR1djMgQjDAdga9uCIEuOFWbBj9fJwVPkwC587lPhIzixrSQ&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=07B5_Tq-u_62wmoVZ4Lopw&oh=00_AfJohl8EuLA8ZVg44hIb6MyzoJ9hnYPYxexX1hUKSDCX7w&oe=683CA911"
+    const imageURL = "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748867933/download_pv2jgg.jpg"
 
     useEffect(() => {
         if (isInView) {
