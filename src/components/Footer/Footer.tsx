@@ -42,7 +42,7 @@ const socialLinks = [
 ];
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [showZaloModal, setShowZaloModal] = useState(false);
   const sloganRef = useRef<HTMLDivElement>(null);
@@ -72,9 +72,9 @@ const Footer = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle newsletter subscription logic here
-    console.log("Subscribing email:", email);
-    setEmail("");
+    // Handle phone number submission logic here
+    console.log("Submitting phone number:", phone);
+    setPhone("");
   };
 
   const handleZaloClick = (e: React.MouseEvent) => {
@@ -300,15 +300,15 @@ const Footer = () => {
               <span className="absolute -bottom-2 left-0 w-12 h-1 bg-[#E34225] rounded-full"></span>
             </h4>
             <p className="text-gray-400 flex flex-wrap">
-              Hãy để lại email, chúng tôi sẽ liên hệ tư vấn thiết kế cho bạn.
+              Hãy để lại số điện thoại, chúng tôi <br/> sẽ với bạn trong thời gian sớm nhất.
             </p>
             <form onSubmit={handleSubmit}>
               <div className="relative">
                 <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Vui lập nhập email để được tư vấn"
+                  type="tel"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  placeholder="Vui lòng nhập số điện thoại"
                   className="w-full px-4 py-2.5 text-sm rounded-lg bg-[#444444] border border-gray-700 focus:outline-none focus:border-[#E34225] text-white pr-12"
                   required
                 />

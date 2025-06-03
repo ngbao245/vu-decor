@@ -6,12 +6,15 @@ import {
 } from "framer-motion";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
   const controls = useAnimation();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   // State cho các trường input
   const [lastName, setLastName] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -42,6 +45,60 @@ const ContactForm = () => {
       controls.start("visible");
     }
   }, [controls, isInView]);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsTouched(true);
+    if (!isFormValid) return;
+
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      // Email to business
+      const businessTemplateParams = {
+        last_name: lastName,
+        first_name: firstName,
+        email: email,
+        phone: phone,
+        service_type: projectType,
+        message: message,
+        time: new Date().toLocaleString('vi-VN')
+      };
+
+      // Email to customer
+      const customerTemplateParams = {
+        first_name: firstName,
+        service_type: projectType,
+        email: email,
+      };
+
+      // Send both emails simultaneously
+      await Promise.all([
+        // Email to business
+        emailjs.send(
+          'default_service',
+          'template_c5nwd3r',
+          businessTemplateParams,
+          'QZfklo8vAujdTrJdd'
+        ),
+        // Email to customer
+        emailjs.send(
+          'service_kck3a2j',
+          'template_h5mcn9c',
+          customerTemplateParams,
+          'QZfklo8vAujdTrJdd'
+        )
+      ]);
+
+      setIsSubmitted(true);
+    } catch (err) {
+      setError('Có lỗi xảy ra khi gửi email. Vui lòng thử lại sau.');
+      console.error('EmailJS error:', err);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <section ref={ref} className="" id="contact-form">
@@ -134,12 +191,7 @@ const ContactForm = () => {
                 <div className="relative min-h-[500px]">
                   <form
                     className="space-y-6"
-                    onSubmit={(e) => {
-                      e.preventDefault();
-                      setIsTouched(true);
-                      if (!isFormValid) return;
-                      setIsSubmitted(true);
-                    }}
+                    onSubmit={handleSubmit}
                   >
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <div className="space-y-2">
@@ -233,10 +285,10 @@ const ContactForm = () => {
                         }}
                       >
                         <option value="">Chọn Dịch Vụ</option>
-                        <option value="residential">Thiết Kế Nội Thất</option>
-                        <option value="commercial">Thi Công Nội Thất</option>
-                        <option value="cultural">Tư Vấn Thiết Kế</option>
-                        <option value="other">Khác</option>
+                        <option value="Thiết Kế Nội Thất">Thiết Kế Nội Thất</option>
+                        <option value="Thi Công Nội Thất">Thi Công Nội Thất</option>
+                        <option value="Tư Vấn Thiết Kế">Tư Vấn Thiết Kế</option>
+                        <option value="Khác">Khác</option>
                       </select>
                     </div>
                     <div className="space-y-2">
@@ -266,16 +318,21 @@ const ContactForm = () => {
                         type="submit"
                         className={`w-full flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold rounded-md transition-all duration-200 mt-2
                           ${
-                            isSubmitted || !isFormValid
+                            isSubmitted || !isFormValid || isLoading
                               ? "bg-[#f9d9d3] text-white cursor-not-allowed"
                               : "bg-[#E34225] hover:bg-[#BD371F] text-white"
                           }
                         `}
-                        disabled={isSubmitted || !isFormValid}
+                        disabled={isSubmitted || !isFormValid || isLoading}
                       >
-                        Gửi
-                        <Send className="w-5 h-5 ml-1" />
+                        {isLoading ? 'Đang gửi...' : 'Gửi'}
+                        {!isLoading && <Send className="w-5 h-5 ml-1" />}
                       </button>
+                      {error && (
+                        <p className="w-full text-red-500 text-xs mt-2 text-start">
+                          {error}
+                        </p>
+                      )}
                       <p
                         className="w-full text-red-500 text-xs mt-2 text-start min-h-[24px] transition-opacity duration-200"
                         style={{
@@ -308,12 +365,11 @@ const ContactForm = () => {
                             d="M5 13l4 4L19 7"
                           />
                         </svg>
-                        <h2 className="text-2xl font-bold mb-2 text-center font-serif">
-                          Thank You
+                        <h2 className="text-base sm:text-2xl font-bold mb-2 text-center font-serif px-1 sm:px-4 leading-tight">
+                          Cảm ơn Quý khách đã quan tâm.
                         </h2>
-                        <p className="text-gray-700 text-center max-w-xs">
-                          Thanks for your interest! Someone will be in touch
-                          within 24 hours.
+                        <p className="text-xs sm:text-base text-gray-700 text-center px-1 sm:px-4 leading-tight">
+                          Chúng tôi sẽ liên hệ lại trong vòng 24 giờ tới.
                         </p>
                       </motion.div>
                     )}
