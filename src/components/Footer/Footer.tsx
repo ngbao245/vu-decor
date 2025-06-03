@@ -1,11 +1,14 @@
 import {
   SiZalo,
   SiFacebook,
-  SiInstagram,
-  SiLinkedin,
-  SiYoutube,
 } from "react-icons/si";
-import { MdEmail, MdPhone, MdLocationOn, MdSend, MdClose, MdQrCode2 } from "react-icons/md";
+import {
+  MdEmail,
+  MdPhone,
+  MdLocationOn,
+  MdSend,
+  MdClose,
+} from "react-icons/md";
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logoImage from "../../assets/logoImage.png";
@@ -28,13 +31,13 @@ const socialLinks = [
     label: "Facebook",
   },
   // { icon: FaTwitter, href: "https://twitter.com/", label: "Twitter" },
-  { icon: SiInstagram, href: "https://instagram.com/", label: "Instagram" },
-  { icon: SiYoutube, href: "https://youtube.com/", label: "Youtube" },
-  {
-    icon: SiLinkedin,
-    href: "https://linkedin.com/company/vudecor",
-    label: "LinkedIn",
-  },
+  // { icon: SiInstagram, href: "https://instagram.com/", label: "Instagram" },
+  // { icon: SiYoutube, href: "https://youtube.com/", label: "Youtube" },
+  // {
+  //   icon: SiLinkedin,
+  //   href: "https://linkedin.com/company/vudecor",
+  //   label: "LinkedIn",
+  // },
   { icon: SiZalo, href: "https://zalo.me/0965994178/", label: "Zalo" },
 ];
 
@@ -47,14 +50,14 @@ const Footer = () => {
   // Control body scroll when modal is open
   useEffect(() => {
     if (showZaloModal) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
 
     // Cleanup function to restore scroll when component unmounts
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [showZaloModal]);
 
@@ -83,30 +86,33 @@ const Footer = () => {
     // Try to open Zalo desktop app first
     const zaloAppUrl = "zalo://chat?phone=0965994178";
     const zaloWebUrl = "https://zalo.me/0965994178";
-    
+
     // Create a temporary link element
-    const link = document.createElement('a');
+    const link = document.createElement("a");
     link.href = zaloAppUrl;
-    
+
     // Try to open Zalo app
     const timeout = setTimeout(() => {
       // If timeout occurs, it means Zalo app is not installed
       // Fallback to web URL
-      window.open(zaloWebUrl, '_blank');
+      window.open(zaloWebUrl, "_blank");
     }, 1000);
 
     // Add event listener to clear timeout if app opens successfully
     const handleVisibilityChange = () => {
       if (document.hidden) {
         clearTimeout(timeout);
-        document.removeEventListener('visibilitychange', handleVisibilityChange);
+        document.removeEventListener(
+          "visibilitychange",
+          handleVisibilityChange
+        );
       }
     };
-    document.addEventListener('visibilitychange', handleVisibilityChange);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
 
     // Try to open the app
     link.click();
-    
+
     setShowZaloModal(false);
   };
 
@@ -147,26 +153,29 @@ const Footer = () => {
                     className="font-medium bg-gradient-to-l from-red-400 via-red-400 to-transparent bg-clip-text text-transparent transition-all duration-500 ease-in-out"
                     style={{
                       backgroundImage: `linear-gradient(to left, 
-                        rgba(96, 165, 250, ${mousePosition.x === 0
-                          ? 0.3
-                          : Math.min(
-                            1,
-                            Math.max(0.3, (300 - mousePosition.x) / 150)
-                          )
+                        rgba(96, 165, 250, ${
+                          mousePosition.x === 0
+                            ? 0.3
+                            : Math.min(
+                                1,
+                                Math.max(0.3, (300 - mousePosition.x) / 150)
+                              )
                         }) 0%,
-                        rgba(96, 165, 250, ${mousePosition.x === 0
-                          ? 0.3
-                          : Math.min(
-                            1,
-                            Math.max(0.3, (300 - mousePosition.x) / 200)
-                          )
+                        rgba(96, 165, 250, ${
+                          mousePosition.x === 0
+                            ? 0.3
+                            : Math.min(
+                                1,
+                                Math.max(0.3, (300 - mousePosition.x) / 200)
+                              )
                         }) 50%,
-                        rgba(96, 165, 250, ${mousePosition.x === 0
-                          ? 0.3
-                          : Math.min(
-                            1,
-                            Math.max(0.3, (300 - mousePosition.x) / 250)
-                          )
+                        rgba(96, 165, 250, ${
+                          mousePosition.x === 0
+                            ? 0.3
+                            : Math.min(
+                                1,
+                                Math.max(0.3, (300 - mousePosition.x) / 250)
+                              )
                         }) 100%)`,
                     }}
                   >
@@ -177,17 +186,20 @@ const Footer = () => {
                     className="font-medium bg-gradient-to-r from-red-400 via-red-400 to-transparent bg-clip-text text-transparent transition-all duration-500 ease-in-out"
                     style={{
                       backgroundImage: `linear-gradient(to right, 
-                        rgba(96, 165, 250, ${mousePosition.x === 0
-                          ? 0.3
-                          : Math.min(1, Math.max(0.3, mousePosition.x / 150))
+                        rgba(96, 165, 250, ${
+                          mousePosition.x === 0
+                            ? 0.3
+                            : Math.min(1, Math.max(0.3, mousePosition.x / 150))
                         }) 0%,
-                        rgba(96, 165, 250, ${mousePosition.x === 0
-                          ? 0.3
-                          : Math.min(1, Math.max(0.3, mousePosition.x / 200))
+                        rgba(96, 165, 250, ${
+                          mousePosition.x === 0
+                            ? 0.3
+                            : Math.min(1, Math.max(0.3, mousePosition.x / 200))
                         }) 50%,
-                        rgba(96, 165, 250, ${mousePosition.x === 0
-                          ? 0.3
-                          : Math.min(1, Math.max(0.3, mousePosition.x / 250))
+                        rgba(96, 165, 250, ${
+                          mousePosition.x === 0
+                            ? 0.3
+                            : Math.min(1, Math.max(0.3, mousePosition.x / 250))
                         }) 100%)`,
                     }}
                   >
@@ -214,8 +226,10 @@ const Footer = () => {
                 <a
                   key={social.label}
                   href={social.href}
-                  onClick={social.label === "Zalo" ? handleZaloClick : undefined}
-                  className="hover:text-[#E34225] transition-colors"
+                  onClick={
+                    social.label === "Zalo" ? handleZaloClick : undefined
+                  }
+                  className="hover:text-[#0068ff] transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -312,7 +326,7 @@ const Footer = () => {
 
       {/* Zalo Modal */}
       {showZaloModal && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/90 backdrop-blur-[2px] flex items-center justify-center z-50"
           onClick={handleModalClick}
         >
@@ -326,9 +340,11 @@ const Footer = () => {
             >
               <MdClose size={24} />
             </button>
-            
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Liên hệ qua Zalo</h3>
-            
+
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">
+              Liên hệ qua Zalo
+            </h3>
+
             <div className="space-y-4">
               <button
                 onClick={handleDirectMessage}
@@ -337,7 +353,7 @@ const Footer = () => {
                 <SiZalo size={24} />
                 <span>Nhắn tin trực tiếp</span>
               </button>
-              
+
               <div className="text-center">
                 <p className="text-gray-600 mb-2">Hoặc quét mã QR</p>
                 <div className="bg-white p-2 rounded-lg inline-block">
@@ -355,9 +371,9 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="h-full border-t flex justify-center  bg-[#1f1f1f]  mt-6 py-5 text-center text-white">
-          <p>
-            &copy; {new Date().getFullYear()} VuDecor. Giữ bản quyển website này.
-          </p>
+        <p>
+          &copy; {new Date().getFullYear()} VuDecor. Giữ bản quyển website này.
+        </p>
       </div>
     </footer>
   );
