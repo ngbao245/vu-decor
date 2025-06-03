@@ -7,7 +7,6 @@ import {
   MdPhone,
   MdLocationOn,
   MdSend,
-  MdClose,
 } from "react-icons/md";
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -38,28 +37,17 @@ const socialLinks = [
   //   href: "https://linkedin.com/company/vudecor",
   //   label: "LinkedIn",
   // },
-  { icon: SiZalo, href: "https://zalo.me/0965994178/", label: "Zalo" },
+  { 
+    icon: SiZalo, 
+    href: "https://zalo.me/0965994178", 
+    label: "Zalo" 
+  },
 ];
 
 const Footer = () => {
   const [phone, setPhone] = useState("");
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [showZaloModal, setShowZaloModal] = useState(false);
   const sloganRef = useRef<HTMLDivElement>(null);
-
-  // Control body scroll when modal is open
-  useEffect(() => {
-    if (showZaloModal) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-
-    // Cleanup function to restore scroll when component unmounts
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [showZaloModal]);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (sloganRef.current) {
@@ -75,52 +63,6 @@ const Footer = () => {
     // Handle phone number submission logic here
     console.log("Submitting phone number:", phone);
     setPhone("");
-  };
-
-  const handleZaloClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setShowZaloModal(true);
-  };
-
-  const handleDirectMessage = () => {
-    // Try to open Zalo desktop app first
-    const zaloAppUrl = "zalo://chat?phone=0965994178";
-    const zaloWebUrl = "https://zalo.me/0965994178";
-
-    // Create a temporary link element
-    const link = document.createElement("a");
-    link.href = zaloAppUrl;
-
-    // Try to open Zalo app
-    const timeout = setTimeout(() => {
-      // If timeout occurs, it means Zalo app is not installed
-      // Fallback to web URL
-      window.open(zaloWebUrl, "_blank");
-    }, 1000);
-
-    // Add event listener to clear timeout if app opens successfully
-    const handleVisibilityChange = () => {
-      if (document.hidden) {
-        clearTimeout(timeout);
-        document.removeEventListener(
-          "visibilitychange",
-          handleVisibilityChange
-        );
-      }
-    };
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-
-    // Try to open the app
-    link.click();
-
-    setShowZaloModal(false);
-  };
-
-  const handleModalClick = (e: React.MouseEvent) => {
-    // Only close if clicking the backdrop (not the modal content)
-    if (e.target === e.currentTarget) {
-      setShowZaloModal(false);
-    }
   };
 
   return (
@@ -226,9 +168,6 @@ const Footer = () => {
                 <a
                   key={social.label}
                   href={social.href}
-                  onClick={
-                    social.label === "Zalo" ? handleZaloClick : undefined
-                  }
                   className="hover:text-[#0068ff] transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -323,51 +262,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
-      {/* Zalo Modal */}
-      {showZaloModal && (
-        <div
-          className="fixed inset-0 bg-black/90 backdrop-blur-[2px] flex items-center justify-center z-50"
-          onClick={handleModalClick}
-        >
-          <div className="bg-white rounded-lg p-6 max-w-sm w-full mx-4 relative shadow-xl">
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setShowZaloModal(false);
-              }}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
-            >
-              <MdClose size={24} />
-            </button>
-
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">
-              Liên hệ qua Zalo
-            </h3>
-
-            <div className="space-y-4">
-              <button
-                onClick={handleDirectMessage}
-                className="w-full bg-[#0068ff] text-white py-3 px-4 rounded-lg flex items-center justify-center space-x-2 hover:bg-[#0055d4] transition-colors"
-              >
-                <SiZalo size={24} />
-                <span>Nhắn tin trực tiếp</span>
-              </button>
-
-              <div className="text-center">
-                <p className="text-gray-600 mb-2">Hoặc quét mã QR</p>
-                <div className="bg-white p-2 rounded-lg inline-block">
-                  <img
-                    src="https://qr-talk.zdn.vn/1/432275460/7b11f9dc4781aedff790.jpg"
-                    alt="Zalo QR Code"
-                    className="w-48 h-48 object-contain"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Copyright */}
       <div className="h-full border-t flex justify-center  bg-[#1f1f1f]  mt-6 py-5 text-center text-white">
