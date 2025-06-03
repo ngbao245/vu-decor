@@ -6,7 +6,7 @@ import {
   SiYoutube,
 } from "react-icons/si";
 import { MdEmail, MdPhone, MdLocationOn, MdSend, MdClose, MdQrCode2 } from "react-icons/md";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logoImage from "../../assets/logoImage.png";
 import asm from "../../assets/asm-light.png";
@@ -43,6 +43,20 @@ const Footer = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [showZaloModal, setShowZaloModal] = useState(false);
   const sloganRef = useRef<HTMLDivElement>(null);
+
+  // Control body scroll when modal is open
+  useEffect(() => {
+    if (showZaloModal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup function to restore scroll when component unmounts
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [showZaloModal]);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (sloganRef.current) {
