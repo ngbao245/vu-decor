@@ -8,7 +8,7 @@ import {
   MdLocationOn,
   MdSend,
 } from "react-icons/md";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import logoImage from "../../assets/logoImage.png";
 import asm from "../../assets/asm-light.png";
