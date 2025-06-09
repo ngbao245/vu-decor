@@ -1,5 +1,5 @@
 import { SiZalo, SiFacebook, SiGmail } from "react-icons/si";
-import { MdEmail, MdPhone, MdLocationOn, MdSend } from "react-icons/md";
+import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import logoImage from "../../assets/logoImage.png";
