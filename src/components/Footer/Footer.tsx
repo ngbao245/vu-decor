@@ -1,13 +1,5 @@
-import {
-  SiZalo,
-  SiFacebook,
-} from "react-icons/si";
-import {
-  MdEmail,
-  MdPhone,
-  MdLocationOn,
-  MdSend,
-} from "react-icons/md";
+import { SiZalo, SiFacebook, SiGmail } from "react-icons/si";
+import { MdEmail, MdPhone, MdLocationOn, MdSend } from "react-icons/md";
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import logoImage from "../../assets/logoImage.png";
@@ -37,15 +29,14 @@ const socialLinks = [
   //   href: "https://linkedin.com/company/vudecor",
   //   label: "LinkedIn",
   // },
-  { 
-    icon: SiZalo, 
-    href: "https://zalo.me/0965994178", 
-    label: "Zalo" 
+  {
+    icon: SiZalo,
+    href: "https://zalo.me/0965994178",
+    label: "Zalo",
   },
 ];
 
 const Footer = () => {
-  const [phone, setPhone] = useState("");
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const sloganRef = useRef<HTMLDivElement>(null);
 
@@ -56,13 +47,6 @@ const Footer = () => {
       const y = e.clientY - rect.top;
       setMousePosition({ x, y });
     }
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle phone number submission logic here
-    console.log("Submitting phone number:", phone);
-    setPhone("");
   };
 
   return (
@@ -238,27 +222,33 @@ const Footer = () => {
               Hỗ trợ tư vấn
               <span className="absolute -bottom-2 left-0 w-12 h-1 bg-[#E34225] rounded-full"></span>
             </h4>
-            <p className="text-gray-400 flex flex-wrap">
-              Hãy để lại số điện thoại, chúng tôi <br/> sẽ với bạn trong thời gian sớm nhất.
-            </p>
-            <form onSubmit={handleSubmit}>
-              <div className="relative">
-                <input
-                  type="tel"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  placeholder="Vui lòng nhập số điện thoại"
-                  className="w-full px-4 py-2.5 text-sm rounded-lg bg-[#444444] border border-gray-700 focus:outline-none focus:border-[#E34225] text-white pr-12"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-[#E34225] hover:text-red-400 transition-colors duration-200"
-                >
-                  <MdSend size={20} />
-                </button>
-              </div>
-            </form>
+            <div className="space-y-3">
+              <a
+                href="https://zalo.me/0965994178"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-full px-6 py-3 text-white bg-[#0068ff] hover:bg-[#0052cc] rounded-lg transition-colors duration-200"
+              >
+                <SiZalo className="mr-2" size={24} />
+                Chat với chúng tôi qua Zalo
+              </a>
+              <a
+                href="tel:0965994178"
+                className="inline-flex items-center justify-center w-full px-6 py-3 text-white bg-[#E34225] hover:bg-[#c93a20] rounded-lg transition-colors duration-200"
+              >
+                <MdPhone className="mr-2" size={24} />
+                Gọi ngay: 0965 994 178
+              </a>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=vudecor24@gmail.com&su=Hỗ%20Trợ%20Tư%20Vấn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-full px-6 py-3 text-[#EA4335] bg-white hover:bg-gray-100 border border-gray-200 rounded-lg transition-colors duration-200"
+              >
+                <SiGmail className="mr-2" size={24} />
+                Gửi email cho chúng tôi
+              </a>
+            </div>
           </div>
         </div>
       </div>
