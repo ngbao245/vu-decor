@@ -79,29 +79,26 @@ const Footer = () => {
                     className="font-medium bg-gradient-to-l from-red-400 via-red-400 to-transparent bg-clip-text text-transparent transition-all duration-500 ease-in-out"
                     style={{
                       backgroundImage: `linear-gradient(to left, 
-                        rgba(96, 165, 250, ${
-                          mousePosition.x === 0
-                            ? 0.3
-                            : Math.min(
-                                1,
-                                Math.max(0.3, (300 - mousePosition.x) / 150)
-                              )
+                        rgba(96, 165, 250, ${mousePosition.x === 0
+                          ? 0.3
+                          : Math.min(
+                            1,
+                            Math.max(0.3, (300 - mousePosition.x) / 150)
+                          )
                         }) 0%,
-                        rgba(96, 165, 250, ${
-                          mousePosition.x === 0
-                            ? 0.3
-                            : Math.min(
-                                1,
-                                Math.max(0.3, (300 - mousePosition.x) / 200)
-                              )
+                        rgba(96, 165, 250, ${mousePosition.x === 0
+                          ? 0.3
+                          : Math.min(
+                            1,
+                            Math.max(0.3, (300 - mousePosition.x) / 200)
+                          )
                         }) 50%,
-                        rgba(96, 165, 250, ${
-                          mousePosition.x === 0
-                            ? 0.3
-                            : Math.min(
-                                1,
-                                Math.max(0.3, (300 - mousePosition.x) / 250)
-                              )
+                        rgba(96, 165, 250, ${mousePosition.x === 0
+                          ? 0.3
+                          : Math.min(
+                            1,
+                            Math.max(0.3, (300 - mousePosition.x) / 250)
+                          )
                         }) 100%)`,
                     }}
                   >
@@ -112,20 +109,17 @@ const Footer = () => {
                     className="font-medium bg-gradient-to-r from-red-400 via-red-400 to-transparent bg-clip-text text-transparent transition-all duration-500 ease-in-out"
                     style={{
                       backgroundImage: `linear-gradient(to right, 
-                        rgba(96, 165, 250, ${
-                          mousePosition.x === 0
-                            ? 0.3
-                            : Math.min(1, Math.max(0.3, mousePosition.x / 150))
+                        rgba(96, 165, 250, ${mousePosition.x === 0
+                          ? 0.3
+                          : Math.min(1, Math.max(0.3, mousePosition.x / 150))
                         }) 0%,
-                        rgba(96, 165, 250, ${
-                          mousePosition.x === 0
-                            ? 0.3
-                            : Math.min(1, Math.max(0.3, mousePosition.x / 200))
+                        rgba(96, 165, 250, ${mousePosition.x === 0
+                          ? 0.3
+                          : Math.min(1, Math.max(0.3, mousePosition.x / 200))
                         }) 50%,
-                        rgba(96, 165, 250, ${
-                          mousePosition.x === 0
-                            ? 0.3
-                            : Math.min(1, Math.max(0.3, mousePosition.x / 250))
+                        rgba(96, 165, 250, ${mousePosition.x === 0
+                          ? 0.3
+                          : Math.min(1, Math.max(0.3, mousePosition.x / 250))
                         }) 100%)`,
                     }}
                   >
@@ -199,7 +193,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <MdPhone size={20} />
-                <span className="text-gray-400">0965 99 4178</span>
+                <span className="text-gray-400">0965 994 178</span>
               </li>
               <li className="flex items-center space-x-3">
                 <MdEmail size={20} />
