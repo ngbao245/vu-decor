@@ -3,7 +3,7 @@ import { createWriteStream } from 'fs';
 import { Readable } from 'stream';
 
 // Define your website's base URL
-const baseUrl = 'https://vudecor.vn'; // Replace with your actual domain
+const baseUrl = 'https://www.vudecor.vn'; // Using www as preferred version since it's being crawled
 
 // Define your routes
 const routes = [
