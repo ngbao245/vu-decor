@@ -127,7 +127,7 @@ const Story = () => {
                         {/* Stats Badge */}
                         <div className="absolute lg:-bottom-6 lg:-left-6 bottom-0 left-0 w-40 h-40 bg-[#7A876D] rounded-xl shadow-lg flex items-center justify-center p-6 transform hover:scale-105 transition-transform duration-300">
                             <div className="text-[#f5f5f3] text-center">
-                                <span className="block text-5xl font-bold font-serif">10</span>
+                                <span className="block text-5xl font-bold font-serif">15+</span>
                                 <span className="block text-sm mt-2 uppercase tracking-wider">Năm Kinh Nghiệm</span>
                             </div>
                         </div>

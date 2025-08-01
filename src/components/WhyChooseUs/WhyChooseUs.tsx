@@ -16,13 +16,13 @@ const WhyChooseUs = () => {
         {
             title: "Khách Hàng Là Trọng Tâm",
             description:
-                "Lắng nghe, thấu hiểu và đáp ứng tối ưu nhu cầu của khách hàng. Chúng tôi cam kết mang đến trải nghiệm dịch vụ tốt nhất.",
+                "Chúng tôi đặt khách hàng ở vị trí trung tâm trong mọi quyết định. Lắng nghe, thấu hiểu và tận tâm để mang lại trải nghiệm tốt nhất trong suốt hành trình đồng hành cùng bạn.",
             icon: <Users className="w-8 h-8 text-[#E34225]" />,
         },
         {
             title: "Chất Lượng Vượt Trội",
             description:
-                "Sản phẩm tinh tế, bền đẹp theo thời gian. Chúng tôi không ngừng cập nhật xu hướng và nâng cao chất lượng dịch vụ.",
+                "Mỗi sản phẩm và dịch vụ đều là kết quả của sự chỉn chu và sáng tạo. Chúng tôi luôn cập nhật xu hướng, cải tiến không ngừng để đem đến chất lượng vượt mong đợi.",
             icon: <Star className="w-8 h-8 text-[#E34225]" />,
         },
         {
