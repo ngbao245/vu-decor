@@ -85,7 +85,7 @@ const Hero = () => {
             <div className="flex flex-col items-center">
               <b className="text-[1rem] sm:text-[1.5rem]">
                 <CountUp
-                  end={150}
+                  end={100}
                   duration={2.5}
                   enableScrollSpy={true}
                   suffix="+"
@@ -96,7 +96,7 @@ const Hero = () => {
             <div className="flex flex-col items-center">
               <b className="text-[1rem] sm:text-[1.5rem]">
                 <CountUp
-                  end={500}
+                  end={300}
                   duration={2.5}
                   enableScrollSpy={true}
                   suffix="+"
@@ -107,7 +107,7 @@ const Hero = () => {
             <div className="flex flex-col items-center">
               <b className="text-[1rem] sm:text-[1.5rem]">
                 <CountUp
-                  end={10}
+                  end={15}
                   duration={2.5}
                   enableScrollSpy={true}
                   suffix="+"

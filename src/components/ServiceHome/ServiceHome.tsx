@@ -32,7 +32,7 @@ const ServiceHome = () => {
         </h1>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-10">
         <motion.div
           className="relative h-[300px] md:h-[400px] md:col-span-2 rounded-lg bg-black/30"
           variants={floatAnimation}
@@ -50,8 +50,11 @@ const ServiceHome = () => {
 
           <div className="absolute flex flex-col gap-3 md:gap-5 bottom-0 w-full text-white px-4 md:px-5 py-4 md:py-5 bg-black/30 rounded-lg">
             <h3 className="text-xl md:text-2xl font-semibold">
-              Thiết kế nội thất không gian sống
+              Tư vấn không gian & màu sắc
             </h3>
+            <p>
+              Khảo sát nhu cầu, định hướng phong cách và phối màu phù hợp với sở thích và công năng.
+            </p>
             <Button
               variant="secondary"
               color="black"
@@ -80,8 +83,12 @@ const ServiceHome = () => {
           </div>
           <div className="absolute flex flex-col gap-3 md:gap-5 bottom-0 w-full text-white px-4 md:px-5 py-4 md:py-5 bg-black/30 rounded-lg">
             <h3 className="text-xl md:text-2xl font-semibold">
-              Cải tạo không gian
+              Thiết kế nội thất
             </h3>
+            <p>
+              Lên ý tưởng, bản vẽ 2D/3D và lựa chọn vật liệu phù hợp với không gian sống.
+
+            </p>
             <Button
               variant="secondary"
               color="black"
@@ -110,8 +117,11 @@ const ServiceHome = () => {
           </div>
           <div className="absolute flex flex-col gap-3 md:gap-5 bottom-0 w-full text-white px-4 md:px-5 py-4 md:py-5 bg-black/30 rounded-lg">
             <h3 className="text-xl md:text-2xl font-semibold">
-              Tư vấn màu sắc <br />& phối màu
+              Thi công nội thất
             </h3>
+            <p>
+              Triển khai thi công chi tiết, đảm bảo đúng thiết kế và tiến độ.
+            </p>
             <Button
               variant="secondary"
               color="black"
@@ -121,6 +131,40 @@ const ServiceHome = () => {
               onClick={() => navigate('/projects')}
             >
               <FaArrowRight />
+            </Button>
+          </div>
+        </motion.div>
+        <motion.div
+          className="relative h-[300px] md:h-[400px] md:col-span-2 rounded-lg bg-black/30"
+          variants={floatAnimation}
+          whileHover={{ scale: 1.02 }}
+          animate="animate"
+        >
+          <div className="w-full h-full ">
+            <img
+              src="https://cdn.pixabay.com/photo/2018/08/09/03/58/home-3593729_1280.jpg"
+              alt=""
+              className="w-full h-full object-cover rounded-lg "
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40 rounded-lg"></div>
+          </div>
+
+          <div className="absolute flex flex-col gap-3 md:gap-5 bottom-0 w-full text-white px-4 md:px-5 py-4 md:py-5 bg-black/30 rounded-lg">
+            <h3 className="text-xl md:text-2xl font-semibold">
+              Cải tạo & sửa chữa không gian
+            </h3>
+            <p>
+              Nâng cấp, thay đổi hoặc sửa chữa nội thất cũ thành không gian mới hiện đại và tiện nghi.
+            </p>
+            <Button
+              variant="secondary"
+              color="black"
+              rounded="full"
+              weight="lg"
+              className="hover:text-[#E34225] cursor-pointer"
+              onClick={() => navigate("/projects")}
+            >
+              Xem thêm
             </Button>
           </div>
         </motion.div>
