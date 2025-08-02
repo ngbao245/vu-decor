@@ -173,6 +173,100 @@ const projects: Project[] = [
       ],
     },
   },
+  {
+    id: "cc64de86-dbb1-43d0-9390-17ba24445940",
+    title: "Căn GH3 - The Glory Heights",
+    image:
+      "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140862/z6845123896130_70ec828a7bce2f8e75847544e5cba82c_yllifg.jpg",
+    description:
+      "Một không gian nhẹ nhàn và ấm áp sẽ được hoàn chỉnh bàn giao trước lễ Quốc Khánh 2/9, làm việc ngoài kiếm tiền ra nó phải là sự đam mê tột cùng, mỗi ngôi nhà mỗi không gian sống phải được cắt ghép thi công một cách chỉnh chu và tỉ mĩ, đem lại sự hài lòng cho bản thân- cho khách hàng hiện tại và hướng tới những khách hàng tìm năng",
+    details: {
+      location: "Quận 9,\nTP. Hồ Chí Minh",
+      area: "45m²",
+      duration: "2 months",
+      client: "Mr. & Mrs. Nguyen",
+      style: "Modern Minimalist",
+      color: ["#2C3E50", "#ECF0F1", "#E74C3C", "#3498DB"],
+      features: [
+        "Thiết kế nội thất theo yêu cầu",
+        "Hệ thống chiếu sáng thông minh",
+        "Giải pháp lưu trữ âm tường",
+        "Kết hợp nghệ thuật hiện đại",
+      ],
+      challenges: [
+        "Thiếu ánh sáng tự nhiên",
+        "Hình dạng phòng không vuông vức",
+        "Cần không gian đa chức năng",
+      ],
+      solutions: [
+        "Bố trí gương hợp lý",
+        "Nội thất bo cong thiết kế riêng",
+        "Hệ thống lưu trữ dạng mô-đun",
+      ],
+      images: [
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140862/z6845123896130_70ec828a7bce2f8e75847544e5cba82c_yllifg.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140862/z6845124431974_4e43e776153485ad013913c09aea8965_fsjigp.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140855/z6845124125452_ad129eb2ad69116f9a45617856f27955_jv8un6.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140855/z6845123819663_ef756817f5991e010a6e3bca199275e7_nvstov.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140854/z6845123972922_c94c446cb70fed7086d2afe8570af6d2_q4ww9m.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140854/z6845123666611_eedc054d36209eb3d9106e930991f3d6_lo7y24.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140854/z6845124087716_35024a66173edf9d4da92526233906e2_fxwysa.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140854/z6845124049019_cac789b7cb8d7a2fbb55cfc12fc8d523_sdddks.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140853/z6845124009596_bbb906055ee524167644d86ff7ae6c1b_ka6rle.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140852/z6845123933148_e6958e6aae7ae0985fcca71767846288_ako20f.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140851/z6845123896218_50376dff2c668012b9b641c443481043_nw1p09.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140850/z6845123666597_8ae875b001c408e8f8ce7581f573a557_l8wuef.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140850/z6845123856967_29dc7179ce914484fbee1948d8ee00fa_ex6ozj.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140849/z6845123780366_e56be07fa8e4836003d8193054d0441d_z4xcru.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140849/z6845123743927_56daea1b276ae2b37119bcb16c37c606_tpmo2p.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140848/z6845123703307_2718dea5002d83463c81cc2e8ce8d750_cx2ego.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140848/z6845123703211_3574575fa6623fcb6a09fb321ae67653_g3oliq.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140847/z6845123666609_7b2bf9d271dfaea8c3b5bb9973ef95dd_nc2ggv.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140857/z6848554581964_90735f9c692f062e1afbf0eb64cc0340_vscneo.jpg"
+      ],
+    },
+  },
+  {
+    id: "6e16449c-799d-48e6-b7b0-64a9ed42f9f1",
+    title: "Căn hộ Viva Plaza",
+    image:
+      "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140862/z6845123896130_70ec828a7bce2f8e75847544e5cba82c_yllifg.jpg",
+    description:
+      "Viva Plaza Quận 7 tọa lạc ngay mặt tiền đường Nguyễn Lương Bằng – vị trí trung tâm kết nối dễ dàng đến Phú Mỹ Hưng và các tiện ích cao cấp như trung tâm thương mại, bệnh viện, trường học quốc tế. Dự án mang đến không gian sống hiện đại, nhẹ nhàng và ấm áp, được thiết kế tối ưu công năng, phù hợp cho gia đình trẻ và người độc thân. \n\nVới tiến độ thi công đảm bảo, các căn hộ đang được hoàn thiện tỉ mỉ, chỉnh chu từng chi tiết và dự kiến bàn giao trước lễ Quốc Khánh 2/9. Viva Plaza không chỉ là nơi ở, mà còn là lựa chọn lý tưởng để an cư và đầu tư sinh lời bền vững tại trung tâm Quận 7.",
+    details: {
+      location: "Quận 7,\nTP. Hồ Chí Minh",
+      area: "45m²",
+      duration: "2 months",
+      client: "Mr. & Mrs. Nguyen",
+      style: "Modern Minimalist",
+      color: ["#2C3E50", "#ECF0F1", "#E74C3C", "#3498DB"],
+      features: [
+        "Thiết kế nội thất theo yêu cầu",
+        "Hệ thống chiếu sáng thông minh",
+        "Giải pháp lưu trữ âm tường",
+        "Kết hợp nghệ thuật hiện đại",
+      ],
+      challenges: [
+        "Thiếu ánh sáng tự nhiên",
+        "Hình dạng phòng không vuông vức",
+        "Cần không gian đa chức năng",
+      ],
+      solutions: [
+        "Bố trí gương hợp lý",
+        "Nội thất bo cong thiết kế riêng",
+        "Hệ thống lưu trữ dạng mô-đun",
+      ],
+      images: [
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140777/z6861330147751_e4b962bd61bb3ffc9acb80254eba3c6d_akmms3.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140770/z6861330141934_c329f8f8fc9545abc3d4a2e1a450d1b5_oxsiqo.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140770/z6861330149073_b2729b930f93919253cd1b2dd66af55e_jekxsh.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140769/z6861330145945_98cf0f51105c97eea39ac7b758da259d_oxsbmg.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140769/z6861330147500_905e11b71f22a44686d3194483f20735_i1qutw.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140769/z6861330136357_591dc80d90c160a1acad3879000ee15b_wz0czj.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140765/z6861330152449_7c319eba90e8f3f4884a6bcfd0a416d8_fwvpue.jpg"
+      ],
+    },
+  },
   // Add more projects as needed
 ];
 
@@ -343,7 +437,7 @@ export const ProjectDetail = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.8 }}
-              className="bg-white rounded-xl shadow-lg p-8 capitalize"
+              className="bg-white rounded-xl shadow-lg p-8 "
             >
               <h2 className="text-2xl font-bold mb-6 flex items-center">
                 <Home className="w-6 h-6 mr-2 text-[#E34225]" />
