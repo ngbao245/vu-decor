@@ -142,10 +142,10 @@ const Header = ({ isSticky }: HeaderProps) => {
               />
             </span>
             <span className="pl-2 md:pl-3 font-light text-sm md:text-sm lg:text-lg tracking-[0.2em] relative overflow-hidden">
-              <span className="inline-block transform transition-transform duration-300 ease-out group-hover:translate-y-[-100%]">
+              <span className="font-normal inline-block transform transition-transform duration-300 ease-out group-hover:translate-y-[-100%]">
                 LIÊN HỆ
               </span>
-              <span className="absolute top-0 left-2 md:left-3 transform transition-transform duration-300 ease-out translate-y-[100%] group-hover:translate-y-0">
+              <span className="font-normal absolute top-0 left-2 md:left-3 transform transition-transform duration-300 ease-out translate-y-[100%] group-hover:translate-y-0">
                 TƯ VẤN
               </span>
             </span>
