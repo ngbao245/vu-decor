@@ -2,7 +2,7 @@ import HeroPage from "../../components/Hero/HeroPage"
 import Story from "../../components/Story/Story"
 import StoryTeam from "../../components/StoryTeam/StoryTeam"
 import StoryValue from "../../components/StoryValue/StoryValue"
-import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs"
+// import WhyChooseUs from "../../compongitents/WhyChooseUs/WhyChooseUs"
 
 export const OurStory = () => {
     return (
