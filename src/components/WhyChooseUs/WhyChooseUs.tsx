@@ -40,7 +40,7 @@ const WhyChooseUs = () => {
                 <h6 className='text-[#828282]'>Tại sao chọn chúng tôi</h6>
                 <h1 className='text-[2.5rem]'><span className='text-[#E34225]'>Giá trị</span> cốt lõi</h1>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto ">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {values.map((value, index) => (
                     <motion.div
                         key={index}
@@ -53,9 +53,9 @@ const WhyChooseUs = () => {
                         transition={{ duration: 0.5, delay: index * 0.2 }}
                         className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1"
                     >
-                        <div className="p-8 h-full  ">
+                        <div className="p-8 h-full">
                             {/* Icon */}
-                            <div className="w-16 h-16 bg-[#E34225]/10 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#E34225]/20 transition-colors duration-300">
+                            <div className="w-20 h-16 bg-[#E34225]/10 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#E34225]/20 transition-colors duration-300">
                                 {value.icon}
                             </div>
 
@@ -64,14 +64,14 @@ const WhyChooseUs = () => {
                                 <h3 className="text-xl font-bold mb-4 text-[#2F2F2F] group-hover:text-[#E34225] transition-colors duration-300">
                                     {value.title}
                                 </h3>
-                                <p className="text-gray-600 leading-relaxed text-justify tracking-wide whitespace-normal">
+                                <p className="text-gray-600 leading-relaxed text-justify tracking-wide whitespace-normal mb-5">
                                     {value.description}
                                 </p>
                             </div>
                         </div>
 
-                        {/* Decorative Bottom Bar */}
-                        <div className="h-1 bg-[#E34225] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                        {/* Decorative Bottom Bar */}   
+                        <div className="h-1 -mt-4 bg-[#E34225] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     </motion.div>
                 ))}
             </div>

@@ -32,7 +32,7 @@ const ServiceHome = () => {
         </h1>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-10 gap-5 ">
         <motion.div
           className="relative h-[300px] md:h-[400px] md:col-span-2 rounded-lg bg-black/30"
           variants={floatAnimation}
@@ -68,12 +68,12 @@ const ServiceHome = () => {
           </div>
         </motion.div>
         <motion.div
-          className="relative h-[300px] md:h-[400px] rounded-lg bg-black/30"
+          className="relative h-[300px] md:h-[400px] rounded-lg"
           variants={floatAnimation}
           whileHover={{ scale: 1.02 }}
           animate="animate"
         >
-          <div className="w-full h-full bg-black/50">
+          <div className="w-full h-full ">
             <img
               src="https://cdn.pixabay.com/photo/2023/09/26/09/24/apartment-8276989_1280.jpg"
               alt=""
@@ -125,7 +125,7 @@ const ServiceHome = () => {
             <Button
               variant="secondary"
               color="black"
-              rounded="full"
+              rounded="full"   
               weight="xl"
               className="hover:text-[#E34225] cursor-pointer"
               onClick={() => navigate('/projects')}
