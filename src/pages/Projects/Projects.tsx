@@ -13,12 +13,20 @@ interface Project {
 // Sample projects data - you can replace this with your actual projects
 const projects: Project[] = [
   {
-    id: "7e164cb1-49d5-4709-b53d-7a92c7a65320",
-    title: "Căn BE1 - The Beverly Vinhomes",
+    id: "cc64de86-dbb1-43d0-9390-17ba24445940",
+    title: "Căn GH3 - The Glory Heights",
     image:
-      "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668663/473806759_122117412578618470_1205087045803481247_n_jltlsj.jpg",
+      "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140853/z6845124009596_bbb906055ee524167644d86ff7ae6c1b_ka6rle.jpg",
     description:
-      "Hình ảnh thực tế căn 1PN những ngày cuối năm, Vu Decor hoàn thiện đúng tiến độ và chất lượng để khách hàng đón Tết Ất Tỵ 2025 trọn vẹn.",
+      "Căn hộ nhẹ nhàng, ấm áp sẽ được hoàn thiện bàn giao trước 2/9, chăm chút tỉ mỉ từng chi tiết để mang đến không gian sống trọn vẹn.",
+  },
+  {
+    id: "6e16449c-799d-48e6-b7b0-64a9ed42f9f1",
+    title: "Căn hộ Viva Plaza",
+    image:
+      "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140777/z6861330147751_e4b962bd61bb3ffc9acb80254eba3c6d_akmms3.jpg",
+    description:
+      "Căn hộ Viva Plaza Quận 7 - nơi không gian nhẹ nhàng, ấm áp hòa quyện với thiết kế hiện đại đầy tinh tế, được chăm chút tỉ mỉ từng chi tiết để đem lại trải nghiệm sống thư thái và tiện nghi đẳng cấp.",
   },
   {
     id: "4a64ed59-d264-44dc-ab95-56ab74848ea9",
@@ -32,30 +40,19 @@ const projects: Project[] = [
     id: "5c107602-c66b-41ef-a69c-90acc4e9fea7",
     title: "Bếp Căn BS10 - The Beverly Solari",
     image:
-      "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668236/498213824_122133969548618470_6851937525598168220_n_ejbn4b.jpg",
+      "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668236/498166510_122133969518618470_2852905110698745605_n_smvs7u.jpg",
     description:
       "Vu Decor tin rằng căn bếp không chỉ đẹp mà còn là nơi giữ lửa yêu thương – nơi cả nhà quây quần, tái tạo năng lượng sau một ngày dài.",
   },
   {
-    id: "cc64de86-dbb1-43d0-9390-17ba24445940",
-    title: "Căn GH3 - The Glory Heights",
+    id: "7e164cb1-49d5-4709-b53d-7a92c7a65320",
+    title: "Căn BE1 - The Beverly Vinhomes",
     image:
-      "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140862/z6845123896130_70ec828a7bce2f8e75847544e5cba82c_yllifg.jpg",
+      "https://res.cloudinary.com/dkx0y97jo/image/upload/v1748668663/473806759_122117412578618470_1205087045803481247_n_jltlsj.jpg",
     description:
-      "Căn hộ nhẹ nhàng, ấm áp sẽ được hoàn thiện bàn giao trước 2/9, chăm chút tỉ mỉ từng chi tiết để mang đến không gian sống trọn vẹn.",
-  },
-  {
-    id: "6e16449c-799d-48e6-b7b0-64a9ed42f9f1",
-    title: "Căn hộ Viva Plaza",
-    image:
-      "https://res.cloudinary.com/dkx0y97jo/image/upload/v1754140777/z6861330147751_e4b962bd61bb3ffc9acb80254eba3c6d_akmms3.jpg",
-    description:
-      "Căn hộ Viva Plaza Quận 7 - nơi không gian nhẹ nhàng, ấm áp hòa quyện với thiết kế hiện đại đầy tinh tế, được chăm chút tỉ mỉ từng chi tiết để đem lại trải nghiệm sống thư thái và tiện nghi đẳng cấp.",
+      "Hình ảnh thực tế căn 1PN những ngày cuối năm, Vu Decor hoàn thiện đúng tiến độ và chất lượng để khách hàng đón Tết Ất Tỵ 2025 trọn vẹn.",
   },
 ];
-
-
-
 
 export const Projects = () => {
   const navigate = useNavigate();
