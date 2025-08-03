@@ -2,6 +2,7 @@ import HeroPage from "../../components/Hero/HeroPage"
 import Story from "../../components/Story/Story"
 import StoryTeam from "../../components/StoryTeam/StoryTeam"
 import StoryValue from "../../components/StoryValue/StoryValue"
+import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs"
 
 export const OurStory = () => {
     return (
@@ -21,8 +22,9 @@ export const OurStory = () => {
                 </div>
 
                 {/* Core Values Section - Gray Background */}
-                <div className="bg-gray-50">
+                <div className="bg-gray-50  ">
                     <StoryValue />
+                    {/* <WhyChooseUs /> */}
                 </div>
 
                 {/* Team Section - White Background */}
