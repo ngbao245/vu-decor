@@ -81,7 +81,7 @@ export const Projects = () => {
 
   return (
     // <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-    <div className="min-h-screen text-justify">
+    <div className="min-h-screen">
       <div>
         <HeroPage
           page="Dự án của chúng tôi"
@@ -117,7 +117,7 @@ export const Projects = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2 transition-colors duration-300 group-hover:text-[#E34225]">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700 text-justify">
                   {project.description}
                 </p>
               </div>
