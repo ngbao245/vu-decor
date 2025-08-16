@@ -84,10 +84,10 @@ const ContactForm = () => {
         ),
         // Email to customer
         emailjs.send(
-          'service_kck3a2j',
-          'template_h5mcn9c',
+          'service_zcszcw6',
+          'template_5ze12o2',
           customerTemplateParams,
-          'QZfklo8vAujdTrJdd'
+          'X1tgFMPZqwTLUuzpI'
         )
       ]);
 
@@ -123,7 +123,7 @@ const ContactForm = () => {
                   <p className="text-gray-600 mb-8">
                     Chúng tôi rất mong nhận được phản hồi từ bạn. Hãy điền vào
                     mẫu dưới đây và một trong những chuyên gia tư vấn thiết kế
-                    của chúng tôi sẽ phản hồi bạn trong vòng 24 giờ.
+                    của chúng tôi sẽ phản hồi bạn trong vòng 72 giờ.
                   </p>
                   <div className="mb-8">
                     <div className="flex items-center gap-4 mb-6">
