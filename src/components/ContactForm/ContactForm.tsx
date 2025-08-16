@@ -369,7 +369,7 @@ const ContactForm = () => {
                           Cảm ơn Quý khách đã quan tâm.
                         </h2>
                         <p className="text-xs sm:text-base text-gray-700 text-center px-1 sm:px-4 leading-tight">
-                          Chúng tôi sẽ liên hệ lại trong vòng 24 giờ tới.
+                          Chúng tôi sẽ liên hệ lại trong vòng 72 giờ tới.
                         </p>
                       </motion.div>
                     )}
