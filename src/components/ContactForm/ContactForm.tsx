@@ -77,10 +77,10 @@ const ContactForm = () => {
       await Promise.all([
         // Email to business
         emailjs.send(
-          'default_service',
-          'template_c5nwd3r',
+          'service_zcszcw6',
+          'template_df77ulj',
           businessTemplateParams,
-          'QZfklo8vAujdTrJdd'
+          'X1tgFMPZqwTLUuzpI'
         ),
         // Email to customer
         emailjs.send(
