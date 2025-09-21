@@ -267,6 +267,62 @@ const projects: Project[] = [
       ],
     },
   },
+  {
+    id: "3e696588-e6d7-49f3-b3ff-73971b6f928e",
+    title: "Căn hộ GH3-0702",
+    image:
+      "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468124/z7034331877050_a88aa9eaef39b04cafa22ed99c22163c_ukfvwv.jpg",
+    description:
+      "Căn hộ GH3-0702 thuộc phân khu Glory Heights, sở hữu diện tích 45m² với thiết kế hiện đại, tối giản và thông minh. Vị trí trung tâm Quận 7 giúp kết nối nhanh đến Phú Mỹ Hưng cùng các tiện ích cao cấp như trường học quốc tế, bệnh viện, trung tâm thương mại. Không gian sống được tối ưu công năng, phù hợp cho gia đình trẻ hoặc người độc thân, vừa mang lại sự tiện nghi an cư vừa là lựa chọn đầu tư bền vững.",
+    details: {
+      location: "Quận 9,\nTP. Hồ Chí Minh",
+      area: "45m²",
+      duration: "1 tháng",
+      client: "Mr. & Mrs. Nguyen",
+      style: "Modern Minimalist",
+      color: ["#2C3E50", "#ECF0F1", "#E74C3C", "#3498DB"],
+      features: [
+        "Thiết kế nội thất theo yêu cầu",
+        "Hệ thống chiếu sáng thông minh",
+        "Giải pháp lưu trữ âm tường",
+        "Kết hợp nghệ thuật hiện đại",
+      ],
+      challenges: [
+        "Thiếu ánh sáng tự nhiên",
+        "Hình dạng phòng không vuông vức",
+        "Cần không gian đa chức năng",
+      ],
+      solutions: [
+        "Bố trí gương hợp lý",
+        "Nội thất bo cong thiết kế riêng",
+        "Hệ thống lưu trữ dạng mô-đun",
+      ],
+      images: [
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468139/z7034331973600_3ad7f6df55fbac360d14696ef3773273_b9qsif.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468138/z7034331980665_e71040c1ebe9e09e88124fbdd5c6004b_blpwqg.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468137/z7034331965275_b1921d33006904da6c519543f15edcb4_rb5mrh.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468136/z7034331969351_b8490db7cb183afc6db03a1971ffc727_sy6m10.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468135/z7034331961108_1a14556d336c3f67400c53f1952a2b8e_oyejcr.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468134/z7034331947303_6a44cb32335427b96349a7bb71b948de_cg5qmt.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468132/z7034331955251_00aaa1ec85fba0455d16a625cf5f236c_tb9tja.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468132/z7034331951785_5a7b62e26ea97af8072d07a874bcb30d_wbo5ty.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468131/z7034331947105_ff53292ef57855c18889e917a7b6a37b_umm6lb.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468130/z7034331947103_c36f7d9f8b078cc2ba149b25e7e98ba2_gxcf0a.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468129/z7034331946893_6ffa839e8cd94bc5c2d4eb31c8f14793_mshsyg.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468128/z7034331946892_f1729d163295dbbd705a3cb79c52c414_ykiso2.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468127/z7034331926700_947dc3087d3a2d22632e4ab5b006f785_mcexzh.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468127/z7034331924779_a702b0697aae16c0f06ef3905e6096ce_ij3jvo.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468126/z7034331926701_d5f7258ba44007c89546554661c04241_wn3s1n.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468126/z7034331926697_573a1cc032260b6473c426e991203730_aic7cl.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468125/z7034331924778_19288307da527e84ce133132a949c2fd_cqluqo.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468125/z7034331897737_f3010e32d27cc59c6b10d1513a3b0675_bohyye.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468125/z7034331886644_4ee2b0a2b892ea6b199471ff81201cb6_zmnbxq.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468125/z7034331893047_648bfb5f69b18a0cadc0c10da7e340e0_vtp3sd.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468125/z7034331881627_a82be144b5b0689f4f42367e645a7ef8_zbkvnk.jpg",
+        "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468124/z7034331877050_a88aa9eaef39b04cafa22ed99c22163c_ukfvwv.jpg",
+      ],
+    },
+  },
   // Add more projects as needed
 ];
 
@@ -318,9 +374,9 @@ export const ProjectDetail = () => {
 
   const currentImages = project.details?.images
     ? project.details.images.slice(
-        (currentPage - 1) * imagesPerPage,
-        currentPage * imagesPerPage
-      )
+      (currentPage - 1) * imagesPerPage,
+      currentPage * imagesPerPage
+    )
     : [];
 
   const handlePageChange = (page: number) => {
@@ -566,9 +622,8 @@ export const ProjectDetail = () => {
                     >
                       <img
                         src={image}
-                        alt={`Project image ${
-                          (currentPage - 1) * imagesPerPage + index + 1
-                        }`}
+                        alt={`Project image ${(currentPage - 1) * imagesPerPage + index + 1
+                          }`}
                         className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                       />
                     </motion.div>
@@ -584,11 +639,10 @@ export const ProjectDetail = () => {
                     whileTap={{ scale: 0.9 }}
                     onClick={() => handlePageChange(currentPage - 1)}
                     disabled={currentPage === 1}
-                    className={`px-3 py-1 rounded-md ${
-                      currentPage === 1
-                        ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                        : "bg-[#377b72] text-white hover:bg-[#2a626c]"
-                    }`}
+                    className={`px-3 py-1 rounded-md ${currentPage === 1
+                      ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                      : "bg-[#377b72] text-white hover:bg-[#2a626c]"
+                      }`}
                   >
                     Trước
                   </motion.button>
@@ -611,11 +665,10 @@ export const ProjectDetail = () => {
                     whileTap={{ scale: 0.9 }}
                     onClick={() => handlePageChange(currentPage + 1)}
                     disabled={currentPage === totalPages}
-                    className={`px-3 py-1 rounded-md ${
-                      currentPage === totalPages
-                        ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                        : "bg-[#377b72] text-white hover:bg-[#2a626c]"
-                    }`}
+                    className={`px-3 py-1 rounded-md ${currentPage === totalPages
+                      ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                      : "bg-[#377b72] text-white hover:bg-[#2a626c]"
+                      }`}
                   >
                     Sau
                   </motion.button>

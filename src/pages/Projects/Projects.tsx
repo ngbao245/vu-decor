@@ -52,6 +52,14 @@ const projects: Project[] = [
     description:
       "Hình ảnh thực tế căn 1PN những ngày cuối năm, Vu Decor hoàn thiện đúng tiến độ và chất lượng để khách hàng đón Tết Ất Tỵ 2025 trọn vẹn.",
   },
+  {
+    id: "3e696588-e6d7-49f3-b3ff-73971b6f928e",
+    title: "Căn GH3-0702 - The Glory Heights",
+    image:
+      "https://res.cloudinary.com/dkx0y97jo/image/upload/v1758468136/z7034331969351_b8490db7cb183afc6db03a1971ffc727_sy6m10.jpg",
+    description:
+      "Căn hộ GH3-0702, phân khu Glory Heights, diện tích 45m², thiết kế tối giản hiện đại, vị trí trung tâm Quận 7, kết nối tiện ích và phù hợp cho an cư lẫn đầu tư.",
+  },
 ];
 
 export const Projects = () => {
