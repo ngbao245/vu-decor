@@ -1,8 +1,16 @@
 {
   "rewrites": [
     {
+      "source": "/snotes",
+      "destination": "https://snotes-project.vercel.app"
+    },
+    {
+      "source": "/snotes/:path*",
+      "destination": "https://snotes-project.vercel.app/:path*"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
-} 
+}
