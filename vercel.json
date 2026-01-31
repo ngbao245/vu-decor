@@ -8,8 +8,12 @@
   ],
   "rewrites": [
     {
-      "source": "/snotes/:path*",
-      "destination": "https://note-silk-gamma.vercel.app/:path*"
+      "source": "/snotes/",
+      "destination": "https://note-silk-gamma.vercel.app/"
+    },
+    {
+      "source": "/snotes/:path+",
+      "destination": "https://note-silk-gamma.vercel.app/:path+"
     },
     {
       "source": "/(.*)",
