@@ -1,9 +1,12 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/snotes",
-      "destination": "https://note-silk-gamma.vercel.app/"
-    },
+      "destination": "/snotes/",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
     {
       "source": "/snotes/:path*",
       "destination": "https://note-silk-gamma.vercel.app/:path*"
