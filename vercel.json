@@ -2,11 +2,11 @@
   "rewrites": [
     {
       "source": "/snotes",
-      "destination": "https://snotes-project.vercel.app"
+      "destination": "https://note-silk-gamma.vercel.app/"
     },
     {
       "source": "/snotes/:path*",
-      "destination": "https://snotes-project.vercel.app/:path*"
+      "destination": "https://note-silk-gamma.vercel.app/:path*"
     },
     {
       "source": "/(.*)",
