@@ -9,7 +9,11 @@
       "destination": "https://note-silk-gamma.vercel.app/:match*"
     },
     {
-      "source": "/((?!hubibo).*)",
+      "source": "/assets/:match*",
+      "destination": "https://note-silk-gamma.vercel.app/assets/:match*"
+    },
+    {
+      "source": "/((?!hubibo|assets).*)",
       "destination": "/index.html"
     }
   ]
