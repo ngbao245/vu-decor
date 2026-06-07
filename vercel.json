@@ -9,11 +9,11 @@
   "rewrites": [
     {
       "source": "/hubibo",
-      "destination": "https://note-silk-gamma.vercel.app/hubibo"
+      "destination": "https://note-silk-gamma.vercel.app/"
     },
     {
       "source": "/hubibo/:match*",
-      "destination": "https://note-silk-gamma.vercel.app/hubibo/:match*"
+      "destination": "https://note-silk-gamma.vercel.app/:match*"
     },
     {
       "source": "/((?!hubibo).*)",
